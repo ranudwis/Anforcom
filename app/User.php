@@ -8,6 +8,11 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+
+    public function teams()
+    {
+        return $this->hasOne(Team::class);
+    }
     use Notifiable;
 
     /**
@@ -16,7 +21,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'nim', 'ktm'
     ];
 
     /**
