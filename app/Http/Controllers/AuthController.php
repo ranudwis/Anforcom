@@ -73,50 +73,41 @@ class AuthController extends Controller
      */
     public function store(Request $request)
     {
-        //validasi data 
+        //validasi data
         $request->validate([
+            'competition_id' => 'required|exists:competitions,id',
+            'university' => 'required',
+            'team_name' => 'required',
             'leader_name' => 'required',
-            'leader_email' => 'required',
+            'leader_email' => 'required|unique:users,email',
             'password' => 'required',
             'leader_nim' => 'required',
-            'leader_ktm' => 'required'
+            'leader_ktm' => 'required|image',
+            'members' => 'required',
         ]);
 
-        $leader = new User([
+        $leader = User::create([
             'name' => $request->leader_name,
             'email' => $request->leader_email,
-            'password' => bcrypt($request->password),
+            'password' => $request->password,
             'nim' => $request->leader_nim,
             'ktm' => $request->leader_ktm->store('public/images/ktm')
         ]);
 
-        $leader->save();
-
-        $request->validate([
-            'team_name' => 'required',
-            'university' => 'required',
-            'payment_confirm' => 'required'
-        ]);
-        $team = new Team([
+        $team = $leader->team()->create([
             'name' => $request->team_name,
             'competition_id' => $request->competition_id,
-            'university' => $request->university,
-            'payment_confirm' => $request->payment->store('public/images/payment')
+            'university' => $request->university
         ]);
 
-        $leader->teams()->save($team);
+        $team->members()->createMany(
+            array_map(function ($member) {
+                return $member + [
+                    'ktm' => $member['ktm']->store('public/images/ktm')
+                ];
+            }, $request->members)
+        );
 
-        $members = [];
-        foreach ($request->members as $member) {
-            $members[] = new Member([
-                'name' => $member['name'],
-                'email' => $member['email'],
-                'nim' => $member['nim'],
-                'ktm' => $member['ktm']->store('public/images/ktm')
-            ]);
-        }
-
-        $team->members()->saveMany($members);
         return redirect('/');
     }
 

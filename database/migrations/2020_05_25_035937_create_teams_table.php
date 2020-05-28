@@ -21,7 +21,7 @@ class CreateTeamsTable extends Migration
             $table->unsignedBigInteger('competition_id');
             $table->foreign('competition_id')->references('id')->on('competitions');
             $table->string('university');
-            $table->string('payment_confirm');
+            $table->string('payment_confirm')->nullable();
             $table->boolean('is_active')->default(false);
             $table->timestamps();
         });

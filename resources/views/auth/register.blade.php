@@ -12,9 +12,16 @@
 
     <form method="POST" action="/auth" enctype="multipart/form-data">
         @csrf
+        @if ($errors->any())
+            @foreach ($errors->all() as $error)
+                <li>
+                    {{ $error }}
+                </li>
+            @endforeach
+        @endif
         <h3>{{$competition -> name}}</h3>
         <div class="form-group">
-            <input type="hidden" name="competition_id" value="{{$competition -> id}}">
+            <input type="hidden" name="competition_id" value="{{ $competition->id }}">
         </div>
         <div class="form-group">
             <input type="text" name="university" placeholder="University">
@@ -94,12 +101,7 @@
             <label>Upload Foto KTM Anggota 2</label><br>
             <input type="file" name="members[1][ktm]">
         </div>
-        <div class="form-group">
-            <label>Upload Foto Bukti Pembayanan</label><br>
-            <input type="file" name="payment">
-        </div>
         <button type="submit">Daftar</button>
-
     </form>
 
 </body>
