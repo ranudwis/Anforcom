@@ -11,6 +11,11 @@
     <h2>Form Login</h2>
     <form method="POST" action="auth/login">
         @csrf
+        @if (session('status'))
+        <div>
+            {{session('status')}}
+        </div>
+        @endif
         <div class="form-group">
             <label>Username</label>
             <input type="text" name="email" value="{{old('email')}}">

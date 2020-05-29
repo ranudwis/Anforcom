@@ -29,6 +29,8 @@ class AuthController extends Controller
         return view('auth.dashboard');
     }
 
+
+
     /**
      * Display a listing of the resource.
      *
@@ -52,10 +54,15 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         if (auth()->attempt($request->only('email', 'password'))) {
-            return redirect('/dashboard');
+            return redirect('/dashboard')->with('status', 'Berhasil Login');
         } else {
-            return redirect('/');
+            return redirect('/')->with('status', 'Anda belum mempunyai akun');
         }
+    }
+    public function logout()
+    {
+        auth()->logout();
+        return redirect('/');
     }
 
     /**
