@@ -18,6 +18,7 @@ class CreateMembersTable extends Migration
             $table->unsignedBigInteger('team_id');
             $table->string('name');
             $table->string('email');
+            $table->string('contact');
             $table->string('nim');
             $table->string('ktm');
             $table->timestamps();
