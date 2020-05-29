@@ -29,7 +29,10 @@ class AuthController extends Controller
         return view('auth.dashboard');
     }
 
-
+    public function payment()
+    {
+        return view('auth.payment');
+    }
 
     /**
      * Display a listing of the resource.
@@ -95,6 +98,7 @@ class AuthController extends Controller
             'leader_nim' => 'required',
             'leader_ktm' => 'required|image',
             'members' => 'required',
+            'leader_contact' => 'required',
         ]);
 
         $leader = User::create([
@@ -102,6 +106,7 @@ class AuthController extends Controller
             'email' => $request->leader_email,
             'password' => $request->password,
             'nim' => $request->leader_nim,
+            'contact' => $request->leader_contact,
             'ktm' => $request->leader_ktm->store('public/images/ktm')
         ]);
 

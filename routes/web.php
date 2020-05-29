@@ -9,6 +9,7 @@ Route::get('/auth/competition', 'AuthController@competition');
 Route::post('/auth/login', 'AuthController@login');
 Route::get('/dashboard', 'AuthController@dashboard');
 Route::get('/logout', 'AuthController@logout');
+Route::get('/payment', 'AuthController@payment');
 
 Route::prefix('/admin')->group(function () {
     Route::view('/', 'admin.index');
