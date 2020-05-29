@@ -9,6 +9,8 @@ use App\Member;
 use App\Team;
 // use Illuminate\Validation\Validator;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {
@@ -20,6 +22,11 @@ class AuthController extends Controller
     public function index()
     {
         return view('auth.login');
+    }
+
+    public function dashboard()
+    {
+        return view('auth.dashboard');
     }
 
     /**
@@ -34,25 +41,22 @@ class AuthController extends Controller
     }
 
 
+    // $team = Team::where('user_id', $data->id)->first();
+    // $members = Member::where('team_id', $team->id);
+    // Session::put('team', $team->name);
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    // public function register()
-    // {
-
-    // }
-
-    // /**
-    //  * Show the form for creating a new resource.
-    //  *
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function create(Competition $competition)
-    // {
-    //     return view('auth.register', ['competition' => $competition]);
-    // }
+    public function login(Request $request)
+    {
+        if (auth()->attempt($request->only('email', 'password'))) {
+            return redirect('/dashboard');
+        } else {
+            return redirect('/');
+        }
+    }
 
     /**
      * Show the form for creating a new resource.
