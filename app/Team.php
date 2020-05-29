@@ -13,6 +13,6 @@ class Team extends Model
     }
 
     protected $fillable = [
-        'name', 'competition_id', 'university'
+        'name', 'competition_id', 'university', 'payment_confirm'
     ];
 }

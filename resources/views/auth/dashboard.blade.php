@@ -15,5 +15,5 @@ Anggota : <br>
     <a href="/logout">Logout</a>
 </div>
 <div>
-    <a href="/payment">Pembayaran</a>
+    <a href="/dashboard/payment">Pembayaran</a>
 </div>

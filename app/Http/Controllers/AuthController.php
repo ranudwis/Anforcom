@@ -144,9 +144,9 @@ class AuthController extends Controller
      * @param  \App\Auth  $auth
      * @return \Illuminate\Http\Response
      */
-    public function edit(Auth $auth)
+    public function edit(User $user)
     {
-        //
+        return view('auth.payment', ['user' => $user]);
     }
 
     /**
@@ -156,9 +156,13 @@ class AuthController extends Controller
      * @param  \App\Auth  $auth
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Auth $auth)
+    public function update(Request $request, User $user)
     {
-        //
+        Team::where('user_id', $user->id)
+            ->update([
+                'payment_confirm' => $request->payment_confirm->store('public/image/payment')
+            ]);
+        return redirect('/dashboard')->with('status', 'Berhasil di konfirmasi');
     }
 
     /**
