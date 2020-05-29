@@ -37,7 +37,7 @@ class AuthController extends Controller
     public function competition()
     {
         $competition = Competition::all();
-        return view('auth.competition', ['competition' => $competition]);
+        return view('auth.competition', compact('competition'));
     }
 
 
@@ -53,9 +53,9 @@ class AuthController extends Controller
     {
         if (auth()->attempt($request->only('email', 'password'))) {
             return redirect('/dashboard');
-        } else {
-            return redirect('/');
         }
+
+        return redirect('/');
     }
 
     /**
@@ -65,7 +65,7 @@ class AuthController extends Controller
      */
     public function register(Competition $competition)
     {
-        return view('auth.register', ['competition' => $competition]);
+        return view('auth.register', compact('competition'));
     }
 
 
