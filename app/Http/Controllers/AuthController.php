@@ -55,11 +55,9 @@ class AuthController extends Controller
     {
         if (auth()->attempt($request->only('email', 'password'))) {
             return redirect('/dashboard')->with('status', 'Berhasil Login');
-        } else {
-            return redirect('/')->with('status', 'Anda belum mempunyai akun');
         }
 
-        return redirect('/');
+        return redirect('/')->with('status', 'Anda belum mempunyai akun');
     }
     public function logout()
     {
