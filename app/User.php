@@ -8,11 +8,6 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-
-    public function teams()
-    {
-        return $this->hasOne(Team::class);
-    }
     use Notifiable;
 
     /**

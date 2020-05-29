@@ -7,10 +7,10 @@ use App\Competition;
 use App\User;
 use App\Member;
 use App\Team;
-// use Illuminate\Validation\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use App\Http\Requests\RegistrationRequest;
 
 class AuthController extends Controller
 {
@@ -82,21 +82,8 @@ class AuthController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RegistrationRequest $request)
     {
-        //validasi data
-        $request->validate([
-            'competition_id' => 'required|exists:competitions,id',
-            'university' => 'required',
-            'team_name' => 'required',
-            'leader_name' => 'required',
-            'leader_email' => 'required|unique:users,email',
-            'password' => 'required',
-            'leader_nim' => 'required',
-            'leader_ktm' => 'required|image',
-            'members' => 'required',
-        ]);
-
         $leader = User::create([
             'name' => $request->leader_name,
             'email' => $request->leader_email,
