@@ -15,4 +15,9 @@ class Team extends Model
     protected $fillable = [
         'name', 'competition_id', 'university'
     ];
+
+    public function leader()
+    {
+        return $this->belongsTo(User::class, 'leader_id');
+    }
 }
