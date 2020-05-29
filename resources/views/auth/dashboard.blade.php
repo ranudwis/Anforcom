@@ -11,4 +11,9 @@ Anggota : <br>
 {{ $member->name }}<br>
 @endforeach
 
-<a href="/logout">Logout</a>
+<div>
+    <a href="/logout">Logout</a>
+</div>
+<div>
+    <a href="/payment">Pembayaran</a>
+</div>
