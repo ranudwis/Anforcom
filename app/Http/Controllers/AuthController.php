@@ -29,7 +29,10 @@ class AuthController extends Controller
         return view('auth.dashboard');
     }
 
-
+    public function payment()
+    {
+        return view('auth.payment');
+    }
 
     /**
      * Display a listing of the resource.
@@ -89,6 +92,7 @@ class AuthController extends Controller
             'email' => $request->leader_email,
             'password' => $request->password,
             'nim' => $request->leader_nim,
+            'contact' => $request->leader_contact,
             'ktm' => $request->leader_ktm->store('public/images/ktm')
         ]);
 
@@ -126,9 +130,9 @@ class AuthController extends Controller
      * @param  \App\Auth  $auth
      * @return \Illuminate\Http\Response
      */
-    public function edit(Auth $auth)
+    public function edit(User $user)
     {
-        //
+        return view('auth.payment', ['user' => $user]);
     }
 
     /**
@@ -138,9 +142,13 @@ class AuthController extends Controller
      * @param  \App\Auth  $auth
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Auth $auth)
+    public function update(Request $request, User $user)
     {
-        //
+        Team::where('user_id', $user->id)
+            ->update([
+                'payment_confirm' => $request->payment_confirm->store('public/image/payment')
+            ]);
+        return redirect('/dashboard')->with('status', 'Berhasil di konfirmasi');
     }
 
     /**

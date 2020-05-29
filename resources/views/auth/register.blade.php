@@ -13,11 +13,11 @@
     <form method="POST" action="/auth" enctype="multipart/form-data">
         @csrf
         @if ($errors->any())
-            @foreach ($errors->all() as $error)
-                <li>
-                    {{ $error }}
-                </li>
-            @endforeach
+        @foreach ($errors->all() as $error)
+        <li>
+            {{ $error }}
+        </li>
+        @endforeach
         @endif
         <h3>{{$competition -> name}}</h3>
         <div class="form-group">
@@ -67,6 +67,14 @@
             @enderror
         </div>
         <div class="form-group">
+            <input type="text" name="leader_contact" placeholder="Leader Contact">
+            @error('leader_contact')
+            <div class="invalid-feedback">
+                {{$message}}
+            </div>
+            @enderror
+        </div>
+        <div class="form-group">
             <label>Upload Foto KTM Ketua</label><br>
             <input type="file" name="leader_ktm">
             @error('leader_ktm')
@@ -85,9 +93,13 @@
             <input type="text" name="members[0][nim]" placeholder="Member 1 NIM">
         </div>
         <div class="form-group">
+            <input type="text" name="members[0][contact]" placeholder="Contact">
+        </div>
+        <div class="form-group">
             <label>Upload Foto KTM Anggota 1</label><br>
             <input type="file" name="members[0][ktm]">
         </div>
+
         <div class="form-group">
             <input type="text" name="members[1][name]" placeholder="Member 2 Name">
         </div>
@@ -98,9 +110,13 @@
             <input type="text" name="members[1][nim]" placeholder="Member 2 NIM">
         </div>
         <div class="form-group">
+            <input type="text" name="members[1][contact]" placeholder="Contact">
+        </div>
+        <div class="form-group">
             <label>Upload Foto KTM Anggota 2</label><br>
             <input type="file" name="members[1][ktm]">
         </div>
+
         <button type="submit">Daftar</button>
     </form>
 

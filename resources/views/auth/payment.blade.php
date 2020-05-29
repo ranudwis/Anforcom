@@ -8,8 +8,10 @@
 </head>
 
 <body>
-    <form method="POST" action="">
-        <input type="file" name="payment_confirm">
+    <form method="POST" action="/dashboard/postpayment" enctype="multipart/form-data">
+        @csrf
+        <input type="file" name="payment_confirm"><br>
+        <button type="submit">Konfirmasi</button>
     </form>
 </body>
 
