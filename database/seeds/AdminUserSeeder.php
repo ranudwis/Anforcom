@@ -19,6 +19,7 @@ class AdminUserSeeder extends Seeder
         $admin->password = 'admin';
         $admin->role = 'admin';
         $admin->ktm = '';
+        $admin->contact = '';
         $admin->save();
     }
 }
