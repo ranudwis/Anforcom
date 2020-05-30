@@ -14,16 +14,6 @@ use App\Http\Requests\RegistrationRequest;
 
 class AuthController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        return view('auth.login');
-    }
-
     public function dashboard()
     {
         return view('auth.dashboard');
@@ -34,57 +24,32 @@ class AuthController extends Controller
         return view('auth.payment');
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function competition()
-    {
-        $competition = Competition::all();
-        return view('auth.competition', compact('competition'));
-    }
-
-
-    // $team = Team::where('user_id', $data->id)->first();
-    // $members = Member::where('team_id', $team->id);
-    // Session::put('team', $team->name);
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function login(Request $request)
     {
         if (auth()->attempt($request->only('email', 'password'))) {
-            return redirect('/dashboard')->with('status', 'Berhasil Login');
+            return redirect()->route('dashboard')->with('status', 'Berhasil Login');
         }
 
-        return redirect('/')->with('status', 'Anda belum mempunyai akun');
+        return back()->with('status', 'Anda belum mempunyai akun');
     }
+
     public function logout()
     {
         auth()->logout();
         return redirect('/');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function competition()
+    {
+        $competitions = Competition::all();
+        return view('auth.competition', compact('competitions'));
+    }
+
     public function register(Competition $competition)
     {
         return view('auth.register', compact('competition'));
     }
 
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(RegistrationRequest $request)
     {
         $leader = User::create([
@@ -110,54 +75,20 @@ class AuthController extends Controller
             }, $request->members)
         );
 
-        return redirect('/');
+        auth()->login($leader);
+        return redirect()->route('dashboard');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Auth  $auth
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Auth $auth)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Auth  $auth
-     * @return \Illuminate\Http\Response
-     */
     public function edit(User $user)
     {
         return view('auth.payment', ['user' => $user]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Auth  $auth
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request)
     {
         auth()->user()->team()->update([
             'payment_confirm' => $request->payment_confirm->store('public/image/payment')
         ]);
-        return redirect('/dashboard')->with('status', 'Berhasil di konfirmasi');
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Auth  $auth
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Auth $auth)
-    {
-        //
+        return redirect()->route('dashboard')->with('status', 'Berhasil di konfirmasi');
     }
 }

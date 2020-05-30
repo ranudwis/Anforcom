@@ -10,7 +10,7 @@
 <body>
     <h2>Form Pendaftaran Anforcom</h2>
 
-    <form method="POST" action="/auth" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
         @csrf
         @if ($errors->any())
         @foreach ($errors->all() as $error)

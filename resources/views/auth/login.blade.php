@@ -9,7 +9,7 @@
 
 <body>
     <h2>Form Login</h2>
-    <form method="POST" action="auth/login">
+    <form method="POST" action="{{ route('login') }}">
         @csrf
         @if (session('status'))
         <div>

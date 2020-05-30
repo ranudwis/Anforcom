@@ -2,15 +2,20 @@
 
 Route::get('/comingsoon', 'ComingSoonController@index')->name('comingsoon');
 
-Route::get('/', 'AuthController@index')->name('home');
-Route::post('/auth', 'AuthController@store');
-Route::get('/auth/{competition}/register', 'AuthController@register');
-Route::get('/auth/competition', 'AuthController@competition');
-Route::post('/auth/login', 'AuthController@login');
-Route::get('/dashboard', 'AuthController@dashboard');
-Route::get('/logout', 'AuthController@logout');
-Route::get('/dashboard/payment', 'AuthController@edit');
-Route::post('/dashboard/postpayment', 'AuthController@update');
+Route::view('/', 'homepage')->name('home');
+
+Route::view('/masuk', 'auth.login')->name('login');
+Route::post('/masuk', 'AuthController@login')->name('login');
+
+Route::get('/logout', 'AuthController@logout')->name('logout');
+
+Route::get('/daftar', 'AuthController@competition')->name('register');
+Route::get('/daftar/{competition}', 'AuthController@register')->name('register.competition');
+Route::post('/daftar', 'AuthController@store')->name('register');
+
+Route::get('/dashboard', 'AuthController@dashboard')->name('dashboard');
+Route::get('/dashboard/payment', 'AuthController@edit')->name('dashboard.payment');
+Route::post('/dashboard/postpayment', 'AuthController@update')->name('dashboard.payment');
 
 Route::prefix('/admin')
     ->namespace('Admin')

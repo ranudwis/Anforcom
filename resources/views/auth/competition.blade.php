@@ -8,8 +8,10 @@
 </head>
 
 <body>
-    @foreach($competition as $cmpt)
-    <a href="/auth/{{$cmpt -> id}}/register">{{$cmpt->name}}</a>
+    @foreach($competitions as $competition)
+        <a href="{{ route('register.competition', ['competition' => $competition->id]) }}">
+            {{ $competition->name }}
+        </a>
     @endforeach
 </body>
 
