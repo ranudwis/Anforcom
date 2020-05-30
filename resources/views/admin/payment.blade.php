@@ -1,4 +1,4 @@
-@extends('admin.partial.master')
+@extends('admin.partial.main')
 
 @section('content')
     <table border="1">
