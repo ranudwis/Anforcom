@@ -28,6 +28,7 @@ class PaymentController extends Controller
     {
         Storage::delete($team->paymment_confirm);
         $team->payment_confirm = null;
+        $team->save();
 
         return back()->with('status', 'Pembayaran tim ditolak dan dihapus');
     }

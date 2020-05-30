@@ -37,5 +37,5 @@ Route::prefix('/admin')
         Route::get('/pembayaran', 'PaymentController@index')->name('payment');
         Route::get('/pembayaran/{team}/konfirmasi', 'PaymentController@confirm')->name('payment.confirm');
         Route::get('/pembayaran/{team}/tolak', 'PaymentController@reject')->name('payment.reject');
-        Route::get('/pembayaran/{team}/hapus', 'PaymentController@delete')->name('paymenet.delete');
+        Route::get('/pembayaran/{team}/hapus', 'PaymentController@delete')->name('payment.delete');
     });
