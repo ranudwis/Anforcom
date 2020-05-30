@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('admin.partial.main')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Partner</title>
-</head>
-
-<body>
+@section('content')
     Tambah Media Partner
     @if (session('status'))
     <div class="alert alert-success" role="alert">
@@ -50,6 +43,4 @@
         </div>
         <button type="submit">Tambah Sponsor</button>
     </form>
-</body>
-
-</html>
+@endsection
