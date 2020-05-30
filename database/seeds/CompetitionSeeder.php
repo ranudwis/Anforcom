@@ -14,12 +14,14 @@ class CompetitionSeeder extends Seeder
     {
         $softdev = new Competition([
             'name' => 'Software development',
+            'slug' => 'softdev',
             'description' => 'Software development'
         ]);
         $softdev->save();
 
         $dataMining = new Competition([
             'name' => 'Data Mining',
+            'slug' => 'datmin',
             'description' => 'Data Mining'
         ]);
         $dataMining->save();

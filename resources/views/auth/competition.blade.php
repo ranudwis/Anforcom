@@ -9,7 +9,7 @@
 
 <body>
     @foreach($competitions as $competition)
-        <a href="{{ route('register.competition', ['competition' => $competition->id]) }}">
+        <a href="{{ route('register.competition', ['competition' => $competition->slug]) }}">
             {{ $competition->name }}
         </a>
     @endforeach

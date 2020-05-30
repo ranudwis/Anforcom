@@ -29,23 +29,24 @@
                     {{ $team->university }}
                 </td>
                 <td>
-                    {{ dd($team->leader)}}
                     {{ $team->leader->name }} {{ $team->leader->email }}
                 </td>
                 <td>
-                    @if ($team->payment_confirmation)
-                        <a href="{{ Storage::url($team->payment_confirm) }}">Bukti pembayaran</a>
+                    @if ($team->payment_confirm)
+                        <a href="{{ Storage::url($team->payment_confirm) }}" target="_blank">
+                            Bukti pembayaran
+                        </a>
                     @else
                         Belum membayar
                     @endif
                 </td>
                 <td>
-                    @if ($team->payment_confirmation)
-                        <a href="{{ route('admin.payment.confirm') }}">Konfirmasi</a>
-                        <a href="{{ route('admin.payment.reject') }}">Tolak</a>
+                    @if ($team->payment_confirm)
+                        <a href="{{ route('admin.payment.confirm', ['team' => $team->id]) }}">Konfirmasi</a>
+                        <a href="{{ route('admin.payment.reject', ['team' => $team->id]) }}">Tolak</a>
                     @endif
 
-                    <a href="{{ route('admin.payment.delete') }}">Hapus</a>
+                    <a href="{{ route('admin.payment.delete', ['team' => $team->id]) }}">Hapus</a>
                 </td>
             </tr>
         @endforeach
