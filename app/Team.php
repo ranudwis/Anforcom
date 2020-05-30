@@ -20,4 +20,9 @@ class Team extends Model
     {
         return $this->belongsTo(User::class, 'leader_id');
     }
+
+    public function submission()
+    {
+        return $this->hasMany(Submission::class);
+    }
 }

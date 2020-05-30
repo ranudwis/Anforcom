@@ -20,6 +20,9 @@
         <li>
             <a href="{{ route('admin.medpart') }}">Media Partner</a>
         </li>
+        <li>
+            <a href="{{ route('admin.task') }}">Tambah Tugas</a>
+        </li>
     </ul>
     @yield('content')
 </body>

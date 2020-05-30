@@ -43,4 +43,7 @@ Route::prefix('/admin')
         Route::post('/sponsor', 'SponsorController@uploadSponsor')->name('sponsor');
         Route::view('/medpart', 'admin.medpart')->name('medpart');
         Route::post('/medpart', 'MedpartController@uploadMedpart')->name('medpart');
+
+        Route::get('/task', 'TaskController@index')->name('task');
+        Route::post('/task', 'TaskController@addTask')->name('task');
     });
