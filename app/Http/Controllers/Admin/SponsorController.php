@@ -3,12 +3,27 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Sponsor;
 use Illuminate\Http\Request;
 
 class SponsorController extends Controller
 {
-    public function FunctionName(Type $var = null)
+    public function uploadSponsor(Request $request)
     {
-        # code...
+
+        $request->validate([
+            'name' => 'required',
+            'sponsor' => 'required',
+            'widht' => 'required',
+            'height' => 'required',
+        ]);
+        Sponsor::create([
+            'name' => $request->name,
+            'logo' => $request->sponsor->store('public/image/sponsor'),
+            'widht' => $request->widht,
+            'height' => $request->height,
+        ]);
+
+        return back()->with('status', 'Sponsor berhasil ditambahkan');
     }
 }

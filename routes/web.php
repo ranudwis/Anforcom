@@ -40,5 +40,7 @@ Route::prefix('/admin')
         Route::get('/pembayaran/{team}/hapus', 'PaymentController@delete')->name('paymenet.delete');
         Route::get('/pembayaran/{team}/hapus', 'PaymentController@delete')->name('paymenet.delete');
         Route::view('/sponsor', 'admin.partial.sponsor')->name('sponsor');
+        Route::post('/sponsor', 'SponsorController@uploadSponsor')->name('sponsor');
         Route::view('/medpart', 'admin.partial.medpart')->name('medpart');
+        Route::post('/medpart', 'MedpartController@uploadMedpart')->name('medpart');
     });
