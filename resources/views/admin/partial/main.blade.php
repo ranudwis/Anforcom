@@ -9,6 +9,9 @@
             <li>
                 <a href="{{ route('admin.payment') }}">Pembayaran</a>
             </li>
+            <li>
+                <a href="{{ route('logout') }}">Keluar</a>
+            </li>
         </ul>
         @yield('content')
     </body>

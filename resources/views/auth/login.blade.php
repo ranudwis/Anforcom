@@ -35,7 +35,7 @@
             @enderror
         </div>
         <button type="submit">Login</button>
-        <a href="/auth/competition">Register</a>
+        <a href="{{ route('register') }}">Register</a>
     </form>
 </body>
 

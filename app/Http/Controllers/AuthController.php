@@ -14,11 +14,6 @@ use App\Http\Requests\RegistrationRequest;
 
 class AuthController extends Controller
 {
-    public function dashboard()
-    {
-        return view('auth.dashboard');
-    }
-
     public function payment()
     {
         return view('auth.payment');
@@ -27,7 +22,11 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         if (auth()->attempt($request->only('email', 'password'))) {
-            return redirect()->route('dashboard')->with('status', 'Berhasil Login');
+            if (auth()->user()->role === 'admin') {
+                return redirect()->route('admin.index');
+            }
+
+            return redirect()->route('dashboard.index')->with('status', 'Berhasil Login');
         }
 
         return back()->with('status', 'Anda belum mempunyai akun');
@@ -76,19 +75,6 @@ class AuthController extends Controller
         );
 
         auth()->login($leader);
-        return redirect()->route('dashboard');
-    }
-
-    public function edit(User $user)
-    {
-        return view('auth.payment', ['user' => $user]);
-    }
-
-    public function update(Request $request)
-    {
-        auth()->user()->team()->update([
-            'payment_confirm' => $request->payment_confirm->store('public/image/payment')
-        ]);
-        return redirect()->route('dashboard')->with('status', 'Berhasil di konfirmasi');
+        return redirect()->route('dashboard.index');
     }
 }
