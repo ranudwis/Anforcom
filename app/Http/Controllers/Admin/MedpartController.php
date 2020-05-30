@@ -15,7 +15,7 @@ class MedpartController extends Controller
         $request->validate([
             'name' => 'required',
             'logo' => 'required',
-            'widht' => 'required',
+            'width' => 'required',
             'height' => 'required'
         ]);
 
@@ -23,7 +23,7 @@ class MedpartController extends Controller
         Medpart::create([
             'name' => $request->name,
             'logo' => $request->medpart->store('public/images/medpart'),
-            'widht' => $request->widht,
+            'width' => $request->width,
             'height' => $request->height
         ]);
 

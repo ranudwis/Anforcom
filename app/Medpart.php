@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Medpart extends Model
 {
     protected $fillable = [
-        'name', 'logo', 'widht', 'height'
+        'name', 'logo', 'width', 'height'
     ];
 }

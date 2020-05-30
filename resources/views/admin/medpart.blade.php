@@ -26,8 +26,8 @@
             @enderror
         </div>
         <div class="form-group">
-            <input type="number" name="widht" placeholder="Lebar">
-            @error('widht')
+            <input type="number" name="width" placeholder="Lebar">
+            @error('width')
             <div class="invalid-feeback">
                 {{$message}}
             </div>

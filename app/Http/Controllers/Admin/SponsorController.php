@@ -14,13 +14,14 @@ class SponsorController extends Controller
         $request->validate([
             'name' => 'required',
             'sponsor' => 'required',
-            'widht' => 'required',
+            'width' => 'required',
             'height' => 'required',
         ]);
+
         Sponsor::create([
             'name' => $request->name,
             'logo' => $request->sponsor->store('public/image/sponsor'),
-            'widht' => $request->widht,
+            'width' => $request->width,
             'height' => $request->height,
         ]);
 

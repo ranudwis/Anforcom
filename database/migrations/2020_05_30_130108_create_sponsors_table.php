@@ -17,7 +17,7 @@ class CreateSponsorsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('logo');
-            $table->unsignedInteger('widht');
+            $table->unsignedInteger('width');
             $table->unsignedInteger('height');
             $table->timestamps();
         });

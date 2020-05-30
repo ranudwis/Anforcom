@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('admin.partial.main')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sponsorship</title>
-</head>
-
-<body>
+@section('content')
     Tambah sponsor
     <form method="POST" action="{{ route('admin.sponsor') }}" enctype="multipart/form-data">
         @csrf
@@ -28,8 +21,8 @@
             @enderror
         </div>
         <div class="form-group">
-            <input type="number" name="widht" placeholder="Lebar">
-            @error('widht')
+            <input type="number" name="width" placeholder="Lebar">
+            @error('width')
             <div class="invalid-feeback">
                 {{$message}}
             </div>
@@ -45,6 +38,4 @@
         </div>
         <button type="submit">Tambah Sponsor</button>
     </form>
-</body>
-
-</html>
+@endsection
