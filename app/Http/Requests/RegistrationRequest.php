@@ -42,21 +42,21 @@ class RegistrationRequest extends FormRequest
             $data = $validator->valid();
 
             foreach ($data['members'] as $i => $member) {
-                if (! $member['name']) {
+                if (!$member['name']) {
                     $validator->errors()->add($i . 'name', 'Nama harus diisi');
                 }
 
-                if (! $member['email']) {
+                if (!$member['email']) {
                     $validator->errors()->add($i . 'email', 'Email harus diisi');
                 }
 
-                if (! $member['contact']) {
+                if (!$member['contact']) {
                     $validator->errors()->add($i . 'contact', 'Line / WA harus diisi');
                 }
 
-                if (! $member['ktm']) {
-                    $validator->errors()->add($i . 'ktm', 'KTM harus diisi');
-                }
+                // if (! $member['ktm']) {
+                //     $validator->errors()->add($i . 'ktm', 'KTM harus diisi');
+                // }
             }
         });
     }
@@ -71,7 +71,7 @@ class RegistrationRequest extends FormRequest
             'password.required' => 'Password harus diisi',
             'password.confirmed' => 'Konfirmasi password harus sama dengan password',
             'leader_nim' => 'NIM ketua harus diisi',
-            'leader_ktm' => 'KTM ketua harus diisi',
+            // 'leader_ktm' => 'KTM ketua harus diisi',
             'members.required' => 'Harus memiliki anggota',
         ];
     }

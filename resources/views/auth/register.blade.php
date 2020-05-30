@@ -24,7 +24,7 @@
             <input type="hidden" name="competition_id" value="{{ $competition->id }}">
         </div>
         <div class="form-group">
-            <input type="text" name="university" placeholder="University">
+            <input type="text" name="university" placeholder="University" value="{{old('university')}}">
             @error('university')
             <div class="invalid-feedback">
                 {{$message}}
@@ -32,10 +32,10 @@
             @enderror
         </div>
         <div class="form-group">
-            <input type="text" name="team_name" placeholder="Team Name">
+            <input type="text" name="team_name" placeholder="Team Name" value="{{old('team_name')}}">
         </div>
         <div class="form-group">
-            <input type="text" name="leader_name" placeholder="Leader Name">
+            <input type="text" name="leader_name" placeholder="Leader Name" value="{{old('leader_name')}}">
             @error('leader_name')
             <div class="invalid-feedback">
                 {{$message}}
@@ -43,7 +43,7 @@
             @enderror
         </div>
         <div class="form-group">
-            <input type="text" name="leader_email" placeholder="Leader Email">
+            <input type="text" name="leader_email" placeholder="Leader Email" value="{{old('leader_email')}}">
             @error('leader_email')
             <div class="invalid-feedback">
                 {{$message}}
@@ -59,7 +59,7 @@
             @enderror
         </div>
         <div class="form-group">
-            <input type="text" name="leader_nim" placeholder="Leader NIM">
+            <input type="text" name="leader_nim" placeholder="Leader NIM" value="{{old('leader_nim')}}">
             @error('leader_nim')
             <div class="invalid-feedback">
                 {{$message}}
@@ -67,7 +67,7 @@
             @enderror
         </div>
         <div class="form-group">
-            <input type="text" name="leader_contact" placeholder="Leader Contact">
+            <input type="text" name="leader_contact" placeholder="Leader Contact" value="{{old('leader_contact')}}">
             @error('leader_contact')
             <div class="invalid-feedback">
                 {{$message}}
@@ -84,10 +84,10 @@
             @enderror
         </div>
         <div class="form-group">
-            <input type="text" name="members[0][name]" placeholder="Member 1 Name">
+            <input type="text" name="members[0][name]" placeholder="Member 1 Name" value="{{old('members[0][name]')}}">
         </div>
         <div class="form-group">
-            <input type="text" name="members[0][email]" placeholder="Member 1 Email">
+            <input type="text" name="members[0][email]" placeholder="Member 1 Email" value="">
         </div>
         <div class="form-group">
             <input type="text" name="members[0][nim]" placeholder="Member 1 NIM">

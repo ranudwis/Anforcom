@@ -142,12 +142,11 @@ class AuthController extends Controller
      * @param  \App\Auth  $auth
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request)
     {
-        Team::where('user_id', $user->id)
-            ->update([
-                'payment_confirm' => $request->payment_confirm->store('public/image/payment')
-            ]);
+        auth()->user()->team()->update([
+            'payment_confirm' => $request->payment_confirm->store('public/image/payment')
+        ]);
         return redirect('/dashboard')->with('status', 'Berhasil di konfirmasi');
     }
 
