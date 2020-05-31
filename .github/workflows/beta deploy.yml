@@ -23,10 +23,6 @@ jobs:
       - name: Deploying
         uses: wei/rclone@v1
         env:
-          RCLONE_CONFIG_ANFORCOM_TYPE: webdav
-          RCLONE_CONFIG_ANFORCOM_URL: ${{ secrets.ANFORCOM_WEBDISK_URL }}
-          RCLONE_CONFIG_ANFORCOM_VENDOR: other
-          RCLONE_CONFIG_ANFORCOM_USER: ${{ secrets.ANFORCOM_WEBDISK_USERNAME }}
-          RCLONE_CONFIG_ANFORCOM_PASS: ${{ secrets.ANFORCOM_WEBDISK_PASSWORD }}
+          RCLONE_CONF: ${{ secrets.ANFORCOM_RCLONE_CONF }}
         with:
           args: copy ./ anforcom:beta/
