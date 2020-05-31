@@ -1,0 +1,25 @@
+name: Beta Deployment
+
+on: push
+
+jobs:
+  deploy:
+    name: Deploying
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Composer package cache
+        uses: actions/cache@v2
+        with:
+          path: ./vendor
+          key: compsoer-${{ hashFiles('composer.lock') }}
+          restore-keys: |
+            composer-
+
+      - name: Deploying
+        uses: wei/rclone@v1
+        env:
+          RCLONE_CONF: ${{ secrets.ANFORCOM_RCLONE_CONF }}
+        with:
+          args: copy ./ anforcom:beta/
