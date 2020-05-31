@@ -1,0 +1,205 @@
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Login Page</title>
+
+	<!--Bootsrap 4 CDN-->
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+	<!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+	<!--Custom styles-->
+	<style type="text/css">
+		.card {
+			margin-top: auto;
+			min-width: 40%;
+			margin-bottom: auto;
+			background-color: rgba(0, 0, 0, 0.5) !important;
+		}
+
+		.social_icon span {
+			font-size: 30px;
+			margin-left: 10px;
+			color: #FFC312;
+		}
+
+		.social_icon span:hover {
+			color: white;
+			cursor: pointer;
+		}
+
+		.card-header h3 {
+			color: white;
+		}
+
+		.input-group-prepend span {
+			width: 40px;
+			background-color: #FFC312;
+			color: black;
+			border: 0 !important;
+		}
+
+		input:focus {
+			outline: 0 0 0 0 !important;
+			box-shadow: 0 0 0 0 !important;
+
+		}
+
+		.links {
+			color: white;
+		}
+
+		.links a {
+			margin-left: 4px;
+		}
+
+		#logo--av img {
+			transition: transform 0.3s;
+		}
+
+		#logo--av img:hover {
+			transform: scale(1.1);
+			-webkit-filter: drop-shadow(1px 1px 10px #FFF);
+			filter: drop-shadow(1px 1px 10px #fff);
+		}
+	</style>
+</head>
+
+<body>
+	<section id="gradient" class="info-header" style="background-color: #09233E;">
+		<div class="container">
+			<div class="d-flex justify-content-center h-100">
+				<div class="card">
+					<div class="card-header text-center">
+						<div class="row mb-2 mt-3">
+							<div class="col-lg">
+								<h3 class="text-uppercase"><b>Login Peserta</b></h3>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg">
+								<div id="logo--av">
+									<a href="login2.html"><img src="helmwkwk.png" alt="av" width="50px"></a>
+								</div>
+							</div>
+						</div>
+						<div class="card-body pr-1 pl-1">
+							<div class="row">
+								<div class="col-lg">
+									<form>
+										<div class="input-group form-group">
+											<div class="input-group-prepend">
+												<span class="input-group-text"><i class="fas fa-envelope"></i></span>
+											</div>
+											<input type="text" class="form-control" name="" placeholder="Email"
+												required>
+										</div>
+										<div class="input-group form-group">
+											<div class="input-group-prepend">
+												<span class="input-group-text"><i class="fas fa-key"></i></span>
+											</div>
+											<input type="password" class="form-control" name="" placeholder="Password"
+												required>
+										</div>
+										<div class="form-group">
+											<input type="submit" value="Login"
+												class="btn float-right btn-primary btn-block">
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="row mt-3 mb-0">
+								<div class="col-lg">
+									<div class="d-flex justify-content-center social_icon">
+										<a href=""><span><i class="fab fa-facebook-square"></i></span></a>
+										<a href=""><span><i class="fab fa-instagram-square"></i></span></a>
+										<a href=""><span><i class="fab fa-pinterest-square"></i></span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer pl-0 pr-0 mt-0">
+							<div class="d-flex justify-content-center links">
+								Lupa password?<a href="#" class="text-warning">Reset di sini!</a>
+							</div>
+							<div class="d-flex justify-content-center links">
+								Belum punya akun?<a href="#" class="text-primary">Daftar sekarang!</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+</body>
+<script>
+	var colors = new Array(
+		[1, 49, 79],
+		[3, 86, 138],
+		[51, 131, 196],
+		[209, 154, 2],
+		[243, 177, 0],
+		[255, 187, 0]);
+
+	var step = 0;
+	//color table indices for: 
+	// current color left
+	// next color left
+	// current color right
+	// next color right
+	var colorIndices = [0, 1, 2, 3];
+
+	//transition speed
+	var gradientSpeed = 0.002;
+
+	function updateGradient() {
+
+		if ($ === undefined) return;
+
+		var c0_0 = colors[colorIndices[0]];
+		var c0_1 = colors[colorIndices[1]];
+		var c1_0 = colors[colorIndices[2]];
+		var c1_1 = colors[colorIndices[3]];
+
+		var istep = 1 - step;
+		var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
+		var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
+		var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
+		var color1 = "rgb(" + r1 + "," + g1 + "," + b1 + ")";
+
+		var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
+		var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
+		var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
+		var color2 = "rgb(" + r2 + "," + g2 + "," + b2 + ")";
+
+		$('#gradient').css({
+			background: "-webkit-gradient(linear, left top, right top, from(" + color1 + "), to(" + color2 + "))"
+		}).css({
+			background: "-moz-linear-gradient(left, " + color1 + " 0%, " + color2 + " 100%)"
+		});
+
+		step += gradientSpeed;
+		if (step >= 1) {
+			step %= 1;
+			colorIndices[0] = colorIndices[1];
+			colorIndices[2] = colorIndices[3];
+
+			//pick two new target color indices
+			//do not pick the same as the current one
+			colorIndices[1] = (colorIndices[1] + Math.floor(1 + Math.random() * (colors.length - 1))) % colors.length;
+			colorIndices[3] = (colorIndices[3] + Math.floor(1 + Math.random() * (colors.length - 1))) % colors.length;
+
+		}
+	}
+
+	setInterval(updateGradient, 10);
+</script>
+
+</html>
