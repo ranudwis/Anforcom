@@ -14,7 +14,8 @@ class Competition extends Model
     {
         return 'slug';
     }
-    public function task()
+
+    public function tasks()
     {
         return $this->hasMany(Task::class);
     }

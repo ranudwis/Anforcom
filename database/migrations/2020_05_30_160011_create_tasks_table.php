@@ -20,9 +20,10 @@ class CreateTasksTable extends Migration
             $table->text('description');
             $table->date('deadline');
             $table->timestamps();
+
             $table->foreign('competition_id')
                 ->references('id')->on('competitions')
-                ->onDelete('CASCADE');
+                ->onDelete('RESTRICT');
         });
     }
 

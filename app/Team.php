@@ -21,7 +21,7 @@ class Team extends Model
         return $this->belongsTo(User::class, 'leader_id');
     }
 
-    public function submission()
+    public function submissions()
     {
         return $this->hasMany(Submission::class);
     }
