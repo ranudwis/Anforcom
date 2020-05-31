@@ -13,7 +13,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ./vendor
-          key: compsoer-${{ hashFiles('composer.lock') }}
+          key: composer-${{ hashFiles('composer.lock') }}
           restore-keys: |
             composer-
 
@@ -25,4 +25,4 @@ jobs:
         env:
           RCLONE_CONF: ${{ secrets.ANFORCOM_RCLONE_CONF }}
         with:
-          args: copy ./ anforcom:beta/
+          args: copy -L ./ anforcom:public_html/beta/
