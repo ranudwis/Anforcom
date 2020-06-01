@@ -19,4 +19,4 @@ jobs:
           RCLONE_CONFIG_ANFORCOM_URL: ${{ secrets.ANFORCOM_WEBDISK_URL }}
           RCLONE_CONFIG_ANFORCOM_USER: ${{ secrets.ANFORCOM_WEBDISK_USERNAME }}
           RCLONE_CONFIG_ANFORCOM_PASS: ${{ secrets.ANFORCOM_WEBDISK_PASSWORD }}
-        run: rclone copy -L --exclude .git/ --exclude vendor/ --transfers 1 --checkers 1 ./ anforcom:public_html/beta/
+        run: rclone copy -L --exclude .git/ --exclude ./vendor/ --transfers 1 --checkers 1 ./ anforcom:public_html/beta/
