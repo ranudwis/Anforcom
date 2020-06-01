@@ -1,0 +1,27 @@
+name: Production Deployment
+
+on:
+  push:
+    tags:
+      - 'v1.*'
+
+jobs:
+  deploy:
+    name: Deploying
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Deploying
+        uses: wei/rclone@v1
+        env:
+          RCLONE_CONF: ${{ secrets.ANFORCOM_RCLONE_CONF }}
+        with:
+          args: copy -L --exclude .git/ --exclude vendor/ ./ anforcom:
+
+      - name: Copying public to public_html
+        uses: wei/rclone@v1
+        env:
+          RCLONE_CONF: ${{ secrets.ANFORCOM_RCLONE_CONF }}
+        with:
+          args: copy -L anforcom:public/ anforcom:public_html/
