@@ -28,9 +28,9 @@ jobs:
 
       - name: Deploying Vendor
         env:
-          RLCONE_CONFIG_ANFORCOM_TYPE: webdav
-          RLCONE_CONFIG_ANFORCOM_VENDOR: other
-          RLCONE_CONFIG_ANFORCOM_URL: ${{ secrets.ANFORCOM_WEBDISK_URL }}
-          RLCONE_CONFIG_ANFORCOM_USER: ${{ secrets.ANFORCOM_WEBDISK_USERNAME }}
-          RLCONE_CONFIG_ANFORCOM_PASS: ${{ secrets.ANFORCOM_WEBDISK_PASSWORD }}
+          RCLONE_CONFIG_ANFORCOM_TYPE: webdav
+          RCLONE_CONFIG_ANFORCOM_VENDOR: other
+          RCLONE_CONFIG_ANFORCOM_URL: ${{ secrets.ANFORCOM_WEBDISK_URL }}
+          RCLONE_CONFIG_ANFORCOM_USER: ${{ secrets.ANFORCOM_WEBDISK_USERNAME }}
+          RCLONE_CONFIG_ANFORCOM_PASS: ${{ secrets.ANFORCOM_WEBDISK_PASSWORD }}
         run: rclone copy -L vendor/ anforcom:public_html/beta/vendor/
