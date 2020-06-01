@@ -13,15 +13,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Deploying
-        uses: wei/rclone@v1
-        env:
-          RCLONE_CONF: ${{ secrets.ANFORCOM_RCLONE_CONF }}
-        with:
-          args: 'copy -L --exclude .git/ --exclude vendor/ ./ anforcom:'
-
       - name: Installing rclone
         run: curl https://rclone.org/install.sh | sudo bash
+
+      - name: Deploying
+        env:
+          RCLONE_CONFIG_ANFORCOM_TYPE: webdav
+          RCLONE_CONFIG_ANFORCOM_VENDOR: other
+          RCLONE_CONFIG_ANFORCOM_URL: ${{ secrets.ANFORCOM_WEBDISK_URL }}
+          RCLONE_CONFIG_ANFORCOM_USER: ${{ secrets.ANFORCOM_WEBDISK_USERNAME }}
+          RCLONE_CONFIG_ANFORCOM_PASS: ${{ secrets.ANFORCOM_WEBDISK_PASSWORD }}
+        run: 'rclone copy -L --exclude .git/ --exclude vendor/ ./ anforcom:'
 
       - name: Copying public to public_html
         env:
