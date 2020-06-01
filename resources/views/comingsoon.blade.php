@@ -158,15 +158,13 @@
     <script>
       var releaseDate = "{{ env('ANFORCOM_OPEN_COMING_SOON') }}";
       $('#dateDisplay').text(moment(releaseDate).format('D MMMM YYYY'))
-      var date = releaseDate.substr(8, 10);
-      var month = releaseDate.substr(6, 7);
-      var year = releaseDate.substr(0, 4);
+      var releaseDateSplitted = releaseDate.split('-')
       $(".cd100").countdown100({
         /*Set Endtime here*/
         /*Endtime must be > current time*/
-        endtimeYear: parseInt(year),
-        endtimeMonth: parseInt(month),
-        endtimeDate: parseInt(date),
+        endtimeYear: parseInt(releaseDateSplitted[0]),
+        endtimeMonth: parseInt(releaseDateSplitted[1]),
+        endtimeDate: parseInt(releaseDateSplitted[2]),
         endtimeHours: 0,
         endtimeMinutes: 0,
         endtimeSeconds: 0,
