@@ -26,7 +26,7 @@ jobs:
         run: composer install --no-dev --no-interaction
 
       - name: Installing rclone
-        run: sudo apt update && sudo apt install rclone
+        run: curl https://rclone.org/install.sh | sudo bash
 
       - name: Deploying Vendor
         env:
