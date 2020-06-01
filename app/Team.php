@@ -6,15 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Team extends Model
 {
+    protected $fillable = [
+        'name', 'leader_id', 'competition_id', 'university', 'leader_nim', 'leader_ktm',
+    ];
 
     public function members()
     {
         return $this->hasMany(Member::class);
     }
-
-    protected $fillable = [
-        'name', 'competition_id', 'university'
-    ];
 
     public function leader()
     {

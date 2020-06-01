@@ -17,7 +17,7 @@ class CreateRegistrationsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('event_id');
-            $table->string('payment_confirmation');
+            $table->string('payment_confirmation')->nullable();
             $table->enum('status', ['inactive', 'rejected', 'active'])->default('inactive');
             $table->timestamps();
 

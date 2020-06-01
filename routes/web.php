@@ -8,12 +8,21 @@ Route::middleware('guest')->group(function () {
     Route::view('/masuk', 'auth.login')->name('login');
     Route::post('/masuk', 'AuthController@login')->name('login');
 
-    Route::get('/daftar', 'AuthController@competition')->name('register');
-    Route::get('/daftar/{competition}', 'AuthController@register')->name('register.competition');
+    Route::get('/daftar', 'AuthController@register')->name('register');
     Route::post('/daftar', 'AuthController@store')->name('register');
 });
 
 Route::get('/logout', 'AuthController@logout')->middleware('auth')->name('logout');
+
+Route::prefix('/lomba')->name('competition.')->group(function () {
+    Route::get('/', 'CompetitionPageController@index')->name('index');
+    Route::get('/{competition}', 'CompetitionPageController@show')->name('show');
+});
+
+Route::middleware('auth')->group(function () {
+    Route::get('/daftar/{event}', 'EnrollmentController@index')->name('enroll');
+    Route::post('/daftar/{event}', 'EnrollmentController@enroll')->name('enroll');
+});
 
 Route::prefix('/dashboard')
     ->namespace('Dashboard')

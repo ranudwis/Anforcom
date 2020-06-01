@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Auth;
-use App\Competition;
+use App\Event;
 use App\User;
 use App\Member;
 use App\Team;
@@ -38,43 +38,32 @@ class AuthController extends Controller
         return redirect('/');
     }
 
-    public function competition()
+    public function register(Request $request)
     {
-        $competitions = Competition::all();
-        return view('auth.competition', compact('competitions'));
+        $formAction = $request->has('next') ?
+            route('register', ['next' => $request->next]) :
+            route('register');
+
+        return view('auth.register', compact('formAction'));
     }
 
-    public function register(Competition $competition)
+    public function store(Request $request)
     {
-        return view('auth.register', compact('competition'));
-    }
-
-    public function store(RegistrationRequest $request)
-    {
-        $leader = User::create([
-            'name' => $request->leader_name,
-            'email' => $request->leader_email,
-            'password' => $request->password,
-            'nim' => $request->leader_nim,
-            'contact' => $request->leader_contact,
-            'ktm' => $request->leader_ktm->store('public/images/ktm')
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|confirmed',
+            'contact' => 'required',
         ]);
 
-        $team = $leader->team()->create([
-            'name' => $request->team_name,
-            'competition_id' => $request->competition_id,
-            'university' => $request->university
-        ]);
+        $user = User::create($request->only('name', 'email', 'password', 'contact'));
 
-        $team->members()->createMany(
-            array_map(function ($member) {
-                return $member + [
-                    'ktm' => $member['ktm']->store('public/images/ktm')
-                ];
-            }, $request->members)
-        );
+        auth()->login($user);
 
-        auth()->login($leader);
+        if ($request->has('next')) {
+            return redirect()->route('enroll', ['event' => $request->next]);
+        }
+
         return redirect()->route('dashboard.index');
     }
 }

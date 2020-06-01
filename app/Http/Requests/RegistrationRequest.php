@@ -24,14 +24,10 @@ class RegistrationRequest extends FormRequest
     public function rules()
     {
         return [
-            'competition_id' => 'required|exists:competitions,id',
             'university' => 'required',
             'team_name' => 'required',
-            'leader_name' => 'required',
-            'leader_email' => 'required|unique:users,email',
-            'leader_contact' => 'required',
-            'password' => 'required',
             'leader_nim' => 'required',
+            'leader_contact' => 'required',
             'leader_ktm' => 'required|image',
             'members' => 'required',
         ];

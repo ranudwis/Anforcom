@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Competition;
+use App\Event;
 use App\Http\Controllers\Controller;
 use App\Task;
 use Illuminate\Http\Request;
@@ -11,7 +11,7 @@ class TaskController extends Controller
 {
     public function index()
     {
-        $competitions = Competition::all();
+        $competitions = Event::all();
         return view('admin.task', compact('competitions'));
     }
 
