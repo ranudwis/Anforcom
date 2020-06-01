@@ -16,9 +16,9 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ./vendor
-          key: composer-${{ hashFiles('composer.lock') }}
+          key: beta-composer-${{ hashFiles('composer.lock') }}
           restore-keys: |
-            composer-
+            beta-composer-
 
       - name: Composer package install
         run: composer install --no-dev --no-interaction

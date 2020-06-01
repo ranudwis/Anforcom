@@ -18,9 +18,9 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ./vendor
-          key: composer-${{ hashFiles('composer.lock') }}
+          key: prod-composer-${{ hashFiles('composer.lock') }}
           restore-keys: |
-            composer-
+            prod-composer-
 
       - name: Composer package install
         run: composer install --no-dev --no-interaction
