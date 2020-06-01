@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Competition;
+use App\Event;
 
-class CompetitionSeeder extends Seeder
+class EventSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,17 +12,19 @@ class CompetitionSeeder extends Seeder
      */
     public function run()
     {
-        $softdev = new Competition([
+        $softdev = new Event([
+            'type' => 'competition',
             'name' => 'Software development',
             'slug' => 'softdev',
-            'description' => 'Software development'
+            'template_name' => 'softdev'
         ]);
         $softdev->save();
 
-        $dataMining = new Competition([
+        $dataMining = new Event([
+            'type' => 'competition',
             'name' => 'Data Mining',
             'slug' => 'datmin',
-            'description' => 'Data Mining'
+            'template_name' => 'datmin',
         ]);
         $dataMining->save();
     }

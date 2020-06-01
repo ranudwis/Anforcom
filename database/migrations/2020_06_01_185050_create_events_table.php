@@ -17,7 +17,7 @@ class CreateEventsTable extends Migration
             $table->bigIncrements('id');
             $table->string('slug')->index();
             $table->string('name');
-            $table->unsignedBigInteger('register_timeline_id');
+            $table->unsignedBigInteger('register_timeline_id')->nullable();
             $table->enum('type', ['event', 'competition']);
             $table->string('template_name');
             $table->timestamps();
