@@ -1,7 +1,9 @@
 name: Beta Vendor Deployment
 
-on: push
-
+on:
+  push:
+    paths:
+      - composer.lock
 jobs:
   deploy:
     name: Deploying
