@@ -3,6 +3,7 @@ name: Production Vendor Deployment
 on:
   push:
     tags:
+      - 'v1'
       - 'v1.*'
     paths:
       - composer.lock
