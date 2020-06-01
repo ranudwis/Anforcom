@@ -1,10 +1,6 @@
 name: Beta Deployment
 
-on:
-  push:
-    tags:
-      - '!v1'
-      - '!v1.*'
+on: push
 
 jobs:
   deploy:
