@@ -21,7 +21,7 @@ jobs:
           args: 'copy -L --exclude .git/ --exclude vendor/ ./ anforcom:'
 
       - name: Installing rclone
-        run: apt update && apt install rclone
+        run: sudo apt update && sudo apt install rclone
 
       - name: Copying public to public_html
         env:

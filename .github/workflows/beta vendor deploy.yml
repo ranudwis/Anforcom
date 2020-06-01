@@ -2,9 +2,9 @@ name: Beta Vendor Deployment
 
 on:
   push:
-    tags-ignore:
-      - 'v1'
-      - 'v1.*'
+    tags:
+      - '!v1'
+      - '!v1.*'
     paths:
       - './composer.lock'
 
@@ -27,7 +27,7 @@ jobs:
         run: composer install --no-dev --no-interaction
 
       - name: Installing rclone
-        run: apt update && apt install rclone
+        run: sudo apt update && sudo apt install rclone
 
       - name: Deploying Vendor
         env:
