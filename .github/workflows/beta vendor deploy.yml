@@ -2,8 +2,12 @@ name: Beta Vendor Deployment
 
 on:
   push:
+    ignore-tags:
+      - 'v1'
+      - 'v1.*'
     paths:
       - composer.lock
+
 jobs:
   deploy:
     name: Deploying
