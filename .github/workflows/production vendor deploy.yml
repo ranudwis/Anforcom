@@ -6,7 +6,7 @@ on:
       - 'v1'
       - 'v1.*'
     paths:
-      - composer.lock
+      - './composer.lock'
 
 jobs:
   deploy:

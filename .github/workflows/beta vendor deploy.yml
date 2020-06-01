@@ -2,11 +2,11 @@ name: Beta Vendor Deployment
 
 on:
   push:
-    ignore-tags:
+    tags-ignore:
       - 'v1'
       - 'v1.*'
     paths:
-      - composer.lock
+      - './composer.lock'
 
 jobs:
   deploy:
