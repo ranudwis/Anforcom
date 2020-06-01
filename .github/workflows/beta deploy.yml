@@ -2,9 +2,9 @@ name: Beta Deployment
 
 on:
   push:
-    tags-ignore:
-      - 'v1'
-      - 'v1.*'
+    tags:
+      - '!v1'
+      - '!v1.*'
 
 jobs:
   deploy:
