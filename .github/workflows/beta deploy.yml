@@ -25,4 +25,4 @@ jobs:
         env:
           RCLONE_CONF: ${{ secrets.ANFORCOM_RCLONE_CONF }}
         with:
-          args: copy -L --exclude .git ./ anforcom:public_html/beta/
+          args: copy -L --exclude .git/ ./ anforcom:public_html/beta/
