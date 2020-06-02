@@ -2,15 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Auth;
-use App\Event;
-use App\User;
-use App\Member;
-use App\Team;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use App\Http\Requests\RegistrationRequest;
+use App\User;
 
 class AuthController extends Controller
 {
@@ -22,7 +18,7 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         if (auth()->attempt($request->only('email', 'password'))) {
-            if (auth()->user()->role === 'admin') {
+            if (auth()->user()->admin) {
                 return redirect()->route('admin.index');
             }
 

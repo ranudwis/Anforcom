@@ -15,7 +15,7 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if ($request->user()->role !== 'admin') {
+        if (! $request->user()->admin) {
             return redirect('dashboard');
         }
 
