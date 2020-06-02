@@ -1,0 +1,37 @@
+name: Beta Vendor Deployment
+
+on:
+  push:
+    tags:
+      - '*vendor'
+
+jobs:
+  deploy:
+    name: Deploying
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Composer package cache
+        uses: actions/cache@v2
+        with:
+          path: ./vendor
+          key: beta-composer-${{ hashFiles('composer.lock') }}
+          restore-keys: |
+            beta-composer-
+
+      - name: Composer package install
+        run: composer install --no-dev --no-interaction
+
+      - name: Installing rclone
+        run: curl https://rclone.org/install.sh | sudo bash
+
+      - name: Deploying Vendor
+        env:
+          RCLONE_CONFIG_ANFORCOM_TYPE: ftp
+          RCLONE_CONFIG_ANFORCOM_PORT: 21
+          RCLONE_CONFIG_ANFORCOM_TLS: false
+          RCLONE_CONFIG_ANFORCOM_HOST: ${{ secrets.ANFORCOM_FTP_HOST }}
+          RCLONE_CONFIG_ANFORCOM_USER: ${{ secrets.ANFORCOM_FTP_USER }}
+          RCLONE_CONFIG_ANFORCOM_PASS: ${{ secrets.ANFORCOM_FTP_PASS }}
+        run: rclone copy -L --check-first --transfers 5 --checkers 5 vendor/ anforcom:public_html/beta/vendor/

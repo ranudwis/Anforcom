@@ -11,10 +11,11 @@ class Task extends Model
     ];
 
 
-    public function submission()
+    public function submissions()
     {
         return $this->hasMany(Submission::class);
     }
+
     public function competition()
     {
         return $this->belongsTo(Competition::class);

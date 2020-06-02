@@ -15,21 +15,18 @@ class CreateTeamsTable extends Migration
     {
         Schema::create('teams', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
             $table->unsignedBigInteger('leader_id');
+            $table->unsignedBigInteger('registration_id');
             $table->unsignedBigInteger('competition_id');
+            $table->string('name');
             $table->string('university');
-            $table->string('payment_confirm')->nullable();
-            $table->boolean('is_active')->default(false);
+            $table->string('leader_nim');
+            $table->string('leader_ktm');
             $table->timestamps();
 
             $table->foreign('leader_id')
                 ->references('id')->on('users')
                 ->onDelete('CASCADE');
-
-            $table->foreign('competition_id')
-                ->references('id')->on('competitions')
-                ->onDelete('RESTRICT');
         });
     }
 

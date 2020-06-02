@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Competition;
+use App\Event;
 use App\Http\Controllers\Controller;
 use App\Task;
 use Illuminate\Http\Request;
@@ -11,26 +11,22 @@ class TaskController extends Controller
 {
     public function index()
     {
-        $competitions = Competition::all();
+        $competitions = Event::all();
         return view('admin.task', compact('competitions'));
     }
 
     public function addTask(Request $request)
     {
-
         $request->validate([
-            'competition_id' => 'required',
+            'competition_id' => 'required|exists:competitions,id',
             'name' => 'required',
             'description' => 'required',
-            'deadline' => 'required',
+            'deadline' => 'required|date',
         ]);
 
-        Task::create([
-            'competition_id' => $request->competition_id,
-            'name' => $request->name,
-            'description' => $request->description,
-            'deadline' => $request->deadline,
-        ]);
+        Task::create(
+            $request->only('competition_id', 'name', 'description', 'deadline')
+        );
 
         return back()->with('status', 'Tugas berhasil ditambahkan');
     }

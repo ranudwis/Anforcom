@@ -15,10 +15,8 @@ class AdminUserSeeder extends Seeder
         $admin = new User();
         $admin->name = 'admin';
         $admin->email = 'admin';
-        $admin->nim = '0';
         $admin->password = 'admin';
-        $admin->role = 'admin';
-        $admin->ktm = '';
+        $admin->admin = true;
         $admin->contact = '';
         $admin->save();
     }

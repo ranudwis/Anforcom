@@ -23,11 +23,11 @@ class CreateSubmissionsTable extends Migration
 
             $table->foreign('task_id')
                 ->references('id')->on('tasks')
-                ->onDelete('CASCADE');
+                ->onDelete('RESTRICT');
 
             $table->foreign('team_id')
                 ->references('id')->on('teams')
-                ->onDelete('CASCADE');
+                ->onDelete('RESTRICT');
         });
     }
 

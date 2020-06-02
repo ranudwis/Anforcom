@@ -4,18 +4,20 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Competition extends Model
+class Event extends Model
 {
-    protected $fillable = [
-        'name', 'description'
-    ];
-
     public function getRouteKeyName()
     {
         return 'slug';
     }
-    public function task()
+
+    public function tasks()
     {
         return $this->hasMany(Task::class);
+    }
+
+    public function registrations()
+    {
+        return $this->hasMany(Registration::class);
     }
 }
