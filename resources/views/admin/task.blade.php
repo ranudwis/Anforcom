@@ -9,6 +9,11 @@
 
 <body>
     Form Tambah Tugas
+    @if (session('status'))
+    <div class="alert alert-success" role="alert">
+        {{session('status')}}
+    </div>
+    @endif
     <form method="POST" action="{{ route('admin.task') }}">
         @csrf
         <div class="form-group">
