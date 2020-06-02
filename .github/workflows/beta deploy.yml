@@ -14,9 +14,10 @@ jobs:
 
       - name: Deploying
         env:
-          RCLONE_CONFIG_ANFORCOM_TYPE: webdav
-          RCLONE_CONFIG_ANFORCOM_VENDOR: other
-          RCLONE_CONFIG_ANFORCOM_URL: ${{ secrets.ANFORCOM_WEBDISK_URL }}
-          RCLONE_CONFIG_ANFORCOM_USER: ${{ secrets.ANFORCOM_WEBDISK_USERNAME }}
-          RCLONE_CONFIG_ANFORCOM_PASS: ${{ secrets.ANFORCOM_WEBDISK_PASSWORD }}
-        run: rclone copy --check-first -L --exclude .git/ --exclude ./vendor/ --transfers 2 --checkers 2 ./ anforcom:public_html/beta/
+          RCLONE_CONFIG_ANFORCOM_TYPE: ftp
+          RCLONE_CONFIG_ANFORCOM_PORT: 21
+          RCLONE_CONFIG_ANFORCOM_TLS: false
+          RCLONE_CONFIG_ANFORCOM_HOST: ${{ secrets.ANFORCOM_FTP_HOST }}
+          RCLONE_CONFIG_ANFORCOM_USER: ${{ secrets.ANFORCOM_FTP_USER }}
+          RCLONE_CONFIG_ANFORCOM_PASS: ${{ secrets.ANFORCOM_FTP_PASS }}
+        run: rclone copy --check-first -L --exclude .git/ --exclude ./vendor/ --transfers 1 --checkers 1 ./ anforcom:public_html/beta/
