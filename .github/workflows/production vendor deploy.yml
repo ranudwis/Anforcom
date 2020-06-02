@@ -36,4 +36,4 @@ jobs:
           RCLONE_CONFIG_ANFORCOM_HOST: ${{ secrets.ANFORCOM_FTP_HOST }}
           RCLONE_CONFIG_ANFORCOM_USER: ${{ secrets.ANFORCOM_FTP_USER }}
           RCLONE_CONFIG_ANFORCOM_PASS: ${{ secrets.ANFORCOM_FTP_PASS }}
-        run: rclone copy -L --check-first --transfers 1 --checkers 1 vendor/ anforcom:vendor/
+        run: rclone copy -L --check-first --transfers 5 --checkers 5 vendor/ anforcom:vendor/
