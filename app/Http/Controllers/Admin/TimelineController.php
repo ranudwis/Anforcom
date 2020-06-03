@@ -18,7 +18,8 @@ class TimelineController extends Controller
     public function showform(Event $event)
     {
         $timeline = Timeline::where('event_id', $event->id)->get();
-        return view('admin.formtimeline', compact('event', 'timeline'));
+        $registrasi = Timeline::where('id', $event->register_timeline_id)->get();
+        return view('admin.formtimeline', compact('event', 'timeline', 'registrasi'));
     }
 
     public function add(Request $request)

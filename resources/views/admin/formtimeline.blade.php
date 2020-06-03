@@ -60,6 +60,15 @@
     </div>
     <div class="displaytimeline">
         <h3>Timeline</h3>
+        <h4>Registrasi : </h4>
+        @foreach($registrasi as $register)
+
+        <p>Start : {{$register->start}}</p>
+        <p>End : {{$register->end}}</p>
+
+        @endforeach
+
+
         <table border="1">
             <tr>
                 <th>Nama</th>
@@ -67,6 +76,7 @@
                 <th>Berakhir</th>
                 <th>Deskripsi</th>
                 <th>Venue</th>
+                <th>Action</th>
             </tr>
             @foreach($timeline as $tml)
             <tr>
@@ -75,6 +85,13 @@
                 <td>{{ $tml->end }}</td>
                 <td>{{ $tml->description }}</td>
                 <td>{{ $tml->venue }}</td>
+                <td>
+                    <form method="POST" action="{{ route('admin.event', ['event_id' => $tml -> event_id])}}">
+                        @csrf
+                        <input type="hidden" name="registrationid" value="{{ $tml -> id}}">
+                        <button type="submit">Set Register</button>
+                    </form>
+                </td>
             </tr>
             @endforeach
         </table>
