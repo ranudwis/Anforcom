@@ -23,6 +23,9 @@
         <li>
             <a href="{{ route('admin.task') }}">Tambah Tugas</a>
         </li>
+        <li>
+            <a href="{{ route('admin.timeline') }}">Tambah Timline</a>
+        </li>
     </ul>
     @yield('content')
 </body>

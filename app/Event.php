@@ -20,4 +20,9 @@ class Event extends Model
     {
         return $this->hasMany(Registration::class);
     }
+
+    public function timelines()
+    {
+        return $this->hasMany(Timeline::class);
+    }
 }
