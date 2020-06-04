@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <a href="{{ route('competition.index') }}">Lomba</a>
+        <a href="{{ route('competition.index') }}">List Lomba</a>
         <a href="{{ route('login') }}">Masuk</a>
         <a href="{{ route('register') }}">Daftar</a>
     </body>
