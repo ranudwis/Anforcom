@@ -1,5 +1,7 @@
 @extends('admin.partial.main')
 
+@section('title', 'Sponsor')
+
 @section('content')
 Tambah sponsor
 @if (session('status'))

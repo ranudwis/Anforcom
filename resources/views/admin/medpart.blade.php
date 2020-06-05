@@ -1,5 +1,7 @@
 @extends('admin.partial.main')
 
+@section('title', 'Media partner')
+
 @section('content')
     Tambah Media Partner
     @if (session('status'))

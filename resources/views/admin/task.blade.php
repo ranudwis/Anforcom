@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('admin.partial.main')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Tugas</title>
-</head>
+@section('title', 'Tugas lomba')
 
-<body>
+@section('content')
     Form Tambah Tugas
     @if (session('status'))
     <div class="alert alert-success" role="alert">
@@ -52,6 +47,4 @@
         </div>
         <button type="submit">Tambah Tugas</button>
     </form>
-</body>
-
-</html>
+@endsection

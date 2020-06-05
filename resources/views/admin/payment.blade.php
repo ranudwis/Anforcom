@@ -1,5 +1,7 @@
 @extends('admin.partial.main')
 
+@section('title', 'Pembayaran')
+
 @section('content')
     <table border="1">
         <tr>
