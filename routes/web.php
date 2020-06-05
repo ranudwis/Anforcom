@@ -32,7 +32,7 @@ Route::prefix('/dashboard')
     ->name('dashboard.')
     ->middleware('auth')
     ->group(function () {
-        Route::view('/', 'dashboard.index')->name('index');
+        Route::get('/', 'DashboardPageController@index')->name('index');
 
         Route::view('/pembayaran', 'dashboard.payment')->name('payment');
         Route::post('/pembayaran', 'PaymentController@pay')->name('payment');
