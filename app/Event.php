@@ -25,4 +25,9 @@ class Event extends Model
     {
         return $this->hasMany(Timeline::class);
     }
+
+    public function registrationTimeline()
+    {
+        return $this->timelines->firstWhere('id', $this->registration_timeline_id);
+    }
 }

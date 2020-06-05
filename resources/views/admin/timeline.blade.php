@@ -11,8 +11,8 @@
     <div>
         <h5>Pilih event</h5>
     </div>
-    @foreach($event as $ev)
-    <a href="{{ route('admin.timeline.showform',['event' => $ev->slug]) }}">{{ $ev->name }}</a>
+    @foreach($events as $event)
+        <a href="{{ route('admin.timeline.show', ['event' => $event->slug]) }}">{{ $event->name }}</a>
     @endforeach
 </body>
 

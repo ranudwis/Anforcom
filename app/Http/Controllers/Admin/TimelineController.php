@@ -9,27 +9,30 @@ use App\Timeline;
 
 class TimelineController extends Controller
 {
-    public function index(Event $event)
+    public function index()
     {
-        $event = Event::all();
-        return view('admin.timeline', compact('event'));
+        $events = Event::all();
+
+        return view('admin.timeline', compact('events'));
     }
 
-    public function showform(Event $event)
+    public function show(Event $event)
     {
-        $timeline = Timeline::where('event_id', $event->id)->get();
-        $registrasi = Timeline::where('id', $event->register_timeline_id)->get();
-        return view('admin.formtimeline', compact('event', 'timeline', 'registrasi'));
+        $event->load('timelines');
+        $registration = $event->registrationTimeline();
+
+        return view('admin.formtimeline', compact('event', 'registration'));
     }
 
-    public function add(Request $request)
+    public function store(Request $request)
     {
         $request->validate([
             'event_id' => 'required',
             'start' => 'required',
             'end' => 'required',
             'name' => 'required',
-            'description' => 'required'
+            'description' => 'nullable',
+            'venue' => 'nullable',
         ]);
 
         Timeline::create($request->all());
