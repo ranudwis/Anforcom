@@ -10,8 +10,8 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="slider-content">
-                                <h1 class="title">Mobile Apps</h1>
-                                <p class="text">Kompetisi yang bertujuan untuk membuat dan mengembangkan applikasi mobile mengenai suatu tema tertentu.</p>
+                                <h1 class="title">{{ $competition->name }}</h1>
+                                <p class="text">Kompetisi yang bertujuan untuk membuat dan mengembangkan applikasi mengenai suatu tema tertentu.</p>
                                 <ul class="slider-btn rounded-buttons">
                                     @auth
                                         <li><a class="main-btn rounded-one" href="{{ route('enroll', ['event' => $competition->slug]) }}">Daftar</a></li>

@@ -10,7 +10,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="slider-content">
-                                <h1 class="title">Data mining</h1>
+                                <h1 class="title">{{ $competition->name }}</h1>
                                 <p class="text">Kompetisi yang bertujuan untuk mencari penyeselaian permasalahan pengolahan data serta memprediksi data tersebut.</p>
                                 <ul class="slider-btn rounded-buttons">
                                     @auth
