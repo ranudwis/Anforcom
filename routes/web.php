@@ -60,5 +60,6 @@ Route::prefix('/admin')
         Route::get('/timeline/{event}', 'TimelineController@show')->name('timeline.show');
         Route::post('/timeline/{event_id}', 'TimelineController@store')->name('timeline.store');
 
-        Route::post('/event/{event_id}', 'EventController@addRegisterId')->name('event');
+        Route::post('/event/{event}/registertimeline', 'EventController@setRegisterTimeline')
+            ->name('event.registertimeline');
     });

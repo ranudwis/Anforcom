@@ -66,19 +66,23 @@
                 <th>Venue</th>
                 <th>Action</th>
             </tr>
-            @foreach($event->timelines as $tml)
+            @foreach($event->timelines as $timeline)
                 <tr>
-                    <td>{{ $tml->name }}</td>
-                    <td>{{ $tml->start }}</td>
-                    <td>{{ $tml->end }}</td>
-                    <td>{{ $tml->description }}</td>
-                    <td>{{ $tml->venue }}</td>
+                    <td>{{ $timeline->name }}</td>
+                    <td>{{ $timeline->start }}</td>
+                    <td>{{ $timeline->end }}</td>
+                    <td>{{ $timeline->description }}</td>
+                    <td>{{ $timeline->venue }}</td>
                     <td>
-                        <form method="POST" action="{{ route('admin.event', ['event_id' => $tml -> event_id])}}">
-                            @csrf
-                            <input type="hidden" name="registrationid" value="{{ $tml -> id}}">
-                            <button type="submit">Set Register</button>
-                        </form>
+                        @if ($timeline->id === $registration->id)
+                            Registrasi
+                        @else
+                            <form method="POST" action="{{ route('admin.event.registertimeline', ['event' => $event->slug]) }}">
+                                @csrf
+                                <input type="hidden" name="registrationid" value="{{ $timeline -> id}}">
+                                <button type="submit">Set Register</button>
+                            </form>
+                        @endif
                     </td>
                 </tr>
             @endforeach
