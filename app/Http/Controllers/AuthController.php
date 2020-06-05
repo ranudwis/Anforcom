@@ -57,9 +57,9 @@ class AuthController extends Controller
         auth()->login($user);
 
         if ($request->has('next')) {
-            return redirect()->route('enroll', ['event' => $request->next]);
+            return redirect()->route('enroll.show', ['event' => $request->next]);
         }
 
-        return redirect()->route('dashboard.index');
+        return redirect()->route('enroll.index');
     }
 }

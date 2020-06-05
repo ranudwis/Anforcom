@@ -9,10 +9,17 @@ use App\Team;
 
 class EnrollmentController extends Controller
 {
-    public function index(Event $event)
+    public function index()
+    {
+        $events = Event::all();
+
+        return view('enroll.index', compact('events'));
+    }
+
+    public function show(Event $event)
     {
         // TODO: Check wheter event is an event or competition
-        return view('enroll.index', compact('event'));
+        return view('enroll.show', compact('event'));
     }
 
     public function enroll(Request $request, Event $event)

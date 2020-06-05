@@ -13,11 +13,7 @@
                                 <h1 class="title">{{ $competition->name }}</h1>
                                 <p class="text">Kompetisi yang bertujuan untuk mencari penyeselaian permasalahan pengolahan data serta memprediksi data tersebut.</p>
                                 <ul class="slider-btn rounded-buttons">
-                                    @auth
-                                        <li><a class="main-btn rounded-one" href="{{ route('enroll', ['event' => $competition->slug]) }}">Daftar</a></li>
-                                    @else
-                                        <li><a class="main-btn rounded-one" href="{{ route('register', ['next' => $competition->slug]) }}">Daftar</a></li>
-                                    @endauth
+                                    <li><a class="main-btn rounded-one" href="{{ route('enroll.show', ['event' => $competition->slug]) }}">Daftar</a></li>
                                     <li><a class="main-btn rounded-two" href="{{ asset('assets/files/Juklak Anforcom 2019.pdf') }}">Guidebook</a></li>
                                 </ul>
                             </div> <!-- slider-content -->
