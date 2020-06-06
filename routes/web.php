@@ -14,10 +14,13 @@ Route::middleware('guest')->group(function () {
 
 Route::get('/logout', 'AuthController@logout')->middleware('auth')->name('logout');
 
-Route::prefix('/lomba')->name('competition.')->group(function () {
-    Route::get('/', 'CompetitionPageController@index')->name('index');
-    Route::get('/{competition}', 'CompetitionPageController@show')->name('show');
-});
+Route::prefix('/lomba')
+    ->name('competition.')
+    ->middleware('needevents')
+    ->group(function () {
+        Route::get('/', 'CompetitionPageController@index')->name('index');
+        Route::get('/{competition}', 'CompetitionPageController@show')->name('show');
+    });
 
 Route::prefix('/daftar')
     ->name('enroll.')
