@@ -128,7 +128,7 @@ p {
   padding: 0 32px;
   font-size: 16px;
   line-height: 46px;
-  color: #0067f4;
+  color: #0ba2ed;
   cursor: pointer;
   z-index: 5;
   -webkit-transition: all 0.4s ease-out 0s;
@@ -155,24 +155,24 @@ p {
   .standard-buttons ul li:first-child {
     margin-left: 0; }
 .standard-buttons .standard-one {
-  border-color: #0067f4; }
+  border-color: #0ba2ed; }
   .standard-buttons .standard-one:hover {
-    color: #0067f4;
+    color: #0ba2ed;
     background-color: rgba(0, 103, 244, 0.4); }
 .standard-buttons .standard-two {
   color: #fff;
-  background-color: #0067f4;
-  border-color: #0067f4; }
+  background-color: #0ba2ed;
+  border-color: #0ba2ed; }
   .standard-buttons .standard-two:hover {
-    color: #0067f4;
+    color: #0ba2ed;
     background-color: transparent; }
 .standard-buttons .standard-three {
   overflow: hidden;
   line-height: 50px;
   color: #fff;
-  background: -webkit-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: -o-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: linear-gradient(to right, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
+  background: -webkit-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: -o-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: linear-gradient(to right, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
   border: 0;
   line-height: 52px;
   background-size: 200% auto; }
@@ -185,7 +185,7 @@ p {
   .standard-buttons .standard-three:hover {
     background-position: right center; }
 .standard-buttons .standard-four {
-  border-color: #0067f4;
+  border-color: #0ba2ed;
   padding-left: 60px; }
   @media (max-width: 767px) {
     .standard-buttons .standard-four {
@@ -205,14 +205,14 @@ p {
       .standard-buttons .standard-four span {
         left: 15px; } }
   .standard-buttons .standard-four:hover {
-    color: #0067f4;
+    color: #0ba2ed;
     background-color: rgba(0, 103, 244, 0.4); }
     .standard-buttons .standard-four:hover i {
       animation: iconTranslateY 0.5s forwards; }
 .standard-buttons .standard-five {
   color: #fff;
-  background-color: #0067f4;
-  border-color: #0067f4;
+  background-color: #0ba2ed;
+  border-color: #0ba2ed;
   padding-left: 60px; }
   @media (max-width: 767px) {
     .standard-buttons .standard-five {
@@ -232,7 +232,7 @@ p {
       .standard-buttons .standard-five span {
         left: 15px; } }
   .standard-buttons .standard-five:hover {
-    color: #0067f4;
+    color: #0ba2ed;
     background-color: transparent; }
     .standard-buttons .standard-five:hover i {
       animation: iconTranslateY 0.5s forwards; }
@@ -241,9 +241,9 @@ p {
   overflow: hidden;
   line-height: 50px;
   color: #fff;
-  background: -webkit-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: -o-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: linear-gradient(to right, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
+  background: -webkit-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: -o-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: linear-gradient(to right, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
   border: 0;
   line-height: 52px;
   background-size: 200% auto; }
@@ -289,24 +289,24 @@ p {
 .light-rounded-buttons .main-btn {
   border-radius: 5px; }
 .light-rounded-buttons .light-rounded-one {
-  border-color: #0067f4; }
+  border-color: #0ba2ed; }
   .light-rounded-buttons .light-rounded-one:hover {
-    color: #0067f4;
+    color: #0ba2ed;
     background-color: rgba(0, 103, 244, 0.4); }
 .light-rounded-buttons .light-rounded-two {
   color: #fff;
-  background-color: #0067f4;
-  border-color: #0067f4; }
+  background-color: #0ba2ed;
+  border-color: #0ba2ed; }
   .light-rounded-buttons .light-rounded-two:hover {
-    color: #0067f4;
+    color: #0ba2ed;
     background-color: transparent; }
 .light-rounded-buttons .light-rounded-three {
   overflow: hidden;
   line-height: 50px;
   color: #fff;
-  background: -webkit-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: -o-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: linear-gradient(to right, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
+  background: -webkit-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: -o-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: linear-gradient(to right, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
   background-size: 200% auto;
   line-height: 52px;
   border: 0; }
@@ -319,7 +319,7 @@ p {
   .light-rounded-buttons .light-rounded-three:hover {
     background-position: right center; }
 .light-rounded-buttons .light-rounded-four {
-  border-color: #0067f4;
+  border-color: #0ba2ed;
   padding-left: 60px; }
   @media (max-width: 767px) {
     .light-rounded-buttons .light-rounded-four {
@@ -339,7 +339,7 @@ p {
       .light-rounded-buttons .light-rounded-four span {
         left: 15px; } }
   .light-rounded-buttons .light-rounded-four:hover {
-    color: #0067f4;
+    color: #0ba2ed;
     background-color: rgba(0, 103, 244, 0.4); }
     .light-rounded-buttons .light-rounded-four:hover i {
       -webkit-animation: iconTranslateY 0.5s forwards;
@@ -348,8 +348,8 @@ p {
       animation: iconTranslateY 0.5s forwards; }
 .light-rounded-buttons .light-rounded-five {
   color: #fff;
-  background-color: #0067f4;
-  border-color: #0067f4;
+  background-color: #0ba2ed;
+  border-color: #0ba2ed;
   padding-left: 60px; }
   @media (max-width: 767px) {
     .light-rounded-buttons .light-rounded-five {
@@ -369,7 +369,7 @@ p {
       .light-rounded-buttons .light-rounded-five span {
         left: 15px; } }
   .light-rounded-buttons .light-rounded-five:hover {
-    color: #0067f4;
+    color: #0ba2ed;
     background-color: transparent; }
     .light-rounded-buttons .light-rounded-five:hover i {
       -webkit-animation: iconTranslateY 0.5s forwards;
@@ -381,9 +381,9 @@ p {
   overflow: hidden;
   line-height: 50px;
   color: #fff;
-  background: -webkit-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: -o-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: linear-gradient(to right, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
+  background: -webkit-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: -o-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: linear-gradient(to right, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
   background-size: 200% auto;
   line-height: 52px;
   border: 0; }
@@ -429,23 +429,23 @@ p {
 .semi-rounded-buttons .main-btn {
   border-radius: 10px; }
 .semi-rounded-buttons .semi-rounded-one {
-  border-color: #0067f4; }
+  border-color: #0ba2ed; }
   .semi-rounded-buttons .semi-rounded-one:hover {
-    color: #0067f4;
+    color: #0ba2ed;
     background-color: rgba(0, 103, 244, 0.4); }
 .semi-rounded-buttons .semi-rounded-two {
   color: #fff;
-  background-color: #0067f4;
-  border-color: #0067f4; }
+  background-color: #0ba2ed;
+  border-color: #0ba2ed; }
   .semi-rounded-buttons .semi-rounded-two:hover {
-    color: #0067f4;
+    color: #0ba2ed;
     background-color: transparent; }
 .semi-rounded-buttons .semi-rounded-three {
   overflow: hidden;
   line-height: 52px;
-  background: -webkit-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: -o-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: linear-gradient(to right, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
+  background: -webkit-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: -o-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: linear-gradient(to right, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
   background-size: 200% auto;
   border: 0;
   color: #fff; }
@@ -458,7 +458,7 @@ p {
   .semi-rounded-buttons .semi-rounded-three:hover {
     background-position: right center; }
 .semi-rounded-buttons .semi-rounded-four {
-  border-color: #0067f4;
+  border-color: #0ba2ed;
   padding-left: 60px; }
   @media (max-width: 767px) {
     .semi-rounded-buttons .semi-rounded-four {
@@ -478,7 +478,7 @@ p {
       .semi-rounded-buttons .semi-rounded-four span {
         left: 15px; } }
   .semi-rounded-buttons .semi-rounded-four:hover {
-    color: #0067f4;
+    color: #0ba2ed;
     background-color: rgba(0, 103, 244, 0.4); }
     .semi-rounded-buttons .semi-rounded-four:hover i {
       -webkit-animation: iconTranslateY 0.5s forwards;
@@ -487,8 +487,8 @@ p {
       animation: iconTranslateY 0.5s forwards; }
 .semi-rounded-buttons .semi-rounded-five {
   color: #fff;
-  background-color: #0067f4;
-  border-color: #0067f4;
+  background-color: #0ba2ed;
+  border-color: #0ba2ed;
   padding-left: 60px; }
   @media (max-width: 767px) {
     .semi-rounded-buttons .semi-rounded-five {
@@ -508,7 +508,7 @@ p {
       .semi-rounded-buttons .semi-rounded-five span {
         left: 15px; } }
   .semi-rounded-buttons .semi-rounded-five:hover {
-    color: #0067f4;
+    color: #0ba2ed;
     background-color: transparent; }
     .semi-rounded-buttons .semi-rounded-five:hover i {
       -webkit-animation: iconTranslateY 0.5s forwards;
@@ -519,9 +519,9 @@ p {
   padding-right: 60px;
   overflow: hidden;
   line-height: 52px;
-  background: -webkit-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: -o-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: linear-gradient(to right, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
+  background: -webkit-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: -o-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: linear-gradient(to right, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
   background-size: 200% auto;
   border: 0;
   color: #fff; }
@@ -567,23 +567,23 @@ p {
 .rounded-buttons .main-btn {
   border-radius: 50px; }
 .rounded-buttons .rounded-one {
-  border-color: #0067f4; }
+  border-color: #0ba2ed; }
   .rounded-buttons .rounded-one:hover {
-    color: #0067f4;
+    color: #0ba2ed;
     background-color: rgba(0, 103, 244, 0.4); }
 .rounded-buttons .rounded-two {
   color: #fff;
-  background-color: #0067f4;
-  border-color: #0067f4; }
+  background-color: #0ba2ed;
+  border-color: #0ba2ed; }
   .rounded-buttons .rounded-two:hover {
-    color: #0067f4;
+    color: #0ba2ed;
     background-color: transparent; }
 .rounded-buttons .rounded-three {
   overflow: hidden;
   line-height: 52px;
-  background: -webkit-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: -o-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: linear-gradient(to right, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
+  background: -webkit-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: -o-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: linear-gradient(to right, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
   background-size: 200% auto;
   color: #fff;
   border: 0; }
@@ -596,7 +596,7 @@ p {
   .rounded-buttons .rounded-three:hover {
     background-position: right center; }
 .rounded-buttons .rounded-four {
-  border-color: #0067f4;
+  border-color: #0ba2ed;
   padding-left: 60px; }
   @media (max-width: 767px) {
     .rounded-buttons .rounded-four {
@@ -616,7 +616,7 @@ p {
       .rounded-buttons .rounded-four span {
         left: 15px; } }
   .rounded-buttons .rounded-four:hover {
-    color: #0067f4;
+    color: #0ba2ed;
     background-color: rgba(0, 103, 244, 0.4); }
     .rounded-buttons .rounded-four:hover i {
       -webkit-animation: iconTranslateY 0.5s forwards;
@@ -625,8 +625,8 @@ p {
       animation: iconTranslateY 0.5s forwards; }
 .rounded-buttons .rounded-five {
   color: #fff;
-  background-color: #0067f4;
-  border-color: #0067f4;
+  background-color: #0ba2ed;
+  border-color: #0ba2ed;
   padding-left: 60px; }
   @media (max-width: 767px) {
     .rounded-buttons .rounded-five {
@@ -646,7 +646,7 @@ p {
       .rounded-buttons .rounded-five span {
         left: 15px; } }
   .rounded-buttons .rounded-five:hover {
-    color: #0067f4;
+    color: #0ba2ed;
     background-color: transparent; }
     .rounded-buttons .rounded-five:hover i {
       -webkit-animation: iconTranslateY 0.5s forwards;
@@ -657,9 +657,9 @@ p {
   padding-right: 60px;
   overflow: hidden;
   line-height: 52px;
-  background: -webkit-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: -o-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: linear-gradient(to right, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
+  background: -webkit-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: -o-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: linear-gradient(to right, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
   background-size: 200% auto;
   color: #fff;
   border: 0; }
@@ -1306,7 +1306,7 @@ p {
     width: 40px;
     height: 40px;
     line-height: 36px;
-    border: 2px solid #0067f4;
+    border: 2px solid #0ba2ed;
     text-align: center;
     font-size: 24px;
     -webkit-transition: all 0.3s ease-out 0s;
@@ -1315,15 +1315,15 @@ p {
     -o-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
     overflow: hidden;
-    color: #0067f4; }
+    color: #0ba2ed; }
     .regular-icon-buttons ul li .regular-icon-light-one:hover {
       color: #fff;
-      background-color: #0067f4; }
+      background-color: #0ba2ed; }
   .regular-icon-buttons ul li .regular-icon-light-two {
     width: 40px;
     height: 40px;
     line-height: 36px;
-    border: 2px solid #0067f4;
+    border: 2px solid #0ba2ed;
     text-align: center;
     font-size: 24px;
     border-radius: 5px;
@@ -1333,15 +1333,15 @@ p {
     -o-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
     overflow: hidden;
-    color: #0067f4; }
+    color: #0ba2ed; }
     .regular-icon-buttons ul li .regular-icon-light-two:hover {
       color: #fff;
-      background-color: #0067f4; }
+      background-color: #0ba2ed; }
   .regular-icon-buttons ul li .regular-icon-light-three {
     width: 40px;
     height: 40px;
     line-height: 36px;
-    border: 2px solid #0067f4;
+    border: 2px solid #0ba2ed;
     text-align: center;
     font-size: 24px;
     border-radius: 10px;
@@ -1351,15 +1351,15 @@ p {
     -o-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
     overflow: hidden;
-    color: #0067f4; }
+    color: #0ba2ed; }
     .regular-icon-buttons ul li .regular-icon-light-three:hover {
       color: #fff;
-      background-color: #0067f4; }
+      background-color: #0ba2ed; }
   .regular-icon-buttons ul li .regular-icon-light-four {
     width: 40px;
     height: 40px;
     line-height: 36px;
-    border: 2px solid #0067f4;
+    border: 2px solid #0ba2ed;
     text-align: center;
     font-size: 24px;
     border-radius: 50%;
@@ -1371,7 +1371,7 @@ p {
     overflow: hidden; }
     .regular-icon-buttons ul li .regular-icon-light-four:hover {
       color: #fff;
-      background-color: #0067f4; }
+      background-color: #0ba2ed; }
   .regular-icon-buttons ul li .regular-icon-light-five {
     width: 40px;
     height: 40px;
@@ -1388,9 +1388,9 @@ p {
     z-index: 5;
     overflow: hidden;
     color: #fff;
-    background: -webkit-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-    background: -o-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-    background: linear-gradient(to right, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
+    background: -webkit-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+    background: -o-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+    background: linear-gradient(to right, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
     background-size: 200% auto; }
     .regular-icon-buttons ul li .regular-icon-light-five:hover {
       background-position: right center; }
@@ -1410,9 +1410,9 @@ p {
     z-index: 5;
     overflow: hidden;
     color: #fff;
-    background: -webkit-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-    background: -o-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-    background: linear-gradient(to right, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
+    background: -webkit-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+    background: -o-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+    background: linear-gradient(to right, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
     background-size: 200% auto;
     border-radius: 5px; }
     .regular-icon-buttons ul li .regular-icon-light-six:hover {
@@ -1433,9 +1433,9 @@ p {
     z-index: 5;
     overflow: hidden;
     color: #fff;
-    background: -webkit-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-    background: -o-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-    background: linear-gradient(to right, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
+    background: -webkit-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+    background: -o-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+    background: linear-gradient(to right, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
     background-size: 200% auto;
     border-radius: 10px; }
     .regular-icon-buttons ul li .regular-icon-light-seven:hover {
@@ -1456,9 +1456,9 @@ p {
     z-index: 5;
     overflow: hidden;
     color: #fff;
-    background: -webkit-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-    background: -o-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-    background: linear-gradient(to right, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
+    background: -webkit-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+    background: -o-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+    background: linear-gradient(to right, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
     background-size: 200% auto;
     border-radius: 50%; }
     .regular-icon-buttons ul li .regular-icon-light-eight:hover {
@@ -1467,7 +1467,7 @@ p {
     width: 40px;
     height: 40px;
     line-height: 36px;
-    border: 2px solid #0067f4;
+    border: 2px solid #0ba2ed;
     text-align: center;
     font-size: 24px;
     -webkit-transition: all 0.3s ease-out 0s;
@@ -1477,15 +1477,15 @@ p {
     transition: all 0.3s ease-out 0s;
     overflow: hidden;
     color: #fff;
-    background-color: #0067f4; }
+    background-color: #0ba2ed; }
     .regular-icon-buttons ul li .regular-icon-light-nine:hover {
-      color: #0067f4;
+      color: #0ba2ed;
       background-color: transparent; }
   .regular-icon-buttons ul li .regular-icon-light-ten {
     width: 40px;
     height: 40px;
     line-height: 36px;
-    border: 2px solid #0067f4;
+    border: 2px solid #0ba2ed;
     text-align: center;
     font-size: 24px;
     border-radius: 5px;
@@ -1496,15 +1496,15 @@ p {
     transition: all 0.3s ease-out 0s;
     overflow: hidden;
     color: #fff;
-    background-color: #0067f4; }
+    background-color: #0ba2ed; }
     .regular-icon-buttons ul li .regular-icon-light-ten:hover {
-      color: #0067f4;
+      color: #0ba2ed;
       background-color: transparent; }
   .regular-icon-buttons ul li .regular-icon-light-eleven {
     width: 40px;
     height: 40px;
     line-height: 36px;
-    border: 2px solid #0067f4;
+    border: 2px solid #0ba2ed;
     text-align: center;
     font-size: 24px;
     border-radius: 10px;
@@ -1515,15 +1515,15 @@ p {
     transition: all 0.3s ease-out 0s;
     overflow: hidden;
     color: #fff;
-    background-color: #0067f4; }
+    background-color: #0ba2ed; }
     .regular-icon-buttons ul li .regular-icon-light-eleven:hover {
-      color: #0067f4;
+      color: #0ba2ed;
       background-color: transparent; }
   .regular-icon-buttons ul li .regular-icon-light-twelve {
     width: 40px;
     height: 40px;
     line-height: 36px;
-    border: 2px solid #0067f4;
+    border: 2px solid #0ba2ed;
     text-align: center;
     font-size: 24px;
     border-radius: 50%;
@@ -1534,9 +1534,9 @@ p {
     transition: all 0.3s ease-out 0s;
     overflow: hidden;
     color: #fff;
-    background-color: #0067f4; }
+    background-color: #0ba2ed; }
     .regular-icon-buttons ul li .regular-icon-light-twelve:hover {
-      color: #0067f4;
+      color: #0ba2ed;
       background-color: transparent; }
 
 /*===== Group Buttons =====*/
@@ -1546,7 +1546,7 @@ p {
   margin-left: 0; }
   .group-buttons .group-one .main-btn {
     background: none;
-    border: 2px solid #0067f4;
+    border: 2px solid #0ba2ed;
     -webkit-transition: all 0.3s ease-out 0s;
     -moz-transition: all 0.3s ease-out 0s;
     -ms-transition: all 0.3s ease-out 0s;
@@ -1561,7 +1561,7 @@ p {
       border-bottom-right-radius: 5px;
       border-left: 0; }
     .group-buttons .group-one .main-btn:hover {
-      background-color: #0067f4;
+      background-color: #0ba2ed;
       color: #fff; }
 .group-buttons .group-two .main-btn {
   background: none;
@@ -1573,9 +1573,9 @@ p {
   overflow: hidden;
   color: #fff;
   line-height: 52px;
-  background: -webkit-linear-gradient(#0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: -o-linear-gradient(#0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: linear-gradient(#0067f4 0%, #2bdbdc 50%, #0067f4 100%);
+  background: -webkit-linear-gradient(#0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: -o-linear-gradient(#0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: linear-gradient(#0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
   background-size: auto 200%;
   border-top: 0;
   border-bottom: 0;
@@ -1600,9 +1600,9 @@ p {
   overflow: hidden;
   color: #fff;
   line-height: 52px;
-  background: -webkit-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: -o-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: linear-gradient(to right, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
+  background: -webkit-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: -o-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: linear-gradient(to right, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
   background-size: 200% auto;
   border: 0; }
   .group-buttons .group-three .main-btn:first-child {
@@ -1619,7 +1619,7 @@ p {
   margin-left: 0; }
   .group-buttons .group-four .main-btn {
     background: none;
-    border: 2px solid #0067f4;
+    border: 2px solid #0ba2ed;
     -webkit-transition: all 0.3s ease-out 0s;
     -moz-transition: all 0.3s ease-out 0s;
     -ms-transition: all 0.3s ease-out 0s;
@@ -1637,7 +1637,7 @@ p {
       border-bottom-right-radius: 5px;
       border-left: 0; }
     .group-buttons .group-four .main-btn:hover {
-      background-color: #0067f4;
+      background-color: #0ba2ed;
       color: #fff; }
 .group-buttons .group-five .main-btn {
   background: none;
@@ -1649,9 +1649,9 @@ p {
   overflow: hidden;
   color: #fff;
   line-height: 52px;
-  background: -webkit-linear-gradient(#0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: -o-linear-gradient(#0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: linear-gradient(#0067f4 0%, #2bdbdc 50%, #0067f4 100%);
+  background: -webkit-linear-gradient(#0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: -o-linear-gradient(#0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: linear-gradient(#0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
   background-size: auto 200%;
   border-top: 0;
   border-bottom: 0;
@@ -1677,9 +1677,9 @@ p {
   overflow: hidden;
   color: #fff;
   line-height: 52px;
-  background: -webkit-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: -o-linear-gradient(left, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
-  background: linear-gradient(to right, #0067f4 0%, #2bdbdc 50%, #0067f4 100%);
+  background: -webkit-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: -o-linear-gradient(left, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
+  background: linear-gradient(to right, #0ba2ed 0%, #2bdbdc 50%, #0ba2ed 100%);
   background-size: 200% auto;
   border: 0;
   padding: 0 16px; }
@@ -1746,7 +1746,7 @@ p {
     border-color: #a4a4a4;
     color: #6c6c6c; }
     .form-input .input-items.default input:focus, .form-input .input-items.default textarea:focus {
-      border-color: #0067f4; }
+      border-color: #0ba2ed; }
     .form-input .input-items.default input::placeholder, .form-input .input-items.default textarea::placeholder {
       color: #6c6c6c;
       opacity: 1; }
@@ -1762,7 +1762,7 @@ p {
   .form-input .input-items.default i {
     color: #6c6c6c; }
   .form-input .input-items.active input, .form-input .input-items.active textarea {
-    border-color: #0067f4;
+    border-color: #0ba2ed;
     color: #121212; }
     .form-input .input-items.active input::placeholder, .form-input .input-items.active textarea::placeholder {
       color: #121212;
@@ -1777,7 +1777,7 @@ p {
       color: #121212;
       opacity: 1; }
   .form-input .input-items.active i {
-    color: #0067f4; }
+    color: #0ba2ed; }
   .form-input .input-items.error input, .form-input .input-items.error textarea {
     border-color: #fc3832;
     color: #fc3832; }
@@ -2033,7 +2033,7 @@ p {
         .navbar-area .navbar .navbar-btn li a.solid {
           background-color: #fff;
           border-color: #fff;
-          /*color: #0067f4;*/ }
+          color: #818af4; }
           .navbar-area .navbar .navbar-btn li a.solid:hover {
             background-color: transparent;
             color: #fff; }
@@ -2056,28 +2056,67 @@ p {
     .navbar-area.sticky .navbar .navbar-nav .nav-item.active, .navbar-area.sticky .navbar .navbar-nav .nav-item:hover {
       color: #121212;
       opacity: 1; }
-    .navbar-area.sticky .navbar .navbar-btn li a.light {
-      /*border-color: #0067f4;*/
-      /*color: #0067f4;*/ }
     .navbar-area.sticky .navbar .navbar-btn li a.solid {
-      /*border-color: #0067f4;*/
-      /*color: #0067f4;*/
+      border-color: #0ba2ed;
       color: #fff; }
+
+      /* Dropdown Menu */
+      .navbar-custom .dropdown:hover > .dropdown-menu {
+      	display: block; /* this makes the dropdown menu stay open while hovering it */
+      	min-width: auto;
+        margin-left: 5px;
+        padding-left: 10px;
+        margin-right: 5px;
+        padding-right: 10px;
+      	animation: fadeDropdown 0.2s; /* required for the fade animation */}
+      @keyframes fadeDropdown {
+          0% { opacity: 0;}
+          100% { opacity: 1;}}
+      .navbar-custom .dropdown-menu {
+      	margin-top: 0px;
+      	border: none;
+      	border-radius: 0.25rem;
+      	background-color: #0ea3d8;}
+      .navbar-custom .dropdown-item:hover {
+      	background-color: #0ea3d8;}
+      .navbar-custom .dropdown-item:hover .item-text {
+      	color: #fff;}
+      .navbar-custom .dropdown-items-divide-hr {
+      	width: 100%;
+      	height: 1px;
+      	margin: 0;
+      	border: none;
+      	background-color: #fff;
+      	opacity: 0.2;}
+      .navbar-custom .social-icons {
+      	display: none;}
+      .navbar-custom .navbar-toggler {
+      	border: none;
+      	color: #fff;
+      	font-size: 2rem;}
+      .navbar-custom button[aria-expanded='false'] .navbar-toggler-awesome.fas.fa-times{
+      	display: none;}
+      .navbar-custom button[aria-expanded='false'] .navbar-toggler-awesome.fas.fa-bars{
+      	display: inline-block;}
+      .navbar-custom button[aria-expanded='true'] .navbar-toggler-awesome.fas.fa-bars{
+      	display: none;}
+      .navbar-custom button[aria-expanded='true'] .navbar-toggler-awesome.fas.fa-times{
+      	display: inline-block;
+      	margin-right: 0.125rem;}
+      /* end of dropdown menu */
 
 /*===========================
        10.SLIDER css
 ===========================*/
 .carousel-item {
-  background-color: #0067f4;
+  background-image: url("../../assets/images/slider/bg.png");
+  background-repeat: no-repeat;
   position: relative; }
   .carousel-item::before {
     position: absolute;
     content: '';
     width: 33%;
     height: 100%;
-    background: -webkit-linear-gradient(rgba(0, 103, 244, 0.3) 0%, rgba(43, 219, 220, 0.3) 100%);
-    background: -o-linear-gradient(rgba(0, 103, 244, 0.3) 0%, rgba(43, 219, 220, 0.3) 100%);
-    background: linear-gradient(rgba(0, 103, 244, 0.3) 0%, rgba(43, 219, 220, 0.3) 100%);
     top: 0;
     right: 15%;
     -webkit-transform: skewX(20deg);
@@ -2167,7 +2206,7 @@ p {
         border-color: #fff; }
         .slider-content .slider-btn li a.rounded-two:hover {
           background-color: #fff;
-          color: #0067f4; }
+          color: #0ba2ed; }
 
 .carousel-indicators {
   margin-bottom: 50px; }
@@ -2275,14 +2314,14 @@ p {
         font-size: 36px;
         line-height: 45px; } }
     .single-features .features-title-icon .features-title a:hover {
-      color: #0067f4; }
+      color: #0ba2ed; }
   .single-features .features-title-icon .features-icon {
     position: relative;
     display: inline-block; }
     .single-features .features-title-icon .features-icon i {
       font-size: 88px;
       line-height: 70px;
-      color: #0067f4;
+      color: #0ba2ed;
       position: relative;
       z-index: 5; }
     .single-features .features-title-icon .features-icon .shape {
@@ -2295,7 +2334,7 @@ p {
     color: #121212;
     margin-top: 16px; }
   .single-features .features-content .features-btn {
-    color: #0067f4;
+    color: #0ba2ed;
     font-size: 16px;
     font-weight: 700;
     margin-top: 29px; }
@@ -2344,9 +2383,9 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: -webkit-linear-gradient(left, #0067f4 0%, #2bdbdc 100%);
-    background: -o-linear-gradient(left, #0067f4 0%, #2bdbdc 100%);
-    background: linear-gradient(to right, #0067f4 0%, #2bdbdc 100%);
+    /*background: -webkit-linear-gradient(left, #0ba2ed 0%, #2bdbdc 100%);
+    background: -o-linear-gradient(left, #0ba2ed 0%, #2bdbdc 100%);
+    background: linear-gradient(to right, #0ba2ed 0%, #2bdbdc 100%);*/
     z-index: -1;
     opacity: 0;
     -webkit-transition: all 0.3s ease-out 0s;
@@ -2429,7 +2468,7 @@ p {
   display: block;
   position: absolute;
   margin-top: 18px;
-  border-color: #0067f4 !important;
+  border-color: #0ba2ed !important;
 }
 
 .timeline li:first-child i {
@@ -2439,7 +2478,7 @@ p {
   line-height: 50px;
   border-radius: 30px;
   margin: -12px -55px;
-  background: #0067f4;
+  background: #0ba2ed;
   color: #fff;
   width: 50px;
   height: 50px;
@@ -2455,7 +2494,7 @@ p {
   .faq-area .faq-title .sub-title {
     font-size: 18px;
     font-weight: 400;
-    color: #0067f4;
+    color: #0ba2ed;
     text-transform: uppercase; }
     @media (max-width: 767px) {
       .faq-area .faq-title .sub-title {
@@ -2560,7 +2599,7 @@ p {
   height: 45px;
   line-height: 45px;
   border-radius: 5px;
-  background-color: #0067f4;
+  background-color: #0ba2ed;
   text-align: center;
   z-index: 99;
   -webkit-transition: all 0.3s ease-out 0s;
@@ -2571,4 +2610,4 @@ p {
   display: none; }
   .back-to-top:hover {
     color: #fff;
-    background-color: #0067f4; }
+    background-color: #0ba2ed; }

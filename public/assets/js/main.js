@@ -8,6 +8,11 @@ $(function() {
         $('.preloader').delay(500).fadeOut(500);
     });
 
+    //===== closes the responsive menu on menu item click
+    $(".navbar-nav li a").on("click", function(event) {
+    if (!$(this).parent().hasClass('dropdown'))
+        $(".navbar").navbar('hide');
+    });
 
     //===== Sticky
 
