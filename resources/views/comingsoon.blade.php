@@ -14,13 +14,8 @@
       rel="stylesheet" 
       href="{{ asset('assets/comingsoon/vendor/bootstrap/css/bootstrap.min.css') }}"
     />
-    <!--===============================================================================================-->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/comingsoon/vendor/animate/animate.css') }}" />
     <!--===============================================================================================-->
@@ -40,11 +35,11 @@
     <div class="simpleslide100">
       <div
         class="simpleslide100-item bg-img1"
-        style="background-image: url('assets/comingsoon/images/bg01.png');"
+        style="background-image: url('assets/comingsoon/images/bg03.png');"
       ></div>
       <div
         class="simpleslide200-item bg-img1"
-        style="background-image: url('assets/comingsoon/images/bg02.png');"
+        style="background-image: url('assets/comingsoon/images/bg04.png');"
       ></div>
     </div>
 
@@ -120,33 +115,14 @@
       </div>
     </div>
 
-    <!-- <div class="container-fluid size1 overlay2">
-      <div class="row color middle">
-        <div class="col-md-1 col-0"></div>
-        <div class="col-md-7 col-12 py-5 align-items-center my-5">
-          <h3><strong>About The Event</strong></h3>
-          <h5><strong>Annual Informatics Competition 2019</strong></h5>
-          <br />
-          <p>
-            ANFORCOM adalah serangkaian event IT tahunan berskala nasional yang
-            diselenggarakan oleh Himpunan Mahasiswa Informatika Universitas
-            Diponegoro
-          </p>
-        </div>
-
-        <div class="col-md-4 col-12 my-5 py-5">
-          <div class="wrappic2">
-            <a href="#"><img src="images/icons/logo2020.png" alt="Anforcom 2020" title="Logo Anforcom 2020"/></a>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <!--===============================================================================================-->
     <script src="{{ asset('assets/comingsoon/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
     <!--===============================================================================================-->
     <script src="{{ asset('assets/comingsoon/vendor/bootstrap/js/popper.js') }}"></script>
     <script src="{{ asset('assets/comingsoon/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <!--===============================================================================================-->
     <script src="{{ asset('assets/comingsoon/vendor/select2/select2.min.js') }}"></script>
     <!--===============================================================================================-->
