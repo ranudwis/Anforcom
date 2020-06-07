@@ -13,345 +13,30 @@
     rel="stylesheet">
   <!--Fontawesome CDN-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css"> -->
+
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
   <title>Form Pendaftaran Data Mining</title>
-  <style type="text/css">
-    /****  floating-Lable style end ****/
-    .form-group {
-      padding-top: 10px;
-    }
 
-    .form-group .input-group {
-      position: relative;
-    }
-
-    .form-group .input-group .form-control-placeholder {
-      position: absolute;
-      top: -6px;
-      left: 57px;
-      padding: 12px 0px 0 0px;
-      -webkit-transition: all 300ms;
-      -o-transition: all 300ms;
-      transition: all 300ms;
-      opacity: .8;
-    }
-
-    .form-group .input-group .input-group-prepend span {
-      min-width: 45px;
-      padding: auto;
-    }
-
-    .form-group .input-group .input-group-prepend span i {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .form-control:focus+.form-control-placeholder,
-    .form-control:valid+.form-control-placeholder {
-      font-size: 75%;
-      -o-transform: translate3d(0, -90%, 0);
-      -moz-transform: translate3d(0, -90%, 0);
-      -webkit-transform: translate3d(0, 90%, 0);
-      transform: translate3d(0, -90%, 0);
-      opacity: 1;
-    }
-
-    .input-group-prepend span {
-      background-color: #f6ba00;
-      color: black;
-      border: 0 !important;
-    }
-
-    input:focus {
-      outline: 0 0 0 0 !important;
-      box-shadow: 0 0 0 0 !important;
-    }
-
-
-    /* =========================================================================== */
-    #register {
-      background-color: #FAFAFA;
-      background-repeat: no-repeat;
-      background-size: 12%;
-      background-position: right;
-      background-attachment: fixed;
-    }
-
-    #register #judulregis h2 {
-      text-align: center;
-      font-weight: bold;
-      color: #03568A;
-      margin-bottom: 3%;
-    }
-
-    @media (min-width: 1200px) {
-      #register #form-regis {
-        margin-left: 10%;
-        width: 80%;
-        padding-bottom: 5%;
-      }
-
-
-      #register #form-regis form #sisikiri {
-        border-right: 1px solid #f0f0f0;
-        padding-right: 20px;
-      }
-
-      #register #form-regis form #sisikanan {
-        padding-left: 20px;
-      }
-
-
-      #register #form-regis form #sisikanan hr {
-        border-top: 2px solid #03568A;
-        margin-top: 6%;
-        margin-bottom: 5%;
-      }
-
-      .card {
-        margin-top: auto;
-        min-width: 40%;
-        margin-bottom: auto;
-      }
-    }
-
-    #register #form-regis form #sisikiri button {
-      padding: 2% 10% 2% 10%;
-      margin: 3% 0% 0% 35%;
-      background-color: #f6ba00;
-      color: #fafafa;
-      letter-spacing: 1px;
-      border: 2px solid transparent;
-      transition: all 0.5s ease
-    }
-
-    #register #form-regis form #sisikiri button:hover {
-      background-color: transparent;
-      color: #f6ba00;
-      border-color: #f6ba00;
-    }
-
-    @media (max-width: 1200px) {
-      .container-fluid {
-        padding-bottom: 50px;
-        padding-left: 40px;
-        padding-right: 40px;
-      }
-
-      #register #form-regis form #sisikiri {
-        border-right: 1px solid #f0f0f0;
-        padding-right: 20px;
-        padding-left: 10px;
-      }
-
-      #register #form-regis form #sisikanan {
-        padding-left: 20px;
-        padding-right: 10px;
-      }
-
-      .form-group .input-group .input-group-prepend span i {
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 13px;
-      }
-
-      .form-group .input-group .form-control-placeholder {
-        position: absolute;
-        top: -5px;
-        left: 55px;
-        padding: 12px 0px 0 0px;
-        -webkit-transition: all 300ms;
-        -o-transition: all 300ms;
-        transition: all 300ms;
-        opacity: .8;
-        font-size: 15.5px;
-      }
-
-    }
-
-    @media (max-width: 992px) {
-      .container-fluid {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 50px;
-      }
-
-      #register #form-regis {
-        margin-left: auto;
-        margin-right: auto;
-        width: 90%;
-        padding-bottom: 5%;
-      }
-
-      #register #form-regis form #sisikiri {
-        border: none;
-        padding-right: 10px;
-        padding-left: 10px;
-      }
-
-      #register #form-regis form #sisikanan {
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-
-      .form-group .input-group .input-group-prepend span {
-        min-width: 40px;
-        padding: auto;
-      }
-
-      .form-group .input-group .input-group-prepend span i {
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 13px;
-      }
-
-      .form-group .input-group .form-control-placeholder {
-        position: absolute;
-        top: -4px;
-        left: 52px;
-        padding: 12px 0px 0 0px;
-        -webkit-transition: all 300ms;
-        -o-transition: all 300ms;
-        transition: all 300ms;
-        opacity: .8;
-        font-size: 14px;
-      }
-
-      .form-group .input-group .form-control-placeholder small {
-        font-size: 10px;
-      }
-
-      .form-group label {
-        font-size: 14px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .container-fluid {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 50px;
-      }
-
-      .card {
-        margin-bottom: 20px;
-      }
-
-      #register #form-regis {
-        margin-left: auto;
-        margin-right: auto;
-        width: 90%;
-        padding-bottom: 5%;
-      }
-
-      #register #form-regis form #sisikiri {
-        border: none;
-        padding-right: 0px;
-        padding-left: 0px;
-      }
-
-      #register #form-regis form #sisikanan {
-        padding-left: 0px;
-        padding-right: 0px;
-      }
-
-      .form-group .input-group .input-group-prepend span {
-        min-width: 37px;
-        padding: auto;
-      }
-
-      .form-group .input-group .input-group-prepend span i {
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 12px;
-      }
-
-      .form-group .input-group .form-control-placeholder {
-        position: absolute;
-        top: -4px;
-        left: 50px;
-        padding: 12px 0px 0 0px;
-        -webkit-transition: all 300ms;
-        -o-transition: all 300ms;
-        transition: all 300ms;
-        opacity: .8;
-        font-size: 15px;
-      }
-
-      .form-group label {
-        font-size: 15px;
-      }
-    }
-
-    @media (max-width: 575.98px) {
-      .container-fluid {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 50px;
-      }
-
-      .card {
-        margin-bottom: 20px;
-      }
-
-      #register #form-regis {
-        margin-left: auto;
-        margin-right: auto;
-        width: 90%;
-        padding-bottom: 5%;
-      }
-
-      #register #form-regis form #sisikiri {
-        border: none;
-        padding-right: 0px;
-        padding-left: 0px;
-      }
-
-      #register #form-regis form #sisikanan {
-        padding-left: 0px;
-        padding-right: 0px;
-      }
-
-      .form-group .input-group .input-group-prepend span {
-        min-width: 37px;
-        padding: auto;
-      }
-
-      .form-group .input-group .input-group-prepend span i {
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 12px;
-      }
-
-      .form-group .input-group .form-control-placeholder {
-        position: absolute;
-        top: -4px;
-        left: 50px;
-        padding: 12px 0px 0 0px;
-        -webkit-transition: all 300ms;
-        -o-transition: all 300ms;
-        transition: all 300ms;
-        opacity: .8;
-        font-size: 13px;
-      }
-    }
-  </style>
 </head>
 
 <body>
   <section id="register">
-    <div class="container-fluid">
-      <div id="judulregis">
-        <a href="login.html">
-          <h2 class="pt-5">Form Pendaftaran Data Mining</h2>
-        </a>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-lg-8 text-center mx-auto pt-5" id="judulregis">
+          <img src="assets/images/LOGO2.png" class="img-fluid mb-2" style="max-height: 30px;">
+          <h2 class="form-title">Form Pendaftaran Data Mining</h2>
+        </div>
       </div>
-      <div id="form-regis">
-        <form>
+      <div class="mt-4" id="form-regis">
+        <form class="validate-form">
           <div class="row pt-3">
-            <div class="col-md-6" id="sisikiri" style="">
-              <div class="card pb-0 pt-2">
+            <div class="col-md-6">
+              <div class="card pb-0 pt-2 mb-5">
                 <div class="card-body">
+                  <div class="card-title">Informasi Tim</div>
                   <div class="form-group">
                     <div class="input-group">
                       <div class="input-group-prepend">
@@ -375,6 +60,8 @@
                       <span id='bantuan_nama_tim' style='display: none; color: red'>Team sudah Terdaftar</span>
                     </div>
                   </div>
+
+                  <div class="card-title mt-5">Ketua Tim</div>
                   <div class="form-group">
                     <div class="input-group">
                       <div class="input-group-prepend">
@@ -390,29 +77,6 @@
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <span class="input-group-text">
-                          <i class="fa fa-envelope"></i>
-                        </span>
-                      </div>
-                      <input class="form-control" id="email_ketua" type="text" name="email_ketua" required>
-                      <label for="email_ketua" class="form-control-placeholder">E-mail Ketua *</label>
-                    </div>
-                    <span id='bantuan_email_ketua' style='display: none; color: red'>Email sudah Terdaftar</span>
-                  </div>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <i class="fab fa-line"></i>
-                        </span>
-                      </div>
-                      <input class="form-control" id="line_ketua" type="text" name="line_ketua" required>
-                      <label for="line_ketua" class="form-control-placeholder">Line/Whatsapp Ketua *</label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
                           <i class="fa fa-id-card"></i>
                         </span>
                       </div>
@@ -421,42 +85,28 @@
                     </div>
                   </div>
                   <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fa fa-phone"></i>
+                        </span>
+                      </div>
+                      <input class="form-control" id="kontak_ketua" type="text" name="kontak_ketua" required>
+                      <label for="kontak_ketua" class="form-control-placeholder">Line/Whatsapp Ketua</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
                     <label for="">Scan Kartu Tanda Mahasiswa Ketua * <small>.png/.jpg</small></label>
                     <input class="form-control-file" type="file" name="userfile1" accept=".png,.jpg" required>
                   </div>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <i class="fa fa-key"></i>
-                        </span>
-                      </div>
-                      <input class="form-control" id="password" type="password" name="password" required>
-                      <label for="password" class="form-control-placeholder">Kata Sandi * <small>huruf dan angka 8 ~ 30
-                          karakter</small></label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <i class="fa fa-unlock"></i>
-                        </span>
-                      </div>
-                      <input class="form-control" id="verif_pass" type="password" name="verif_pass" required>
-                      <label for="verif_pass" class="form-control-placeholder">Ulang Kata Sandi *</label>
-                    </div>
-                    <span id='bantuan_password' style='display: none; color: red'>Kata sandi tidak sama</span>
-                  </div>
                 </div>
               </div>
-              <p class="mb-0"><small>*) Wajib untuk diisi</small></p>
-              <button class="btn btn-block d-flex justify-content-center mx-auto" type="submit">DAFTAR!</button>
             </div>
 
-            <div class="col-md-6" id="sisikanan">
-              <div class="card pt-2">
+            <div class="col-md-6">
+              <div class="card pt-2 mb-2">
                 <div class="card-body">
+                  <div class="card-title">Anggota Tim</div>
                   <div class="form-group">
                     <div class="input-group">
                       <div class="input-group-prepend">
@@ -472,33 +122,22 @@
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <span class="input-group-text">
-                          <i class="fa fa-envelope"></i>
-                        </span>
-                      </div>
-                      <input class="form-control" id="email_anggota1" type="text" name="email_anggota1" required>
-                      <label for="email_anggota1" class="form-control-placeholder">E-mail Anggota 1</label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <i class="fab fa-line"></i>
-                        </span>
-                      </div>
-                      <input class="form-control" id="line_anggota1" type="text" name="line_anggota1" required>
-                      <label for="line_anggota1" class="form-control-placeholder">Line/Whatsapp Anggota 1</label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
                           <i class="fa fa-id-card"></i>
                         </span>
                       </div>
                       <input class="form-control" id="nim_anggota1" type="text" name="nim_anggota1" required>
                       <label for="nim_anggota1" class="form-control-placeholder">Nomor Mahasiswa Anggota 1 (NIM)</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fa fa-phone"></i>
+                        </span>
+                      </div>
+                      <input class="form-control" id="kontak_anggota1" type="text" name="kontak_anggota1" required>
+                      <label for="kontak_anggota1" class="form-control-placeholder">Line/Whatsapp Anggota 1</label>
                     </div>
                   </div>
                   <div class="form-group">
@@ -520,41 +159,40 @@
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <span class="input-group-text">
-                          <i class="fa fa-envelope"></i>
-                        </span>
-                      </div>
-                      <input class="form-control" id="email_anggota2" type="text" name="email_anggota2" required>
-                      <label for="email_anggota2" class="form-control-placeholder">E-mail Anggota 2</label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <i class="fab fa-line"></i>
-                        </span>
-                      </div>
-                      <input class="form-control" id="line_anggota2" type="text" name="line_anggota2" required>
-                      <label for="line_anggota2" class="form-control-placeholder">Line/Whatsapp Anggota 1</label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
                           <i class="fa fa-id-card"></i>
                         </span>
                       </div>
                       <input class="form-control" id="nim_anggota2" type="text" name="nim_anggota2" required>
-                      <label for="nim_anggota2" class="form-control-placeholder">Nomor Mahasiswa Anggota 1 (NIM)</label>
+                      <label for="nim_anggota2" class="form-control-placeholder">Nomor Mahasiswa Anggota 2</label>
+                      <div class="invalid-feedback">
+                        Looks good!
+                      </div>
                     </div>
                   </div>
                   <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fa fa-phone"></i>
+                        </span>
+                      </div>
+                      <input class="form-control" id="kontak_anggota2" type="text" name="kontak_anggota2" required>
+                      <label for="kontak_anggota2" class="form-control-placeholder">Line/Whatsapp Anggota 2 (NIM)</label>
+                      <div class="invalid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group upload">
                     <label for="">Scan Kartu Tanda Mahasiswa Anggota 2 <small>.png/.jpg</small></label>
                     <input class="form-control-file" type="file" name="userfile3" accept=".png,.jpg">
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="col-md-6 mb-5" id="button_keterangan">
+              <p class="mb-1"><small>*) Wajib untuk diisi</small></p>
+              <button class="btn btn-block d-flex justify-content-center mx-auto" type="submit">DAFTAR!</button>
             </div>
           </div>
         </form>
@@ -574,6 +212,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
   </script>
+
 </body>
 
 </html>
