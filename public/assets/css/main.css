@@ -3,3 +3,16 @@
 #sticky-footer {
     flex-shrink: none;
 }
+
+.make-me-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 0 15px;
+  }
+
+.sidebar-section {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
