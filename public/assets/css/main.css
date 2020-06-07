@@ -1,0 +1,5 @@
+/* Dibuat untuk view dashboard */
+
+#sticky-footer {
+    flex-shrink: none;
+}

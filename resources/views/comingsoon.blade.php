@@ -11,8 +11,7 @@
     <meta name="theme-color" content="#ffffff" />
     <!--===============================================================================================-->
     <link
-      rel="stylesheet"
-      type="text/css"
+      rel="stylesheet" 
       href="{{ asset('assets/comingsoon/vendor/bootstrap/css/bootstrap.min.css') }}"
     />
     <!--===============================================================================================-->
