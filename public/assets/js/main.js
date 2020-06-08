@@ -14,17 +14,7 @@ $(function() {
         $(".navbar").navbar('hide');
     });
 
-    //===== Sticky
-
-    $(window).on('scroll', function (event) {
-        var scroll = $(window).scrollTop();
-        if (scroll < 20) {
-            $(".navbar-area").removeClass("sticky");
-            $(".navbar-area img").attr("src", "assets/images/logobaru.png");
-        }
-    });
-
-
+    
     //===== Section Menu Active
 
     var scrollLink = $('.page-scroll');
