@@ -7,6 +7,8 @@
 		<div class="wrap-login100 justify-content-center">
 			<div class="login100-more" style="background-image: url('assets/images/illustration.png');"></div>
 			<form action="{{ route('login') }}" method="post" class="login100-form validate-form pt-5 pb-lg-5">
+                @csrf
+
 				<div class="login100-logo mx-auto ml-lg-0 pt-lg-5">
 					<img src="{{ asset('assets/images/logolong.png') }}" class="img-fluid">
 				</div>
