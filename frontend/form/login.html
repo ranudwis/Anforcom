@@ -2,91 +2,104 @@
 <html lang="en">
 
 <head>
-	<title>Login</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <!--  meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="assets/css/util.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-	<!--===============================================================================================-->
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/util.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png" />
+    <!--===============================================================================================-->
 </head>
 
 <body>
 
-	<div class="limiter">
-		<div class="wrap-login100 justify-content-center">
-			<div class="login100-more" style="background-image: url('assets/images/illustration.png');"></div>
-			<form class="login100-form validate-form pt-5 pb-lg-5">
-				<div class="login100-logo mx-auto ml-lg-0 pt-lg-5">
-					<img src="assets/images/LOGO2.png" class="img-fluid">
-				</div>
-				<span class="login100-form-title mt-3 p-b-34">
-					<h4 class="font-weight-bold text-dark text-left text-center text-lg-left">Masuk ke Akun Kamu
-					</h4>
-				</span>
-				<div class="form-group-full">
-					<label for="username">Username</label>
-					<div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type user name">
-						<input id="username" class="input100" type="text" name="username" placeholder="anforcom">
-						<span class="focus-input100"></span>
-					</div>
-				</div>
-				<div class="form-group-full">
-					<label for="first-name">Password</label>
-					<div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type password">
-						<input class="input100" type="password" name="pass" placeholder="**********">
-						<span class="focus-input100"></span>
-					</div>
-				</div>
-				<div class="container pl-0 pr-0 utilities mb-4" style="border-radius: 50%">
-					<span class="float-left">
-						<div class="round">
-							<input class="mt-0 mr-2" type="checkbox" id="checkbox" />
-							<label class="m-t-2" for="checkbox"></label> Ingat Saya
-						</div>
-					</span>
-					<a href="" class="float-right">Lupa Password </a>
-				</div>
-				<div class="container-login100-form-btn p-b-50">
-					<button class="login100-form-btn">
-						Masuk
-					</button>
-				</div>
+    <div class="limiter">
+        <div class="login100-more" style="background-image: url('assets/images/illustration.png');"></div>
+        <div class="container-login100">
+            <div class="wrap-login100 justify-content-center">
+                <form class="login100-form validate-form pt-5 pb-lg-5">
+                    <div class="login100-logo mx-auto ml-lg-0 pt-lg-5">
+                        <img src="assets/images/LOGO2.png" class="img-fluid">
+                    </div>
+                    <span class="login100-form-title mt-3 p-b-34">
+                        <h4 class="font-weight-bold text-dark text-left text-center text-lg-left">Masuk ke Akun Kamu
+                        </h4>
+                    </span>
+                    <div class="alert alert-danger btn-block" role="alert">
+                        This is an example danger alert for validate form
+                    </div>
+                    <div class="form-group-full">
+                        <label for="username">Username</label>
+                        <div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20"
+                            data-validate="Type user name">
+                            <input id="username" class="input100" type="text" name="username" placeholder="anforcom">
+                            <span class="focus-input100"></span>
+                        </div>
+                    </div>
+                    <div class="form-group-full">
+                        <label for="first-name">Password</label>
+                        <div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20"
+                            data-validate="Type password">
+                            <input class="input100" type="password" name="pass" placeholder="**********">
+                            <span class="focus-input100"></span>
+                        </div>
+                    </div>
+                    <div class="container pl-0 pr-0 utilities mb-4" style="border-radius: 50%">
+                        <span class="float-left">
+                            <div class="round">
+                                <input class="mt-0 mr-2" type="checkbox" id="checkbox" />
+                                <label class="m-t-2" for="checkbox"></label> Ingat Saya
+                            </div>
+                        </span>
+                        <a href="" class="float-right">Lupa Password </a>
+                    </div>
+                    <div class="container-login100-form-btn p-b-50">
+                        <button class="login100-form-btn">
+                            Masuk
+                        </button>
+                    </div>
 
-				<div class="w-full text-center pb-lg-2">
-					<a href="#" class="">
-						Belum punya akun? <a href="#" data-url="register.html" class="text-warning">Daftar di
-							sini!</a>
-					</a>
-				</div>
-			</form>
-		</div>
-	</div>
+                    <div class="w-full text-center pb-lg-2">
+                        <a href="#" class="">
+                            Belum punya akun? <a href="#" data-url="register.html" class="text-warning">Daftar di
+                                sini!</a>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
-	<!--===============================================================================================-->
-	<script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="assets/vendor/bootstrap/js/popper.js"></script>
-	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="assets/js/main.js"></script>
+    <!--===============================================================================================-->
+    <script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="assets/vendor/bootstrap/js/popper.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <!-- <script src="assets/js/main.js"></script> -->
 
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$("a").click(function (event) {
-				var $this = $(this),
-					url = $this.data("url");
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("a").click(function (event) {
+                var $this = $(this),
+                    url = $this.data("url");
 
-				$(document.body).load(url);
-				event.preventDefault();
-			});
-		});
-	</script>
+                $(document.body).load(url);
+                event.preventDefault();
+            });
+        });
+
+    </script>
 
 </body>
 
