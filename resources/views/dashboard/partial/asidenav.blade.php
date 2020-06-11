@@ -9,7 +9,7 @@
             </li>
 
             <li class="list-group-item">
-                <a style="text-decoration:none;color:black;" href="#" alt="Timeline" title="Timeline">
+            <a style="text-decoration:none;color:black;" href="{{ route('dashboard.timeline')}}" alt="Timeline" title="Timeline">
                     <i class="fa fa-fw fa-calendar-alt"></i>
                     &emsp;Timeline
                 </a>
