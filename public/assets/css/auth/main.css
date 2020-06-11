@@ -3,32 +3,32 @@
 
 @font-face {
   font-family: Product-Sans-Regular;
-  src: url('../fonts/product-sans/Product-Sans-Regular.ttf');
+  src: url('../../fonts/product-sans/Product-Sans-Regular.ttf');
 }
 
 @font-face {
   font-family: Product-Sans-Italic;
-  src: url('../fonts/product-sans/Product-Sans-Italic.ttf');
+  src: url('../../fonts/product-sans/Product-Sans-Italic.ttf');
 }
 
 @font-face {
   font-family: Product-Sans-Bold;
-  src: url('../fonts/product-sans/Product-Sans-Bold.ttf');
+  src: url('../../fonts/product-sans/Product-Sans-Bold.ttf');
 }
 
 @font-face {
   font-family: Product-Sans-Bold-Italic;
-  src: url('../fonts/product-sans/Product-Sans-Bold-Italic.ttf');
+  src: url('../../fonts/product-sans/Product-Sans-Bold-Italic.ttf');
 }
 
 @font-face {
   font-family: Gilroy-Bold;
-  src: url('../fonts/gilroy/Gilroy-ExtraBold.otf');
+  src: url('../../fonts/gilroy/Gilroy-ExtraBold.otf');
 }
 
 @font-face {
   font-family: Gilroy-Light;
-  src: url('../fonts/gilroy/Gilroy-Light.otf');
+  src: url('../../fonts/gilroy/Gilroy-Light.otf');
 }
 
 
