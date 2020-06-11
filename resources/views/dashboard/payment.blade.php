@@ -1,6 +1,7 @@
 @extends('dashboard.partial.main')
 
 @section('content')
+<article class="col-md-9 position-relative">
     @if (Auth::user()->team->payment_confirm)
         <p>
             Kamu sudah membayar
@@ -22,4 +23,5 @@
             <button type="submit">Konfirmasi</button>
         </form>
     @endif
+</article>
 @endsection
