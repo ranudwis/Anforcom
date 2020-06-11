@@ -14,7 +14,7 @@
     </div>
     <div class="row">
         <div class="col-md">
-            <nav class="mx-5">
+            <nav class="mx-5 my-4">
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                   <a class="nav-item nav-link active timeline-link" id="nav-datmin-tab" data-toggle="tab" href="#nav-datmin" role="tab" aria-controls="nav-datmin" aria-selected="true">Data Mining</a>
                   <a class="nav-item nav-link timeline-link" id="nav-softdev-tab" data-toggle="tab" href="#nav-softdev" role="tab" aria-controls="nav-softdev" aria-selected="false">Software Development</a>
