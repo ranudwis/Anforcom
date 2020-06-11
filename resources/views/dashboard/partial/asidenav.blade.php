@@ -1,5 +1,5 @@
-<aside class="col-md-3 bg-light shadow-sm position-relative">
-    <div class="card my-5 mx-auto" style="width: 16rem;">
+<aside class="col-md-3 bg-light shadow-sm" style="height: 100vh">
+    <div class="card my-5 mx-auto" style="width: 80%;">
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
                 <a style="text-decoration:none;color:black;" href="#" alt="Dashboard" title="Dashboard">
