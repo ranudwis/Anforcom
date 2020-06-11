@@ -9,12 +9,13 @@ $(function() {
     });
 
     //===== closes the responsive menu on menu item click
+    
     $(".navbar-nav li a").on("click", function(event) {
     if (!$(this).parent().hasClass('dropdown'))
         $(".navbar").navbar('hide');
     });
 
-    
+
     //===== Section Menu Active
 
     var scrollLink = $('.page-scroll');

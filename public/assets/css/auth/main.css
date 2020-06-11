@@ -2,6 +2,7 @@
 [ FONT ]*/
 
 @font-face {
+<<<<<<< HEAD:frontend/form/assets/css/main.css
     font-family: Product-Sans-Regular;
     src: url('../fonts/product-sans/Product-Sans-Regular.ttf');
 }
@@ -29,6 +30,35 @@
 @font-face {
     font-family: Gilroy-Light;
     src: url('../fonts/gilroy/Gilroy-Light.otf');
+=======
+  font-family: Product-Sans-Regular;
+  src: url('../../fonts/product-sans/Product-Sans-Regular.ttf');
+}
+
+@font-face {
+  font-family: Product-Sans-Italic;
+  src: url('../../fonts/product-sans/Product-Sans-Italic.ttf');
+}
+
+@font-face {
+  font-family: Product-Sans-Bold;
+  src: url('../../fonts/product-sans/Product-Sans-Bold.ttf');
+}
+
+@font-face {
+  font-family: Product-Sans-Bold-Italic;
+  src: url('../../fonts/product-sans/Product-Sans-Bold-Italic.ttf');
+}
+
+@font-face {
+  font-family: Gilroy-Bold;
+  src: url('../../fonts/gilroy/Gilroy-ExtraBold.otf');
+}
+
+@font-face {
+  font-family: Gilroy-Light;
+  src: url('../../fonts/gilroy/Gilroy-Light.otf');
+>>>>>>> b7b6ce845bea5018c875f84f62def365ce35e8f5:public/assets/css/auth/main.css
 }
 
 
@@ -629,8 +659,15 @@ input.input100 {
 }
 
 @media (max-width: 992px) {
+<<<<<<< HEAD:frontend/form/assets/css/main.css
     .alert-validate::before {
         visibility: visible;
         opacity: 1;
     }
+=======
+  .alert-validate::before {
+    visibility: visible;
+    opacity: 1;
+  }
+>>>>>>> b7b6ce845bea5018c875f84f62def365ce35e8f5:public/assets/css/auth/main.css
 }
