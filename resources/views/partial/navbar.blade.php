@@ -34,7 +34,7 @@
           </li-->
 
           <!-- Dropdown Menu -->
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown active">
             <a class="nav-link dropdown-toggle page-scroll" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Lomba</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="softdev.html"><span class="item-text">Mobile Apps</span></a>

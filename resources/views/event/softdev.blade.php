@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- HOME START -->
-<section id="home" class="slider_area">
+<section id="lomba" class="slider_area">
     <div id="carouselThree" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -64,51 +64,49 @@
         <div class="section-padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-10">
-                        <ul class="timeline">
-                            <li>
-                                <li>
-                                    <div class="content-text">
-                                        <h3 class="line-title">Pendaftaran</h3>
-                                        <span>15 Juni - 06 September 2020</span>
-                                        <p class="line-text">Batas Pendaftaran.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="content-text">
-                                        <h3 class="line-title">Pengumpulan Proposal</h3>
-                                        <span>06 Juli - 13 September 2020</span>
-                                        <p class="line-text">Batas Pengumpulan Proposal.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="content-text">
-                                        <h3 class="line-title">Pengumuman Finalis</h3>
-                                        <span>27 September 2020</span>
-                                        <p class="line-text">Akan diberitakan finalis anforcom melalui web dan media lainnya.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="content-text">
-                                        <h3 class="line-title">Pengumpulan File Finalis</h3>
-                                        <span>12 October 2020</span>
-                                        <p class="line-text">Batas Pengumpulan file yang dibutuhkan saat final.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="content-text">
-                                        <h3 class="line-title">Final</h3>
-                                        <span>18 October 2020</span>
-                                        <p class="line-text">Final akan dilaksanakan secara online.</p>
-                                    </div>
-                                </li>
-                            </ul>
+                  <ul class="timeline">
+                    <li>
+                      <li>
+                        <div class="content-text">
+                          <h3 class="line-title">Pendaftaran</h3>
+                          <span>15 Juni - 06 September 2020</span>
+                          <p class="line-text">Batas Pendaftaran.</p>
                         </div>
-                    </div>
+                      </li>
+                      <li>
+                        <div class="content-text">
+                          <h3 class="line-title">Pengumpulan Proposal</h3>
+                          <span>06 Juli - 13 September 2020</span>
+                          <p class="line-text">Batas Pengumpulan Proposal.</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="content-text">
+                          <h3 class="line-title">Pengumuman Finalis</h3>
+                          <span>27 September 2020</span>
+                          <p class="line-text">Akan diberitakan finalis anforcom melalui web dan media lainnya.</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="content-text">
+                          <h3 class="line-title">Pengumpulan File Finalis</h3>
+                          <span>12 October 2020</span>
+                          <p class="line-text">Batas Pengumpulan file yang dibutuhkan saat final.</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="content-text">
+                          <h3 class="line-title">Final</h3>
+                          <span>18 October 2020</span>
+                          <p class="line-text">Final akan dilaksanakan secara online.</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-            </div>
-        </div> <!-- container -->
-    </section>
+              </div>
+            </div> <!-- container -->
+          </section>
 
     <!-- TIMELINE ENDS -->
 
