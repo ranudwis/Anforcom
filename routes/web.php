@@ -40,6 +40,9 @@ Route::prefix('/dashboard')
         Route::view('/pembayaran', 'dashboard.payment')->name('payment');
         Route::post('/pembayaran', 'PaymentController@pay')->name('payment');
         Route::view('/tim', 'dashboard.tim')->name('tim');
+
+        //ini halaman percobaan
+        Route::view('/pembayaran2', 'dashboard.payment2')->name('payment2');
     });
 
 
