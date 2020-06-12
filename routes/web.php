@@ -44,6 +44,7 @@ Route::prefix('/dashboard')
 
         //ini halaman percobaan
         Route::view('/pembayaran2', 'dashboard.payment2')->name('payment2');
+        Route::view('/tugas', 'dashboard.tugas')->name('tugas');
     });
 
 
