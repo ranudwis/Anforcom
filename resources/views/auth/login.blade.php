@@ -8,6 +8,8 @@
     <div class="container-login100">
         <div class="wrap-login100 justify-content-center">
             <form class="login100-form validate-form pt-5 pb-lg-5" method="POST" action="{{ route('login') }}">
+                @csrf
+
                 <div class="login100-logo mx-auto ml-lg-0 pt-lg-5">
                     <img src="{{ asset('assets/form/images/LOGO2.png') }}" class="img-fluid">
                 </div>
