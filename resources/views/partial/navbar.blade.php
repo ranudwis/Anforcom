@@ -33,6 +33,7 @@
         <div class="navbar-btn d-none d-sm-inline-block">
             <ul>
                 <li><a class="solid" href="{{ route('login') }}">Login</a></li>
+                <li><a class="solid daftar" href="#">Daftar</a></li>
             </ul>
         </div>
     </nav> <!-- navbar -->

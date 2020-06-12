@@ -2002,9 +2002,9 @@ p {
           transform: translate(-50%) scaleX(1); }
           .navbar-btn {
             margin-left: 10px;
-            margin-right: 50px;}
+            margin-right: 10px;}
             @media (min-width: 320px) and (max-width: 991px) {
-              .navbar-btn {visibility: hidden;}}
+              .navbar-btn {visibility: hidden; margin-right: 10px}}
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .navbar-area .navbar .navbar-btn {
         position: absolute;
@@ -2040,6 +2040,14 @@ p {
           background-color: #fff;
           border-color: #fff;
           color: #818af4; }
+        .navbar-area .navbar .navbar-btn li a.solid.daftar {
+          background-color: transparent;
+          border-color:#fff;
+          color: #fff; }
+          .navbar-area .navbar .navbar-btn li a.solid.daftar:hover {
+            background-color: #fff;
+            border-color: #fff;
+            color: #818af4; }
           .navbar-area .navbar .navbar-btn li a.solid:hover {
             background-color: transparent;
             color: #fff; }
