@@ -12,7 +12,6 @@ class TimelineController extends Controller
     public function index()
     {
         $events = Event::all();
-
         return view('admin.timeline', compact('events'));
     }
 

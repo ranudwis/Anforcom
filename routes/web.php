@@ -65,6 +65,7 @@ Route::prefix('/admin')
         Route::post('/medpart', 'MedpartController@uploadMedpart')->name('medpart');
 
         Route::get('/task', 'TaskController@index')->name('task');
+        Route::get('/task/{event_id}', 'TaskController@formtask')->name('formtask');
         Route::post('/task', 'TaskController@addTask')->name('task');
 
         Route::get('/timeline', 'TimelineController@index')->name('timeline');

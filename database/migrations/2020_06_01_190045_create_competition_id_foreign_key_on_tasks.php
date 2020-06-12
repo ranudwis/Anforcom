@@ -14,7 +14,7 @@ class CreateCompetitionIdForeignKeyOnTasks extends Migration
     public function up()
     {
         Schema::table('tasks', function (Blueprint $table) {
-            $table->foreign('competition_id')
+            $table->foreign('event_id')
                 ->references('id')->on('events')
                 ->onDelete('RESTRICT');
 
