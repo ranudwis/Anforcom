@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="limiter">
-    <div class="login100-more" style="background-image: url({{ asset('assets/form/images/Illustration.png') }});"></div>
+    <div class="login100-more" style="background-image: url({{ asset('assets/form/images/illustration.png') }});"></div>
     <div class="container-login100">
         <div class="wrap-login100 justify-content-center">
             <form class="login100-form validate-form pt-5 pb-lg-5" method="POST" action="{{ route('login') }}">
