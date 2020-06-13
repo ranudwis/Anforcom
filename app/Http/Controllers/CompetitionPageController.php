@@ -17,6 +17,7 @@ class CompetitionPageController extends Controller
     public function show($competition)
     {
         $competition = Event::where('type', 'competition')
+            ->with('timelines')
             ->where('slug', $competition)
             ->firstOrFail();
 
