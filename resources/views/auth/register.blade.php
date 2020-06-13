@@ -61,15 +61,6 @@
                         <span class="focus-input100"></span>
                     </div>
                 </div>
-                <div class="container pl-0 pr-0 utilities mb-4" style="border-radius: 50%">
-                    <span class="float-left">
-                        <div class="round">
-                            <input class="mt-0 mr-2" type="checkbox" id="checkbox" />
-                            <label class="m-t-2" for="checkbox"></label> Ingat Saya
-                        </div>
-                    </span>
-                    <a href="" class="float-right">Lupa Password </a>
-                </div>
                 <div class="container-login100-form-btn p-b-50">
                     <button class="login100-form-btn">
                         Register
