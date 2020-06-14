@@ -37,8 +37,12 @@
         </div>
         <div class="navbar-btn d-none d-sm-inline-block">
             <ul>
-                <li><a class="solid" href="{{ route('login') }}">Login</a></li>
-                <li><a class="solid daftar" href="#">Daftar</a></li>
+                @auth
+                    <li><a class="solid" href="{{ route('dashboard.index') }}">Dashboard</a></li>
+                @else
+                    <li><a class="solid" href="{{ route('login') }}">Login</a></li>
+                    <li><a class="solid daftar" href="{{ route('register') }}">Daftar</a></li>
+                @endauth
             </ul>
         </div>
     </nav> <!-- navbar -->
