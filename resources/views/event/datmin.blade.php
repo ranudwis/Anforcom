@@ -14,7 +14,7 @@
                                 <p class="text">Kompetisi yang bertujuan untuk mencari penyeselaian permasalahan pengolahan data serta memprediksi data tersebut.</p>
                                 <ul class="slider-btn rounded-buttons">
                                     <li><a class="main-btn rounded-one" href="{{ route('enroll.show', ['event' => $competition->slug]) }}">Daftar</a></li>
-                                    <li><a class="main-btn rounded-two" href="{{ asset('assets/files/Juklak Anforcom 2019.pdf') }}">Guidebook</a></li>
+                                    <li><a class="main-btn rounded-two" href="{{ asset('rulebooks/Rulebook Data Mining Anforcom 2020.pdf') }}">Rulebook</a></li>
                                 </ul>
                             </div> <!-- slider-content -->
                         </div>
