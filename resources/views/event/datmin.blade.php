@@ -39,7 +39,7 @@
     <!-- FAQ START -->
 
     <section id="FAQ" class="faq-area">
-        <div class="container">
+        {{-- <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="faq-content mt-45">
@@ -89,7 +89,7 @@
                 <img src="assets/images/about.jpg" alt="about">
             </div>
         </div> -->
-    </div> <!-- row -->
+    </div> <!-- row --> --}}
 </div> <!-- container -->
 </section>
 
