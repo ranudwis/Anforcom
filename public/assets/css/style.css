@@ -567,10 +567,10 @@ p {
 .rounded-buttons .main-btn {
   border-radius: 50px; }
 .rounded-buttons .rounded-one {
-  border-color: #0ba2ed; }
+  border-color: transparent; }
   .rounded-buttons .rounded-one:hover {
     color: #0ba2ed;
-    background-color: rgba(0, 103, 244, 0.4); }
+    background-color: #fff; }
 .rounded-buttons .rounded-two {
   color: #fff;
   background-color: #0ba2ed;
@@ -1916,7 +1916,7 @@ p {
         top: 115%;
         left: 0;
         width: 100%;
-        background-color: #f4f6f7;
+        background-color: #094480;
         z-index: 8;
         padding: 10px 0;
         -webkit-box-shadow: 0px 10px 25px 0px rgba(18, 18, 18, 0.05);
@@ -1928,7 +1928,7 @@ p {
         top: 115%;
         left: 0;
         width: 100%;
-        background-color: #f4f6f7;
+        background-color: #094480;
         z-index: 8;
         padding: 10px 0;
         -webkit-box-shadow: 0px 10px 25px 0px rgba(18, 18, 18, 0.05);
@@ -2125,9 +2125,11 @@ p {
          HOME css
 ===========================*/
 .header {
-  background: #fff; /*url("../../assets/images/slider/bg.png") center center no-repeat*/;
-  background-size: cover;
-}
+  background: url("../../assets/images/tema.png") right top no-repeat;}
+
+@media (max-width: 1218px) {
+  .header {
+    background-size: cover;;}}
 
 .header .header-content {
   padding-top: 8.5rem;
@@ -2141,11 +2143,17 @@ p {
 
 .header h1 {
   color: #000;
+  margin-top: 50px;
   margin-bottom: 20px;
 }
 
-.header .p-large {
-  margin-bottom: 2rem;
+@media (max-width: 768px) {
+  .header h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;}}
+
+.header p {
+  margin-bottom: 20px;
   max-width: 480px;
   font-size: 24px;
   line-height: inherit;
@@ -2154,6 +2162,7 @@ p {
 
 .main-btn {
   margin-top: 20px;
+  margin-bottom: 100px;
   display: inline-block;
   font-weight: 700;
   text-align: center;
@@ -2186,7 +2195,7 @@ p {
 
   .slider-content .slider-btn li a.rounded-one {
     background-color: #094480;
-    border-color: #094480;
+    border-color: transparent;
     color: #fff;}
   .slider-content .slider-btn li a.rounded-one:hover {
     background-color: #fff;
@@ -2198,7 +2207,6 @@ p {
 .about {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: #f4f6f7;
 }
 
 .about .section-title h3 {
@@ -2207,15 +2215,13 @@ p {
 
 .about p {
   line-height: inherit;
-  max-width: 700px;
-  font-size: 24px;
-  padding-bottom: 20px;
-}
+  max-width: 650px;
+  font-size: 20px;
+  padding-bottom: 20px;}
+
 @media (max-width: 768px;) {
   .about p {
-    font-size: 14px;
-  }
-}
+    font-size: 14px;}}
 
 .about img {
   padding-left: 20px;
@@ -2228,17 +2234,73 @@ p {
 ===========================*/
 
 .event {
-  padding-top: 6.875rem;
+  padding-top: 10.875rem;
   padding-bottom: 6.125rem;
+  background: url("../../assets/images/event.png") left top no-repeat;
+  background-size: cover;
 }
+
+@media (max-width: 767px) {
+  ..event {
+    padding-top: 70px;
+    padding-bottom: 80px; } }
+
+.event h3 {
+  padding-bottom: 3.125rem;
+  color: #fff;
+  font-size: 48px;
+}
+
+.single-service {
+  background-color: #fff;
+  border: 1px solid #eceff8;
+  border-radius: 5px;
+  padding: 25px;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s; }
+  @media (max-width: 767px) {
+    .single-service {
+      padding: 15px; } }
+  .single-service .service-icon img {
+    padding-top: 20px;
+    padding-bottom: 20px;}
+  .single-service .service-content {
+    margin-bottom: 20px;
+    margin-top: 20px}
+    .single-service .service-content .service-title a {
+      font-size: 22px;
+      font-weight: 600;
+      color: #32333c;
+      margin-bottom: 20px;
+      -webkit-transition: all 0.3s ease-out 0s;
+      -moz-transition: all 0.3s ease-out 0s;
+      -ms-transition: all 0.3s ease-out 0s;
+      -o-transition: all 0.3s ease-out 0s;
+      transition: all 0.3s ease-out 0s; }
+      .single-service .service-content .service-title a:hover {
+        color: #094480; }
+  @media (max width: 768px) {
+    .single-service .service-content h4 {
+      font-size: 12px;
+      padding-left: 10px;}}
+  .single-service .service-content p {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 480px;}
+  .single-service:hover {
+    -webkit-box-shadow: 0px 0px 21px 0px #094480;
+    -moz-box-shadow: 0px 0px 21px 0px #094480;
+    box-shadow: 0px 0px 21px 0px #094480 }
 
 /*===========================
       VIDEO css
 ===========================*/
 .basic-3 {
-  background-color: #f4f6f7;
   padding-top: 6.875rem;
-  padding-bottom: 6.125rem;
 }
 
 .basic-3 h2 {
@@ -2387,7 +2449,6 @@ p {
 ===========================*/
 
 .medpar {
-  padding-top: 6.875rem;
   padding-bottom: 6.125rem;
 }
 
@@ -2772,7 +2833,13 @@ p {
   position: relative;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 992px) and (max-width: 1279px){
+  .timeline {
+    padding-left: 150px;
+  }
+}
+
+@media (min-width: 1280px) {
   .timeline {
     padding-left: 250px;
   }

@@ -8,9 +8,11 @@
     </head>
 
     <body>
-        <a href="{{ route('competition.index') }}">List Lomba</a>
+        <!--a href="{{ route('competition.index') }}">List Lomba</a>
         <a href="{{ route('login') }}">Masuk</a>
-        <a href="{{ route('register') }}">Daftar</a>
+        <a href="{{ route('register') }}">Daftar</a-->
+
+        @extends('partial.main')
 
         <!-- HOME START -->
         <section id="home" class="header">
@@ -25,11 +27,6 @@
                                 <li><a class="main-btn rounded-one" href="#">Daftar</a></li>
                               </ul>
                           </div>
-                      </div> <!-- end of col -->
-                      <div class="col-lg-6">
-                          <div class="image-container">
-                              <img class="img-fluid" src="#" alt="blom ada">
-                          </div> <!-- end of image-container -->
                       </div> <!-- end of col -->
                   </div> <!-- end of row -->
               </div> <!-- end of container -->
@@ -67,9 +64,55 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-12">
-                <div class="section-title text-center pb-10">
+                <div class="text-center pb-10">
                   <h3 class="title">Kompetisi dan acara</h3>
                 </div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-6">
+                <div class="single-service text-center mt-30">
+                    <div class="image-fluid service-icon">
+                      <img src="assets/images/computer.png" alt="">
+                    </div>
+                    <div class="service-content">
+                      <h4 class="title service-title"><a href="#">Software Development</a></h4>
+                      <p>Kompetisi yang bertujuan untuk membuat dan mengembangkan applikasi mengenai suatu tema tertentu.</p>
+                    </div>
+                </div> <!-- single service -->
+              </div>
+              <div class="col-lg-6">
+                <div class="single-service text-center mt-30">
+                    <div class="image-fluid service-icon">
+                      <img src="assets/images/data-mining.png" alt="">
+                    </div>
+                    <div class="service-content">
+                      <h4 class="title service-title"><a href="#">Data Mining</a></h4>
+                      <p class="text">Kompetisi yang bertujuan untuk mencari penyeselaian permasalahan pengolahan data serta memprediksi data yang diberikan.</p>
+                    </div>
+                </div> <!-- single service -->
+              </div>
+              <div class="col-lg-6">
+                <div class="single-service text-center mt-30">
+                    <div class="image-fluid service-icon">
+                      <img src="assets/images/speech.png" alt="">
+                    </div>
+                    <div class="service-content">
+                      <h4 class="title service-title"><a href="#">Seminar</a></h4>
+                      <p class="text">Acara Seminar yang diisi oleh developer ternama.</p>
+                    </div>
+                </div> <!-- single service -->
+              </div>
+              <div class="col-lg-6">
+                <div class="single-service text-center mt-30">
+                    <div class="image-fluid service-icon">
+                      <img src="assets/images/theater.png" alt="">
+                    </div>
+                    <div class="service-content">
+                      <h4 class="title service-title"><a href="#">Live music</a></h4>
+                      <p class="text">Acara penutupan dengan guest star ternama.</p>
+                    </div>
+                </div> <!-- single service -->
               </div>
             </div>
           </div>
@@ -180,6 +223,7 @@
                   <div class="footer-content">
                     <a href="#home"><img src="assets/images/LOGO2 PUTIH.png" alt="logo"></a>
                     <ul>
+                      <li><a href="http://line.me/ti/p/~@gsy5063l"><i class="lni lni-line"></i></a></li>
                       <li><a href="https://twitter.com/Anforcom"><i class="lni lni-twitter-original"></i></a></li>
                       <li><a href="https://www.instagram.com/anforcom/"><i class="lni lni-instagram-original"></i></a></li>
                       <li><a href="https://www.youtube.com/channel/UCYNWHN4O_8om6FX7nKpE-rw"><i class="lni lni-youtube"></i></a></li>
@@ -196,5 +240,4 @@
         </footer>
         <!-- FOOTER ENDS -->
     </body>
-
     </html>
