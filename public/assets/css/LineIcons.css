@@ -858,7 +858,7 @@ Generated using nucleoapp.com
   content: "\eab1";
 }
 
-.lni-facebook-filled::before {
+.lni-facebook-filled:before {
   content: "\eab2";
 }
 
@@ -1114,7 +1114,7 @@ Generated using nucleoapp.com
   content: "\eaf1";
 }
 
-.lni-instagram-original::before {
+.lni-instagram-original:before {
   content: "\eaf2";
 }
 
@@ -2026,11 +2026,11 @@ Generated using nucleoapp.com
   content: "\ebd5";
 }
 
-.lni-twitter-original::before {
+.lni-twitter-original:before {
   content: "\ebd6";
 }
 
-.lni-twitter::before {
+.lni-twitter:before {
   content: "\ebd7";
 }
 
@@ -2178,7 +2178,7 @@ Generated using nucleoapp.com
   content: "\ebfb";
 }
 
-.lni-youtube::before {
+.lni-youtube:before {
   content: "\ebfc";
 }
 
@@ -2205,4 +2205,3 @@ Generated using nucleoapp.com
 .lni-pulse::before {
   content: "\ec02";
 }
-

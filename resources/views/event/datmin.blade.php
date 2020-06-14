@@ -56,7 +56,7 @@
     <section id="FAQ" class="faq-area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5">
+                <div class="col-lg-6">
                     <div class="faq-content mt-45">
                         <div class="faq-title">
                             <h6 class="sub-title">Cari tahu lagi</h6>
