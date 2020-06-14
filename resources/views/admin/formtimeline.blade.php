@@ -53,8 +53,8 @@
     <h3>Timeline</h3>
     <h4>Registrasi : </h4>
     @if ($registration)
-    <p>Start : {{ $registration->start }}</p>
-    <p>End : {{ $registration->end }}</p>
+        <p>Start : {{ $registration->start }}</p>
+        <p>End : {{ $registration->end }}</p>
     @endif
 
     <table border="1">

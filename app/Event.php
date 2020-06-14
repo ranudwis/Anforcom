@@ -28,6 +28,10 @@ class Event extends Model
 
     public function registrationTimeline()
     {
-        return $this->timelines->firstWhere('id', $this->register_timeline_id);
+        return $this->timelines->firstWhere('id', $this->register_timeline_id) ?? (object) [
+            'id' => 0,
+            'start' => null,
+            'end' => null,
+        ];
     }
 }
