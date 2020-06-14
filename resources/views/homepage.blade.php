@@ -132,7 +132,7 @@
                 <div class="col-lg-12">
                   <div class="image-container">
                     <div class="video-wrapper">
-                      <a class="popup-youtube" href="https://www.youtube.com/watch?v=YYNhPgzVDnM" data-effect="fadeIn">
+                      <a class="popup-youtube" href="{{ env('ANFORCOM_TEASER_URL') }}" data-effect="fadeIn" target="_blank">
                         <img class="img-fluid" src="assets/images/video.jpg" alt="alternative">
                         <span class="video-play-button">
                           <span></span>

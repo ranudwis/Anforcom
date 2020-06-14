@@ -2,7 +2,7 @@
 
 Route::get('/comingsoon', 'ComingSoonController@index')->name('comingsoon');
 
-Route::view('/', 'homepage')->name('home');
+Route::view('/', 'homepage')->middleware('needevents')->name('home');
 
 Route::middleware('guest')->group(function () {
     Route::view('/masuk', 'auth.login')->name('login');
