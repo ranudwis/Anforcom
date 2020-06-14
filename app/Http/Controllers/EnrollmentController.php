@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Request\RegistrationRequest;
+use App\Http\Requests\RegistrationRequest;
 use App\Event;
 use App\Team;
 
@@ -22,7 +22,7 @@ class EnrollmentController extends Controller
         return view('enroll.show', compact('event'));
     }
 
-    public function enroll(Request $request, Event $event)
+    public function enroll(RegistrationRequest $request, Event $event)
     {
         $registration = $request->user()->registrations()->create([
             'event_id' => $event->id

@@ -45,18 +45,19 @@
                         <h2 class="form-title">Form Pendaftaran {{ $event->name }}</h2>
                     </div>
                 </div>
-                <div class="alert alert-danger btn-block mt-3" role="alert">
-                    This is an example danger alert for validate form
-                </div>
-                @csrf
-
                 @if ($errors->any())
-                @foreach ($errors->all() as $error)
-                {{ $error }}
-                @endforeach
+                    <div class="alert alert-danger btn-block mt-3" role="alert">
+                        <ul>
+                            @foreach ($errors->all() as $error) <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
                 @endif
+
                 <div class="mt-4" id="form-regis">
-                    <form class="validate-form" novalidate>
+                    <form action="{{ route('enroll.create', ['event' => $event->slug]) }}" method="post" enctype="multipart/form-data" class="validate-form" novalidate>
+                        @csrf
+
                         <div class="row pt-3">
                             <div class="col-md-6">
                                 <div class="card pb-0 pt-2 mb-5">

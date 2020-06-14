@@ -27,31 +27,33 @@ class RegistrationRequest extends FormRequest
             'university' => 'required',
             'team_name' => 'required',
             'leader_nim' => 'required',
-            'leader_contact' => 'required',
             'leader_ktm' => 'required|image',
             'members' => 'required',
         ];
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     */
     public function withValidator($validator)
     {
         $validator->after(function ($validator) {
             $data = $validator->valid();
 
             foreach ($data['members'] as $i => $member) {
-                if (! $member['name']) {
+                if (! isset($member['name']) || ! $member['name']) {
                     $validator->errors()->add($i . 'name', 'Nama harus diisi');
                 }
 
-                if (! $member['email']) {
+                if (! isset($member['email']) || ! $member['email']) {
                     $validator->errors()->add($i . 'email', 'Email harus diisi');
                 }
 
-                if (! $member['contact']) {
+                if (! isset($member['contact']) || ! $member['contact']) {
                     $validator->errors()->add($i . 'contact', 'Line / WA harus diisi');
                 }
 
-                if (! $member['ktm']) {
+                if (! isset($member['ktm']) || ! $member['ktm']) {
                     $validator->errors()->add($i . 'ktm', 'KTM harus diisi');
                 }
             }

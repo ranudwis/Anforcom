@@ -18,7 +18,7 @@
                     <h4 class="font-weight-bold text-dark text-left text-center text-lg-left">Buat Akun Baru</h4>
                 </span>
                 {{-- menampilkan error validasi --}}
-                @if (count($errors) > 0)
+                @if ($errors->any())
                 <div class="alert alert-danger btn-block" role="alert">
                     <ul>
                         @foreach ($errors->all() as $error) <li>{{ $error }}</li>
