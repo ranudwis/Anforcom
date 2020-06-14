@@ -8,7 +8,7 @@
 
     @yield('content')
 
-    @include('partial.contact')
+    @include('partial.footer')
 
     @include('partial.backtotop')
 
