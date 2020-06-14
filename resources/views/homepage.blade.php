@@ -76,8 +76,8 @@
                       <img src="assets/images/computer.png" alt="">
                     </div>
                     <div class="service-content">
-                      <h4 class="title service-title"><a href="#">Software Development</a></h4>
-                      <p>Kompetisi yang bertujuan untuk membuat dan mengembangkan applikasi mengenai suatu tema tertentu.</p>
+                      <h4 class="title service-title"><a href="{{ route('competition.show', ['competition' => 'apps-innovation']) }}">Apps Innovation</a></h4>
+                      <p>Kompetisi yang bertujuan untuk membuat dan mengembangkan aplikasi mengenai suatu tema tertentu.</p>
                     </div>
                 </div> <!-- single service -->
               </div>
@@ -87,12 +87,12 @@
                       <img src="assets/images/data-mining.png" alt="">
                     </div>
                     <div class="service-content">
-                      <h4 class="title service-title"><a href="#">Data Mining</a></h4>
+                      <h4 class="title service-title"><a href="{{ route('competition.show', ['competition' => 'datmin']) }}">Data Mining</a></h4>
                       <p class="text">Kompetisi yang bertujuan untuk mencari penyeselaian permasalahan pengolahan data serta memprediksi data yang diberikan.</p>
                     </div>
                 </div> <!-- single service -->
               </div>
-              <div class="col-lg-6">
+              {{-- <div class="col-lg-6">
                 <div class="single-service text-center mt-30">
                     <div class="image-fluid service-icon">
                       <img src="assets/images/speech.png" alt="">
@@ -112,7 +112,7 @@
                       <h4 class="title service-title"><a href="#">Live music</a></h4>
                       <p class="text">Acara penutupan dengan guest star ternama.</p>
                     </div>
-                </div> <!-- single service -->
+                </div> <!-- single service --> --}}
               </div>
             </div>
           </div>
@@ -148,7 +148,7 @@
         <!-- TEASER END -->
 
         <!-- SPONSOR START -->
-        <section id="sponsor" class="sponsor">
+        {{-- <section id="sponsor" class="sponsor">
           <div class="brand-area pt-90">
             <div class="container">
               <div class="row">
@@ -176,11 +176,11 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> --}}
         <!-- SPONSOR PARTNER END -->
 
         <!-- MEDIA PARTNER END -->
-        <section id="medpar" class="medpar">
+        {{-- <section id="medpar" class="medpar">
           <div class="brand-area pt-90">
             <div class="container">
               <div class="row">
@@ -211,7 +211,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> --}}
         <!-- MEDIA PARTNER END -->
 
         <!-- FOOTER START -->
