@@ -1,6 +1,6 @@
 <section class="navbar-area">
     <nav class="navbar navbar-collapse navbar-expand-lg navbar-custom">
-        <a class="navbar-brand" href="#home">
+        <a class="navbar-brand" href="{{ route('home') }}">
             <img src="{{ asset('assets/images/logobaru.png') }}" alt="Logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">

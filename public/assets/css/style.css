@@ -2127,9 +2127,10 @@ p {
 .header {
   background: url("../../assets/images/tema.png") right top no-repeat;}
 
-@media (max-width: 1218px) {
+@media (max-width: 1024px) {
   .header {
-    background-size: cover;;}}
+    background: url("../../assets/images/kecil.png") right top no-repeat;
+    background-size: cover;}}
 
 .header .header-content {
   padding-top: 8.5rem;
@@ -2249,7 +2250,9 @@ p {
   padding-bottom: 3.125rem;
   color: #fff;
   font-size: 48px;
-}
+  font-weight: 600;}
+  @media (min-width: 1280px) {
+    .event h3 { padding-top: 3.125rem }}
 
 .single-service {
   background-color: #fff;
@@ -2271,10 +2274,6 @@ p {
     margin-bottom: 20px;
     margin-top: 20px}
     .single-service .service-content .service-title a {
-      font-size: 22px;
-      font-weight: 600;
-      color: #32333c;
-      margin-bottom: 20px;
       -webkit-transition: all 0.3s ease-out 0s;
       -moz-transition: all 0.3s ease-out 0s;
       -ms-transition: all 0.3s ease-out 0s;
@@ -2288,6 +2287,7 @@ p {
       padding-left: 10px;}}
   .single-service .service-content p {
     text-align: center;
+    margin-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
     max-width: 480px;}
@@ -2301,6 +2301,7 @@ p {
 ===========================*/
 .basic-3 {
   padding-top: 6.875rem;
+  padding-bottom: 6.875rem;
 }
 
 .basic-3 h2 {
@@ -2405,7 +2406,6 @@ p {
 ===========================*/
 
 .sponsor {
-  padding-top: 6.875rem;
   padding-bottom: 6.125rem;
 }
 
@@ -2489,6 +2489,7 @@ p {
     margin-top: 35px; }
     .footer-content ul li {
       display: inline-block;
+      margin-bottom: 50px;
       margin-right: 14px; }
       @media (max-width: 767px) {
         .footer-content ul li {
@@ -2516,16 +2517,6 @@ p {
         .footer-content ul li a:hover {
           background-color: #fff;
           color: #1c2940; }
-
-/*.lni-facebook-filled:before {
-  content: "\eab2";}
-.lni-twitter-original:before {
-  content: "\ebd7";}
-.lni-instagram-original:before {
-  content: "\eaf2";}
-.lni-youtube:before {
-  content: "\ebfc";}
-*/
 
 /*===========================
        10.SLIDER css

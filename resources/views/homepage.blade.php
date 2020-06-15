@@ -24,7 +24,7 @@
                               <h1>Anforcom 2020</h1>
                               <p class="text">Annual Informatics Competition (Anforcom) 2020 merupakan kompetisi skala nasional yang diselenggarakan oleh Himpunan Mahasiswa Informatika Universitas Diponegoro.</p>
                               <ul class="slider-btn rounded-buttons">
-                                <li><a class="main-btn rounded-one" href="#">Daftar</a></li>
+                                <li><a class="main-btn rounded-one" href="{{ route('register') }}">Daftar</a></li>
                               </ul>
                           </div>
                       </div> <!-- end of col -->
@@ -72,46 +72,54 @@
             <div class="row justify-content-center">
               <div class="col-lg-6">
                 <div class="single-service text-center mt-30">
+                  <a href="{{ route('competition.show', ['competition' => 'apps-innovation']) }}">
                     <div class="image-fluid service-icon">
                       <img src="assets/images/computer.png" alt="">
                     </div>
                     <div class="service-content">
-                      <h4 class="title service-title"><a href="{{ route('competition.show', ['competition' => 'apps-innovation']) }}">Apps Innovation</a></h4>
+                      <h4 class="title service-title">Apps Innovation</h4>
                       <p>Kompetisi yang bertujuan untuk membuat dan mengembangkan aplikasi mengenai suatu tema tertentu.</p>
                     </div>
+                  </a>
                 </div> <!-- single service -->
               </div>
               <div class="col-lg-6">
                 <div class="single-service text-center mt-30">
+                  <a href="{{ route('competition.show', ['competition' => 'datmin']) }}">
                     <div class="image-fluid service-icon">
                       <img src="assets/images/data-mining.png" alt="">
                     </div>
                     <div class="service-content">
-                      <h4 class="title service-title"><a href="{{ route('competition.show', ['competition' => 'datmin']) }}">Data Mining</a></h4>
+                      <h4 class="title service-title">Data Mining</h4>
                       <p class="text">Kompetisi yang bertujuan untuk mencari penyeselaian permasalahan pengolahan data serta memprediksi data yang diberikan.</p>
                     </div>
+                  </a>
                 </div> <!-- single service -->
               </div>
               {{-- <div class="col-lg-6">
                 <div class="single-service text-center mt-30">
+                  <a href="#">
                     <div class="image-fluid service-icon">
                       <img src="assets/images/speech.png" alt="">
                     </div>
                     <div class="service-content">
-                      <h4 class="title service-title"><a href="#">Seminar</a></h4>
+                      <h4 class="title service-title">Seminar</h4>
                       <p class="text">Acara Seminar yang diisi oleh developer ternama.</p>
                     </div>
+                  </a>
                 </div> <!-- single service -->
               </div>
               <div class="col-lg-6">
                 <div class="single-service text-center mt-30">
+                  <a href="#">
                     <div class="image-fluid service-icon">
                       <img src="assets/images/theater.png" alt="">
                     </div>
                     <div class="service-content">
-                      <h4 class="title service-title"><a href="#">Live music</a></h4>
+                      <h4 class="title service-title">Live music</h4>
                       <p class="text">Acara penutupan dengan guest star ternama.</p>
                     </div>
+                  </a>
                 </div> <!-- single service --> --}}
               </div>
             </div>
