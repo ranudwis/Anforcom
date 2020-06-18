@@ -37,10 +37,11 @@ Route::prefix('/dashboard')
     ->group(function () {
         Route::get('/', 'DashboardPageController@index')->name('index');
 
+        Route::get('/timeline', 'TimelineController@index')->name('timeline');
+
         Route::view('/pembayaran', 'dashboard.payment')->name('payment');
         Route::post('/pembayaran', 'PaymentController@pay')->name('payment');
         Route::view('/tim', 'dashboard.tim')->name('tim');
-        Route::view('/timeline', 'dashboard.timeline')->name('timeline');
 
         //ini halaman percobaan
         Route::view('/pembayaran2', 'dashboard.payment2')->name('payment2');
