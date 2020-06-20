@@ -30,7 +30,7 @@ class SendDiscordRegistrationNotification
     {
         $user = $event->getNewUser();
         $message = new NewUserMessage($user);
-        $discordNotifier = new DiscordNotification('Pendaftaran baru Anforcom');
+        $discordNotifier = new DiscordNotification();
 
         $discordNotifier->send($message);
     }

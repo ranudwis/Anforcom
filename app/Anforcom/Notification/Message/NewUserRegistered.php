@@ -13,6 +13,11 @@ class NewUserRegistered implements Message
         $this->user = $user;
     }
 
+    public function getTitle()
+    {
+        return 'Pendaftaran Baru Anforcom';
+    }
+
     public function getMessage()
     {
         return <<<MESSAGE

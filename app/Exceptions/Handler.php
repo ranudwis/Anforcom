@@ -4,6 +4,7 @@ namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Validation\ValidationException;
 use App\Anforcom\Notification\Message\ErrorMessage;
 use App\Anforcom\Notification\Notifier\DiscordLog;
 
@@ -38,14 +39,18 @@ class Handler extends ExceptionHandler
      */
     public function report(Exception $exception)
     {
+        parent::report($exception);
+
         if (env('APP_ENV') === 'production') {
+            if ($exception instanceof ValidationException) {
+                return;
+            }
+
             $message = new ErrorMessage($exception);
-            $discordLogNotifier = new DiscordLog('Exception Report');
+            $discordLogNotifier = new DiscordLog();
 
             $discordLogNotifier->send($message);
         }
-
-        parent::report($exception);
     }
 
     /**

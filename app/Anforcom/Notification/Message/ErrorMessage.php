@@ -28,6 +28,11 @@ class ErrorMessage implements Message
         }
     }
 
+    public function getTitle()
+    {
+        return 'Exception Report';
+    }
+
     public function getMessage()
     {
         return <<<MESSAGE

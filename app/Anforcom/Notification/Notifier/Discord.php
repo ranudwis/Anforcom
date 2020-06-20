@@ -7,14 +7,12 @@ use App\Anforcom\Notification\Message\Message;
 
 class Discord
 {
-    protected $name;
     protected $apiUrl;
     protected $client;
     protected $operation = true;
 
-    public function __construct(string $name, string $apiUrl = null)
+    public function __construct(string $apiUrl = null)
     {
-        $this->name = $name;
         $this->apiUrl = $apiUrl;
         $this->client = new Client();
     }
@@ -27,7 +25,7 @@ class Discord
 
         $this->client->post($this->apiUrl, [
             'json' => [
-                'username' => $this->name,
+                'username' => $message->getTitle(),
                 'content' => $message->getMessage()
             ]
         ]);
