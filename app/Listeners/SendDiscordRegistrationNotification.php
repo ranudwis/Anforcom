@@ -6,7 +6,7 @@ use App\Events\NewUserRegistered;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use App\Anforcom\Notification\Message\NewUserRegistered as NewUserMessage;
-use App\Anforcom\Notification\Notifier\Discord;
+use App\Anforcom\Notification\Notifier\DiscordNotification;
 
 class SendDiscordRegistrationNotification
 {
@@ -30,7 +30,7 @@ class SendDiscordRegistrationNotification
     {
         $user = $event->getNewUser();
         $message = new NewUserMessage($user);
-        $discordNotifier = new Discord('Pendaftaran baru Anforcom');
+        $discordNotifier = new DiscordNotification('Pendaftaran baru Anforcom');
 
         $discordNotifier->send($message);
     }
