@@ -14,8 +14,14 @@ class Timeline extends Model
 
     public function getRangeString()
     {
-        return $this->start->format('j F Y') .
+        $formatString = 'j F Y';
+
+        if ($this->start == $this->end) {
+            return $this->start->format($formatString);
+        }
+
+        return $this->start->format($formatString) .
             ' - ' .
-            $this->end->format('j F Y');
+            $this->end->format($formatString);
     }
 }
