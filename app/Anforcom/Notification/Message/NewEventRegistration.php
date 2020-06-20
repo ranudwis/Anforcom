@@ -4,7 +4,6 @@ namespace App\Anforcom\Notification\Message;
 
 use App\Registration;
 use App\Team;
-use Storage;
 
 class NewEventRegistration implements Message
 {
@@ -14,7 +13,7 @@ class NewEventRegistration implements Message
     public function __construct(Registration $registration, Team $team)
     {
         $registration->load('event');
-        $team->load('leader');
+        $team->load('leader', 'members');
 
         $this->registration = $registration;
         $this->team = $team;
@@ -22,19 +21,31 @@ class NewEventRegistration implements Message
 
     public function getTitle()
     {
-        return 'Pendaftaran baru: ' . $this->registration->event->name;
+        return 'Pendaftaran Baru [' . $this->registration->event->name . ']';
     }
 
     public function getMessage()
     {
         $leader = $this->team->leader;
+        $members = '';
+
+        foreach ($this->team->members as $i => $member) {
+            $number = $i + 1;
+            $members .= <<<MEMBER
+            Anggota ke-{$number}
+            Nama: {$member->name}
+            Email: {$member->email}
+            Kontak: {$member->contact}
+
+            MEMBER;
+        }
 
         return <<<MESSAGE
-        [{$this->registration->event->name}]
-
         Nama Tim: {$this->team->name}
         Universitas: {$this->team->university}
         Ketua tim: {$leader->name} {$leader->email} {$leader->contact}
+
+        {$members}
         MESSAGE;
     }
 }

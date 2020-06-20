@@ -18,6 +18,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\NewUserRegistered' => [
             'App\Listeners\SendDiscordRegistrationNotification',
         ],
+        'App\Events\NewEventRegistration' => [
+            'App\Listeners\SendEventRegistrationNotification',
+        ],
     ];
 
     /**
