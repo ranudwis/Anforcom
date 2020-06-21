@@ -4,7 +4,6 @@ namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
-use Illuminate\Validation\ValidationException;
 use App\Anforcom\Notification\Message\ErrorMessage;
 use App\Anforcom\Notification\Notifier\DiscordLog;
 
@@ -16,7 +15,9 @@ class Handler extends ExceptionHandler
      * @var array
      */
     protected $dontReport = [
-        //
+        'Illuminate\Validation\ValidationException',
+        'Illuminate\Auth\AuthenticationException',
+        'Symfony\Component\HttpKernel\Exception\NotFoundHttpException',
     ];
 
     /**
@@ -42,7 +43,12 @@ class Handler extends ExceptionHandler
         parent::report($exception);
 
         if (env('APP_ENV') === 'production') {
-            if ($exception instanceof ValidationException) {
+            if (
+                in_array(
+                    get_class($exception),
+                    $this->dontReport
+                )
+            ) {
                 return;
             }
 

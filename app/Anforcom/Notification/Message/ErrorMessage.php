@@ -10,6 +10,7 @@ class ErrorMessage implements Message
     private $exception;
     private $methods;
     private $uri;
+    private $user;
 
     public function __construct(Exception $exception)
     {
