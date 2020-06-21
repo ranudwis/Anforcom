@@ -33,7 +33,13 @@
                 <div class="card rounded shadow-sm mx-5 my-2">
                     <div class="card-body">
                         <h5 class="card-title">
-                        <a class="font-weight-bold" href="{{ route('dashboard.tim') }}" style="color:black;text-decoration:none;"alt="{{$registration->event->name}}" title="{{$registration->event->name}}">{{$registration->event->name}}</a>
+                        <a
+                            class="font-weight-bold"
+                            href="{{ route('dashboard.event.show', ['event' => $registration->event->slug]) }}"
+                            style="color:black;text-decoration:none;" alt="{{$registration->event->name}}" title="{{$registration->event->name}}">
+                            {{ $registration->event->name }}
+                        </a>
+
                         </h5>
                         @if ($registration->isInactive())
                             <span>Status Pembayaran : <span class="text-warning">Belum Membayar</span></span>
