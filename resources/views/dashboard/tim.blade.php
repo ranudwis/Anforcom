@@ -2,12 +2,7 @@
 
 @section('content')
 <article class="col-md-9 position-relative">
-    <div class="row">
-        <div class="col-md">
-            <h6 class="pt-5 pb-3 ml-5" style="color:rgba(0,0,0,0.5)">Dashboard (breadcumbs)</h6>
-        </div>
-    </div>
-    <div class="row">
+    <div class="row mt-5">
         <div class="col-md">
             <h4 class="ml-5">Detail Lomba</h4>
         </div>
@@ -22,23 +17,8 @@
     </div>
     <div class="row">
         <div class="col-md">
-            <div class="card rounded shadow-sm mx-5 my-5">
+            <div class="card rounded shadow-sm mx-5 my-3">
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                      <div class="row">
-                          <div class="col-md">
-                              <span class="card-text">Status Pembayaran</span>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-md">
-                              <h4>Menunggu Pembayaran</h4>
-                          </div>
-                          <div class="col-md d-flex justify-content-end">
-                            <a href="#" class="btn btn-warning">Konfirmasi Pembayaran</a>
-                        </div>
-                      </div>
-                  </li>
                   <li class="list-group-item">
                       <div class="row">
                           <div class="col-md">
@@ -83,6 +63,13 @@
                         </div>
                     </div>
                   </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md">
+                            <h5 class="font-weight-bold mb-3">Form Tugas</h5>
+                        </div>
+                    </div>
+                </li>
                 </ul>
             </div>
         </div>

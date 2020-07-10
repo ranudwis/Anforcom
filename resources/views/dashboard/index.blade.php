@@ -2,12 +2,7 @@
 
 @section('content')
 <article class="col-md-9 position-relative">
-    <div class="row">
-        <div class="col-md">
-            <h6 class="pt-5 pb-3 ml-5" style="color:rgba(0,0,0,0.5)">Dashboard (breadcumbs)</h6>
-        </div>
-    </div>
-    <div class="row">
+    <div class="row mt-5">
         <div class="col-md">
             <h4 class="ml-5">Selamat Datang, {{ Auth::user()->name }}</h4>
         </div>
