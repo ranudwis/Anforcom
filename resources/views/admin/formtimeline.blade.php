@@ -74,7 +74,7 @@
             <td>{{ $timeline->description }}</td>
             <td>{{ $timeline->venue }}</td>
             <td>
-                @if ($timeline->id === $registration->id)
+                @if ($timeline->id === $registrasi->id)
                 Registrasi
                 @else
                 <form method="POST" action="{{ route('admin.event.registertimeline', ['event' => $event->slug]) }}">

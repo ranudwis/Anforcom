@@ -5,13 +5,14 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Team;
+use App\Registration;
 use Storage;
 
 class PaymentController extends Controller
 {
     public function index()
     {
-        $teams = Team::where('is_active', false)->with('leader')->get();
+        $teams = Registration::where('status', 'inactive')->get();
 
         return view('admin.payment', compact('teams'));
     }
@@ -40,5 +41,10 @@ class PaymentController extends Controller
         $team->delete();
 
         return back()->with('status', 'Tim dihapus');
+    }
+
+    public function pay()
+    {
+        return 'Dimas Iktiar Pandawi';
     }
 }
