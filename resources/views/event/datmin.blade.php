@@ -14,7 +14,7 @@
                                 <p class="text">Kompetisi yang bertujuan untuk mencari penyeselaian permasalahan pengolahan data serta memprediksi data tersebut.</p>
                                 <ul class="slider-btn rounded-buttons">
                                     <li><a class="main-btn rounded-one" href="{{ route('enroll.show', ['event' => $competition->slug]) }}">Daftar</a></li>
-                                    <li><a class="main-btn rounded-two" href="{{ asset('assets/files/Juklak Anforcom 2019.pdf') }}">Guidebook</a></li>
+                                    <li><a class="main-btn rounded-two" href="{{ asset('rulebooks/Rulebook Data Mining Anforcom 2020.pdf') }}">Rulebook</a></li>
                                 </ul>
                             </div> <!-- slider-content -->
                         </div>
@@ -32,97 +32,16 @@
 
 <!-- HOME ENDS -->
 
-<!-- TEMA START -->
+@include('event.partial.theme')
 
-<section id="tema" class="tema-area">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-10">
-                <div class="section-title text-center pb-10">
-                    <h3 class="title">Tema</h3>
-                    <p class="text">"Be a Brilliant Generation Through Digital Tech Innovation!"</p>
-                </div> <!-- section title -->
-            </div>
-        </div> <!-- row -->
-    </div> <!-- container-->
-</section><!-- section -->
-
-<!-- TEMA ENDS -->
-
-<!-- TIMELINE START -->
-
-<section id="timeline" class="features-area">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-10">
-                <div class="section-title text-center pb-10">
-                    <h3 class="title">Timeline</h3>
-                    <p class="text">Catat tanggalnya dan jangan sampai tertinggal!</p>
-                </div> <!-- row -->
-            </div>
-        </div> <!-- row -->
-        <div class="section-padding">
-            <div class="container">
-                <div class="row">
-                  <ul class="timeline">
-                    <li>
-                      <li>
-                        <div class="content-text">
-                          <h3 class="line-title">Pendaftaran</h3>
-                          <span>15 Juni - 3 September 2020</span>
-                          <p class="line-text">Batas Pendaftaran.</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="content-text">
-                          <h3 class="line-title">Pembagian Dataset</h3>
-                          <span>6 September 2020</span>
-                          <p class="line-text">Diberikan data yang dibutuhkan.</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="content-text">
-                          <h3 class="line-title">Pengumpulan Proposal</h3>
-                          <span>6 - 13 September 2020</span>
-                          <p class="line-text">Batas upload makalah data mining.</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="content-text">
-                          <h3 class="line-title">Pengumuman Finalis</h3>
-                          <span>27 September 2020</span>
-                          <p class="line-text">Akan diberitakan finalis anforcom melalui web dan media lainnya.</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="content-text">
-                          <h3 class="line-title">Pengumpulan File Finalis</h3>
-                          <span>12 October 2020</span>
-                          <p class="line-text">Batas Pengumpulan file yang dibutuhkan saat final.</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="content-text">
-                          <h3 class="line-title">Final</h3>
-                          <span>18 October 2020</span>
-                          <p class="line-text">Final akan dilaksanakan secara online.</p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div> <!-- container -->
-          </section>
-
-    <!-- TIMELINE ENDS -->
+@include('event.partial.timeline')
 
     <!-- FAQ START -->
 
     <section id="FAQ" class="faq-area">
-        <div class="container">
+        {{-- <div class="container">
             <div class="row">
-                <div class="col-lg-5">
+                <div class="col-lg-6">
                     <div class="faq-content mt-45">
                         <div class="faq-title">
                             <h6 class="sub-title">Cari tahu lagi</h6>
@@ -170,7 +89,7 @@
                 <img src="assets/images/about.jpg" alt="about">
             </div>
         </div> -->
-    </div> <!-- row -->
+    </div> <!-- row --> --}}
 </div> <!-- container -->
 </section>
 

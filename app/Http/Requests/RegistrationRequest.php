@@ -27,7 +27,6 @@ class RegistrationRequest extends FormRequest
             'university' => 'required',
             'team_name' => 'required',
             'leader_nim' => 'required',
-            'leader_contact' => 'required',
             'leader_ktm' => 'required|image',
             'members' => 'required',
         ];
@@ -38,22 +37,20 @@ class RegistrationRequest extends FormRequest
         $validator->after(function ($validator) {
             $data = $validator->valid();
 
-            foreach ($data['members'] as $i => $member) {
-                if (! $member['name']) {
-                    $validator->errors()->add($i . 'name', 'Nama harus diisi');
+            for ($i = 0; $i < 2; $i++) {
+                $number = $i + 1;
+                $member = $data['members'][$i];
+
+                if ($number === 2 && $this->isMemberFieldInvalid($member, 'name')) {
+                    break;
                 }
 
-                if (! $member['email']) {
-                    $validator->errors()->add($i . 'email', 'Email harus diisi');
-                }
-
-                if (! $member['contact']) {
-                    $validator->errors()->add($i . 'contact', 'Line / WA harus diisi');
-                }
-
-                if (! $member['ktm']) {
-                    $validator->errors()->add($i . 'ktm', 'KTM harus diisi');
-                }
+                $this->validateMemberData($member, $validator, $i, [
+                    'name' =>  'Nama anggota ke-' . $number . ' harus diisi',
+                    'email' => 'Email anggota ke-' . $number . ' harus diisi',
+                    'contact' => 'Line / WA anggota ke-' . $number . ' harus diisi',
+                    'ktm' => 'KTM anggota ke-' . $number . ' harus diisi',
+                ]);
             }
         });
     }
@@ -72,5 +69,19 @@ class RegistrationRequest extends FormRequest
             'leader_ktm.required' => 'KTM ketua harus diisi',
             'members.required' => 'Harus memiliki anggota',
         ];
+    }
+
+    private function isMemberFieldInvalid($member, $field)
+    {
+        return ! isset($member[$field]) || ! $member[$field];
+    }
+
+    private function validateMemberData($member, $validator, $index, $data)
+    {
+        foreach ($data as $field => $error) {
+            if ($this->isMemberFieldInvalid($member, $field)) {
+                $validator->errors()->add("members[$index][{$field}]", $error);
+            }
+        }
     }
 }

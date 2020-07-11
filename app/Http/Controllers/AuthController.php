@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use App\Http\Requests\RegistrationRequest;
 use App\User;
+use App\Events\NewUserRegistered;
 
 class AuthController extends Controller
 {
@@ -22,7 +23,7 @@ class AuthController extends Controller
                 return redirect()->route('admin.index');
             }
 
-            return redirect()->route('dashboard.index')->with('status', 'Berhasil Login');
+            return redirect()->route('dashboard.index')->with('status');
         }
 
         return back()->with('status', 'Anda belum mempunyai akun');
@@ -55,6 +56,7 @@ class AuthController extends Controller
         $user = User::create($request->only('name', 'email', 'password', 'contact'));
 
         auth()->login($user);
+        event(new NewUserRegistered($user));
 
         if ($request->has('next')) {
             return redirect()->route('enroll.show', ['event' => $request->next]);

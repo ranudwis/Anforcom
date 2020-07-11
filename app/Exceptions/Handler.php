@@ -4,6 +4,8 @@ namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use App\Anforcom\Notification\Message\ErrorMessage;
+use App\Anforcom\Notification\Notifier\DiscordLog;
 
 class Handler extends ExceptionHandler
 {
@@ -13,7 +15,9 @@ class Handler extends ExceptionHandler
      * @var array
      */
     protected $dontReport = [
-        //
+        'Illuminate\Validation\ValidationException',
+        'Illuminate\Auth\AuthenticationException',
+        'Symfony\Component\HttpKernel\Exception\NotFoundHttpException',
     ];
 
     /**
@@ -37,6 +41,22 @@ class Handler extends ExceptionHandler
     public function report(Exception $exception)
     {
         parent::report($exception);
+
+        if (env('APP_ENV') === 'production') {
+            if (
+                in_array(
+                    get_class($exception),
+                    $this->dontReport
+                )
+            ) {
+                return;
+            }
+
+            $message = new ErrorMessage($exception);
+            $discordLogNotifier = new DiscordLog();
+
+            $discordLogNotifier->send($message);
+        }
     }
 
     /**

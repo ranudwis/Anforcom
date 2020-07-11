@@ -14,8 +14,8 @@ class EventSeeder extends Seeder
     {
         $softdev = new Event([
             'type' => 'competition',
-            'name' => 'Software development',
-            'slug' => 'softdev',
+            'name' => 'Apps Innovation',
+            'slug' => 'apps-innovation',
             'template_name' => 'softdev'
         ]);
         $softdev->save();

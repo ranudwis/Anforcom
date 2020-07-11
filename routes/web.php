@@ -2,7 +2,7 @@
 
 Route::get('/comingsoon', 'ComingSoonController@index')->name('comingsoon');
 
-Route::view('/', 'homepage')->name('home');
+Route::get('/', 'HomepageController@index')->middleware('needevents')->name('home');
 
 Route::middleware('guest')->group(function () {
     Route::view('/masuk', 'auth.login')->name('login');
@@ -37,13 +37,16 @@ Route::prefix('/dashboard')
     ->group(function () {
         Route::get('/', 'DashboardPageController@index')->name('index');
 
-        Route::view('/pembayaran', 'dashboard.payment')->name('payment');
-        Route::post('/pembayaran', 'PaymentController@pay')->name('payment');
-        Route::view('/tim', 'dashboard.tim')->name('tim');
-        Route::view('/timeline', 'dashboard.timeline')->name('timeline');
+        Route::get('/timeline', 'TimelineController@index')->name('timeline');
+
+        Route::get('/event/{event}', 'EventController@show')->name('event.show');
+
+        Route::get('/pembayaran/{event}', 'PaymentController@show')->name('payment');
+        Route::post('/pembayaran/{event}', 'PaymentController@pay')->name('payment');
 
         //ini halaman percobaan
-        Route::view('/pembayaran2', 'dashboard.payment2')->name('payment2');
+        Route::view('/tim', 'dashboard.tim')->name('tim');
+        Route::view('/tugas', 'dashboard.tugas')->name('tugas');
     });
 
 

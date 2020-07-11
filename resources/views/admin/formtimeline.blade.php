@@ -52,9 +52,9 @@
 <div class="displaytimeline">
     <h3>Timeline</h3>
     <h4>Registrasi : </h4>
-    @if ($registrasi)
-    <p>Start : {{ $registrasi->start }}</p>
-    <p>End : {{ $registrasi->end }}</p>
+    @if ($registration)
+        <p>Start : {{ $registration->start }}</p>
+        <p>End : {{ $registration->end }}</p>
     @endif
 
     <table border="1">
@@ -87,4 +87,4 @@
         </tr>
         @endforeach
     </table>
-    @endsection
+@endsection

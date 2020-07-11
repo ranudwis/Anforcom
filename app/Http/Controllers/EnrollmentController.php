@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Request\RegistrationRequest;
+use App\Http\Requests\RegistrationRequest;
+use App\Events\NewEventRegistration;
 use App\Event;
 use App\Team;
 
@@ -22,7 +23,7 @@ class EnrollmentController extends Controller
         return view('enroll.show', compact('event'));
     }
 
-    public function enroll(Request $request, Event $event)
+    public function enroll(RegistrationRequest $request, Event $event)
     {
 
         $registration = $request->user()->registrations()->create([
@@ -45,8 +46,16 @@ class EnrollmentController extends Controller
                 return $member + [
                     'ktm' => $member['ktm']->store('public/images/ktm')
                 ];
-            }, $request->members)
+            },
+            array_filter(
+                $request->members,
+                function ($member) {
+                    return isset($member['name']) && $member['name'];
+                }
+            ))
         );
+
+        event(new NewEventRegistration($registration, $team));
 
         return redirect()->route('dashboard.index');
     }
