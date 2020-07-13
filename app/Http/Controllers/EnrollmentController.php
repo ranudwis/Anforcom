@@ -42,17 +42,19 @@ class EnrollmentController extends Controller
         $team = $registration->teams()->save($team);
 
         $team->members()->createMany(
-            array_map(function ($member) {
-                return $member + [
-                    'ktm' => $member['ktm']->store('public/images/ktm')
-                ];
-            },
-            array_filter(
-                $request->members,
+            array_map(
                 function ($member) {
-                    return isset($member['name']) && $member['name'];
-                }
-            ))
+                    return $member + [
+                        'ktm' => $member['ktm']->store('public/images/ktm')
+                    ];
+                },
+                array_filter(
+                    $request->members,
+                    function ($member) {
+                        return isset($member['name']) && $member['name'];
+                    }
+                )
+            )
         );
 
         event(new NewEventRegistration($registration, $team));

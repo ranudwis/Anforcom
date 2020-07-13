@@ -10,7 +10,7 @@ class Registration extends Model
 
     public function teams()
     {
-        return $this->hasMany(Team::class);
+        return $this->hasOne(Team::class);
     }
 
     public function event()

@@ -6,41 +6,48 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Team;
 use App\Registration;
+use App\Event;
+use App\User;
 use Storage;
 
 class PaymentController extends Controller
 {
     public function index()
     {
-        $teams = Registration::where('status', 'inactive')->get();
+        $events = Event::all();
 
-        return view('admin.payment', compact('teams'));
+        return view('admin.payment2', compact('events'));
     }
 
-    public function confirm(Team $team)
+    public function confirm($regis)
     {
-        $team->is_active = true;
-        $team->save();
+        $registration = Registration::where('id', $regis)->update(['status' => 'active']);
 
         return back()->with('status', 'Tim dikonfirmasi');
     }
 
-    public function reject(Team $team)
+    public function reject(Registration $regis)
     {
-        Storage::delete($team->paymment_confirm);
-        $team->payment_confirm = null;
-        $team->save();
+        Storage::delete($regis->payment_confirmation);
+        $regis->payment_confirmation = null;
+        $regis->save();
 
         return back()->with('status', 'Pembayaran tim ditolak dan dihapus');
     }
 
-    public function delete(Team $team)
+    public function delete(Registration $regis)
     {
-        $team->leader->delete();
-        $team->members()->delete();
-        $team->delete();
+        $regis->teams()->delete();
+        $regis->delete();
 
         return back()->with('status', 'Tim dihapus');
+    }
+
+    public function show($id)
+    {
+        $registration = Registration::with('teams.leader')->where('event_id', $id)->get();
+
+        return view('admin.payment', compact('registration'));
     }
 
     public function pay()

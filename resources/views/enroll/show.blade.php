@@ -46,12 +46,12 @@
                     </div>
                 </div>
                 @if ($errors->any())
-                    <div class="alert alert-danger btn-block mt-3" role="alert">
-                        <ul>
-                            @foreach ($errors->all() as $error) <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
+                <div class="alert alert-danger btn-block mt-3" role="alert">
+                    <ul>
+                        @foreach ($errors->all() as $error) <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
                 @endif
 
                 <div class="mt-4" id="form-regis">

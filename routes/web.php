@@ -58,9 +58,10 @@ Route::prefix('/admin')
         Route::view('/', 'admin.index')->name('index');
 
         Route::get('/pembayaran', 'PaymentController@index')->name('payment');
-        Route::get('/pembayaran/{team}/konfirmasi', 'PaymentController@confirm')->name('payment.confirm');
-        Route::get('/pembayaran/{team}/tolak', 'PaymentController@reject')->name('payment.reject');
-        Route::get('/pembayaran/{team}/hapus', 'PaymentController@delete')->name('payment.delete');
+        Route::get('/pembayaran/{id}', 'PaymentController@show')->name('payment.show');
+        Route::get('/pembayaran/{regis}/konfirmasi', 'PaymentController@confirm')->name('payment.confirm');
+        Route::get('/pembayaran/{regis}/tolak', 'PaymentController@reject')->name('payment.reject');
+        Route::get('/pembayaran/{regis}/hapus', 'PaymentController@delete')->name('payment.delete');
 
         Route::view('/sponsor', 'admin.sponsor')->name('sponsor');
         Route::post('/sponsor', 'SponsorController@uploadSponsor')->name('sponsor');

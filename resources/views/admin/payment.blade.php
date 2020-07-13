@@ -22,20 +22,21 @@
         </th>
     </tr>
 
-    @foreach ($teams as $team)
+    @foreach ($registration as $regis)
     <tr>
         <td>
-            {{ $team->name }}
+            {{ $regis->teams->name }}
         </td>
         <td>
-            {{ $team->university }}
+            {{ $regis->teams->university }}
         </td>
         <td>
-            {{ $team->leader->name }} {{ $team->leader->email }}
+            {{ $regis->teams->leader->name }}
+
         </td>
         <td>
-            @if ($team->payment_confirm)
-            <a href="{{ Storage::url($team->payment_confirm) }}" target="_blank">
+            @if ($regis->payment_confirmation)
+            <a href="{{ Storage::url($regis->payment_confirmation) }}" target="_blank">
                 Bukti pembayaran
             </a>
             @else
@@ -43,11 +44,11 @@
             @endif
         </td>
         <td>
-            @if ($team->payment_confirm)
-            <a href="{{ route('admin.payment.confirm', ['team' => $team->id]) }}">Konfirmasi</a>
-            <a href="{{ route('admin.payment.reject', ['team' => $team->id]) }}">Tolak</a>
+            @if ($regis->payment_confirmation)
+            <a href="{{ route('admin.payment.confirm', ['regis' => $regis->id]) }}">Konfirmasi</a>
+            <a href="{{ route('admin.payment.reject', ['regis' => $regis->id]) }}">Tolak</a>
             @endif
-            <a href="{{ route('admin.payment.delete', ['team' => $team->id]) }}">Hapus</a>
+            <a href="{{ route('admin.payment.delete', ['regis' => $regis->id]) }}">Hapus</a>
         </td>
     </tr>
     @endforeach
