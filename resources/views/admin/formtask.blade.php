@@ -12,7 +12,9 @@ Form Tambah Tugas
 
 <form method="POST" action="{{ route('admin.task') }}">
     @csrf
-    <input type="hidden" name="event_id" value="{{$timelines[0]->event_id}}">
+    @foreach($events as $event)
+    <input type="hidden" name="event_id" value="{{$event->id}}">
+    @endforeach
     <div class="form-group">
         <input type="text" name="name" placeholder="Nama Tugas">
         @error('name')
@@ -41,4 +43,24 @@ Form Tambah Tugas
     </select>
     <button type="submit">Tambah Tugas</button>
 </form>
+
+<div class="display-task">
+    <h3>List Tugas</h3>
+    @if(count($tasks) !== 0)
+    <table border="1">
+        <tr>
+            <th>Nama Tugas</th>
+        </tr>
+        @foreach($tasks as $task)
+        <tr>
+            <td>
+                <a href="{{route('admin.submission.show', ['event_id' => $task->event_id, 'task_id' => $task->id])}}">{{$task->name}}</a>
+            </td>
+        </tr>
+        @endforeach
+    </table>
+    @else
+    <h3>Belum ada tugas untuk peserta</h3>
+    @endif
+</div>
 @endsection

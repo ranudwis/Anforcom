@@ -6,6 +6,8 @@ use App\Event;
 use App\Http\Controllers\Controller;
 use App\Task;
 use App\Timeline;
+use App\Submission;
+use App\Team;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
@@ -19,8 +21,9 @@ class TaskController extends Controller
     public function formtask($event_id)
     {
         $timelines = Timeline::where('event_id', $event_id)->get();
-
-        return view('admin.formtask', compact('timelines'));
+        $events = Event::where('id', $event_id)->get();
+        $tasks = Task::where('event_id', $event_id)->get();
+        return view('admin.formtask', compact('timelines', 'events', 'tasks'));
     }
 
     public function addTask(Request $request)
@@ -37,5 +40,14 @@ class TaskController extends Controller
         );
 
         return back()->with('status', 'Tugas berhasil ditambahkan');
+    }
+
+    public function submission($event_id, $task_id)
+    {
+        $teams = Team::with(['submissions' => function ($join) use ($task_id) {
+            $join->where('id', '=', 'submissions.team_id')->where('submissions.task_id', $task_id);
+        }])->get();
+
+        return view('admin.submission', compact('teams'));
     }
 }

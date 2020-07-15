@@ -18,7 +18,7 @@
             <a href="{{ route('admin.medpart') }}">Media Partner</a>
         </li>
         <li>
-            <a href="{{ route('admin.task') }}">Tambah Tugas</a>
+            <a href="{{ route('admin.task') }}">Tugas</a>
         </li>
         <li>
             <a href="{{ route('admin.timeline') }}">Tambah Timline</a>
@@ -29,9 +29,9 @@
     </ul>
 
     @if (session('status'))
-        <div class="alert alert-success" role="alert">
-            {{ session('status') }}
-        </div>
+    <div class="alert alert-success" role="alert">
+        {{ session('status') }}
+    </div>
     @endif
 
     @yield('content')

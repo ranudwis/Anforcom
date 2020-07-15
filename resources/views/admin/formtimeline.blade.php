@@ -53,8 +53,8 @@
     <h3>Timeline</h3>
     <h4>Registrasi : </h4>
     @if ($registration)
-        <p>Start : {{ $registration->start }}</p>
-        <p>End : {{ $registration->end }}</p>
+    <p>Start : {{ $registration->start }}</p>
+    <p>End : {{ $registration->end }}</p>
     @endif
 
     <table border="1">
@@ -74,7 +74,7 @@
             <td>{{ $timeline->description }}</td>
             <td>{{ $timeline->venue }}</td>
             <td>
-                @if ($timeline->id === $registrasi->id)
+                @if ($timeline->id === $registration->id)
                 Registrasi
                 @else
                 <form method="POST" action="{{ route('admin.event.registertimeline', ['event' => $event->slug]) }}">
@@ -87,4 +87,6 @@
         </tr>
         @endforeach
     </table>
-@endsection
+    @endsection
+
+</div>

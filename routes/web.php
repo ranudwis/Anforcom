@@ -71,6 +71,7 @@ Route::prefix('/admin')
         Route::get('/task', 'TaskController@index')->name('task');
         Route::get('/task/{event_id}', 'TaskController@formtask')->name('formtask');
         Route::post('/task', 'TaskController@addTask')->name('task');
+        Route::get('/task/{event_id}/{task_id}', 'TaskController@submission')->name('submission.show');
 
         Route::get('/timeline', 'TimelineController@index')->name('timeline');
         Route::get('/timeline/{event}', 'TimelineController@show')->name('timeline.show');
