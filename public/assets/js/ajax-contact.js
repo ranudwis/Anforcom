@@ -27,6 +27,7 @@ $(function() {
 
 			// Set the message text.
 			$(formMessages).text(response);
+			//alert("Pesan telah dikirimkan. Terima kasih");
 
 			// Clear the form.
 			$('#contact-form input,#contact-form textarea').val('');
@@ -40,7 +41,7 @@ $(function() {
 			if (data.responseText !== '') {
 				$(formMessages).text(data.responseText);
 			} else {
-				$(formMessages).text('Oops! An error occured and your message could not be sent.');
+				$(formMessages).text('Maaf, box belum terisi.');
 			}
 		});
 	});

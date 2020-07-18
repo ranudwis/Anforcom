@@ -17,20 +17,23 @@
         <!-- HOME START -->
         <section id="home" class="header">
           <div class="header-content">
-              <div class="container">
-                  <div class="row">
-                      <div class="col-lg-6">
-                          <div class="text-container">
-                              <h1>Anforcom 2020</h1>
-                              <p class="text">Annual Informatics Competition (Anforcom) 2020 merupakan kompetisi skala nasional yang diselenggarakan oleh Himpunan Mahasiswa Informatika Universitas Diponegoro.</p>
-                              <ul class="slider-btn rounded-buttons">
-                                <li><a class="main-btn rounded-one" href="{{ route('register') }}">Daftar</a></li>
-                              </ul>
-                          </div>
-                      </div> <!-- end of col -->
-                  </div> <!-- end of row -->
-              </div> <!-- end of container -->
-          </div> <!-- end of header-content -->
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="text-container">
+                    <h1>Anforcom 2020</h1>
+                    <p class="text">Annual Informatics Competition (Anforcom) 2020 merupakan kompetisi skala nasional yang diselenggarakan oleh Himpunan Mahasiswa Informatika Universitas Diponegoro.</p>
+                    <ul class="slider-btn rounded-buttons">
+                      <li><a class="main-btn rounded-one" href="{{ route('register') }}">Daftar</a></li>
+                    </ul>
+                  </div>
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                  <img class="img-fluid" src="assets/images/robot.png" alt="maskot">
+                </div>
+              </div> <!-- end of row -->
+            </div> <!-- end of header-content -->
+          </div> <!-- end of container -->
         </section>
         <!-- HOME ENDS -->
 
@@ -91,7 +94,7 @@
                     </div>
                     <div class="service-content">
                       <h4 class="title service-title">Data Mining</h4>
-                      <p class="text">Kompetisi yang bertujuan untuk mencari penyeselaian permasalahan pengolahan data serta memprediksi data yang diberikan.</p>
+                      <p class="text">Kompetisi yang bertujuan untuk mencari penyeselaian permasalahan pengolahan data serta memprediksinya.</p>
                     </div>
                   </a>
                 </div> <!-- single service -->
