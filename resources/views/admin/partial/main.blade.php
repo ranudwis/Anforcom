@@ -24,6 +24,9 @@
             <a href="{{ route('admin.timeline') }}">Tambah Timline</a>
         </li>
         <li>
+            <a href="{{ route('admin.system') }}">System</a>
+        </li>
+        <li>
             <a href="{{ route('logout') }}">Keluar</a>
         </li>
     </ul>

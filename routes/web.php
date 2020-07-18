@@ -79,4 +79,7 @@ Route::prefix('/admin')
 
         Route::post('/event/{event}/registertimeline', 'EventController@setRegisterTimeline')
             ->name('event.registertimeline');
+
+        Route::view('/system', 'admin.system')->name('system');
+        Route::get('/system/linkStorage', 'SystemController@linkStorage')->name('system.linkStorage');
     });
