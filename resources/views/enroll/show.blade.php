@@ -170,7 +170,7 @@
                                                     </span>
                                                 </div>
                                                 <input class="form-control" id="kontak_anggota1" type="text" name="members[0][contact]" value="" required>
-                                                <label for="kontak_anggota1" class="form-control-placeholder">Line/Whatsapp
+                                                <label for="kontak_anggota1" class="form-control-placeholder">Whatsapp
                                                     Anggota 1</label>
                                             </div>
                                         </div>
@@ -226,7 +226,7 @@
                                                     </span>
                                                 </div>
                                                 <input class="form-control" id="kontak_anggota2" type="text" name="members[1][contact]" value="" required>
-                                                <label for="kontak_anggota2" class="form-control-placeholder">Line/Whatsapp
+                                                <label for="kontak_anggota2" class="form-control-placeholder">Whatsapp
                                                     Anggota 2 (NIM)</label>
                                                 <div class="invalid-feedback">
                                                     Looks good!

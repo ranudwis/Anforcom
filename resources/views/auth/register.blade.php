@@ -57,7 +57,7 @@
                 <div class="form-group-full">
                     <label for="contact">Contact</label>
                     <div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type contact">
-                        <input class="input100" type="text" name="contact" placeholder="(Whatsapp/Line)">
+                        <input class="input100" type="text" name="contact" placeholder="Whatsapp">
                         <span class="focus-input100"></span>
                     </div>
                 </div>
