@@ -28,8 +28,7 @@ class PaymentController extends Controller
 
     public function reject(Registration $regis)
     {
-        Storage::delete($regis->payment_confirmation);
-        $regis->payment_confirmation = null;
+        $regis->status = 'rejected';
         $regis->save();
 
         return back()->with('status', 'Pembayaran tim ditolak dan dihapus');
@@ -48,10 +47,5 @@ class PaymentController extends Controller
         $registration = Registration::with('teams.leader')->where('event_id', $id)->get();
 
         return view('admin.payment', compact('registration'));
-    }
-
-    public function pay()
-    {
-        return 'Dimas Iktiar Pandawi';
     }
 }

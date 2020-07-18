@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Storage;
 
 class PaymentController extends Controller
 {
@@ -24,14 +25,19 @@ class PaymentController extends Controller
             'payment_confirmation' => 'required|image',
         ]);
 
-        $paymentConfirmation = $request->payment_confirmation->store('public/images/payment_confirmation');
-        $request->user()
-            ->registrations()
+        $payment = $request->user()->registrations()
             ->whereHas('event', $this->registrationEventHasQuery($eventSlug))
-            ->update([
-                'status' => 'paid',
-                'payment_confirmation' => $paymentConfirmation
-            ]);
+            ->first();
+        $oldPayment = $payment->payment_confirmation;
+
+        $paymentConfirmation = $request->payment_confirmation->store('public/images/payment_confirmation');
+        $payment->status = 'paid';
+        $payment->payment_confirmation = $paymentConfirmation;
+        $payment->save();
+
+        if ($oldPayment) {
+            Storage::delete($oldPayment);
+        }
 
         return back();
     }

@@ -35,19 +35,24 @@
 
         </td>
         <td>
-            @if ($regis->payment_confirmation)
-            <a href="{{ Storage::url($regis->payment_confirmation) }}" target="_blank">
-                Bukti pembayaran
-            </a>
+            @if ($regis->status == 'paid')
+                <a href="{{ Storage::url($regis->payment_confirmation) }}" target="_blank">
+                    Bukti pembayaran
+                </a>
+            @elseif ($regis->status == 'active')
+                <span style="color: green">
+                    Dikonfirmasi
+                </span>
             @else
-            Belum membayar
+                Belum membayar
             @endif
         </td>
         <td>
-            @if ($regis->payment_confirmation)
-            <a href="{{ route('admin.payment.confirm', ['regis' => $regis->id]) }}">Konfirmasi</a>
-            <a href="{{ route('admin.payment.reject', ['regis' => $regis->id]) }}">Tolak</a>
+            @if ($regis->status == 'paid')
+                <a href="{{ route('admin.payment.confirm', ['regis' => $regis->id]) }}">Konfirmasi</a>
+                <a href="{{ route('admin.payment.reject', ['regis' => $regis->id]) }}">Tolak</a>
             @endif
+
             <a href="{{ route('admin.payment.delete', ['regis' => $regis->id]) }}">Hapus</a>
         </td>
     </tr>
