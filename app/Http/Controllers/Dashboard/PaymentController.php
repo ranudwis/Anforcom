@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Storage;
+use App\Events\IncomingPayment;
 
 class PaymentController extends Controller
 {
@@ -38,6 +39,8 @@ class PaymentController extends Controller
         if ($oldPayment) {
             Storage::delete($oldPayment);
         }
+
+        event(new IncomingPayment($payment));
 
         return back();
     }

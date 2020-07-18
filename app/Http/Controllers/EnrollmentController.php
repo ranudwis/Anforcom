@@ -25,7 +25,6 @@ class EnrollmentController extends Controller
 
     public function enroll(RegistrationRequest $request, Event $event)
     {
-
         $registration = $request->user()->registrations()->create([
             'event_id' => $event->id
         ]);
