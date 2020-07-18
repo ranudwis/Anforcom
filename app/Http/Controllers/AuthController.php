@@ -23,7 +23,7 @@ class AuthController extends Controller
                 return redirect()->route('admin.index');
             }
 
-            return redirect()->route('dashboard.index')->with('status');
+            return redirect()->route('dashboard.index');
         }
 
         return back()->with('status', 'Anda belum mempunyai akun');

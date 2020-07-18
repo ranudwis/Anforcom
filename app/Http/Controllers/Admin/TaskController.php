@@ -44,9 +44,13 @@ class TaskController extends Controller
 
     public function submission($event_id, $task_id)
     {
-        $teams = Team::with(['submissions' => function ($join) use ($task_id) {
-            $join->where('id', '=', 'submissions.team_id')->where('submissions.task_id', $task_id);
-        }])->get();
+        $teams = Team::with([
+            'submissions' => function ($join) use ($task_id) {
+                $join->where('id', '=', 'submissions.team_id')->where('submissions.task_id', $task_id);
+            }
+        ])
+        ->where('competition_id', $event_id)
+        ->get();
 
         return view('admin.submission', compact('teams'));
     }
