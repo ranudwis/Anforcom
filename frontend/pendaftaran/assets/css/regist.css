@@ -74,8 +74,6 @@ html {
 
 /* all button css */
 .btn {
-    margin-top: 8px;
-    margin-left: auto;
     border-radius: 100px;
     color: #0CA5EE;
     font-family: Product-Sans-Regular, sans-serif;
@@ -104,8 +102,8 @@ html {
     }
 
     .btn {
-        height: 50px;
-        margin-top: 50px;
+        padding: 15px 0;
+        font-size: 20px;
     }
 }
 
