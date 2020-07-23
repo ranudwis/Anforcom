@@ -14,8 +14,16 @@ class EventController extends Controller
         $this->middleware(DashboardEventMiddleware::class);
     }
 
-    public function show(Event $event)
+    public function show(Request $request, Event $event)
     {
-        return 'aaa';
+        $leader = $request->user()->load('team.members');
+
+        $event->load([
+            'tasks.submissions' => function ($query) use ($leader) {
+                $query->where('submissions.team_id', $leader->team->id);
+            }
+        ]);
+
+        return view('dashboard.team', compact('event', 'leader'));
     }
 }
