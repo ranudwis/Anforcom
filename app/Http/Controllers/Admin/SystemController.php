@@ -14,4 +14,11 @@ class SystemController extends Controller
 
         return back()->with('status', 'Storage linked');
     }
+
+    public function migrate()
+    {
+        Artisan::call('migrate', ['--force' => true]);
+
+        return back()->with('status', 'Database migrated');
+    }
 }
