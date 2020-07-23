@@ -4,6 +4,8 @@ Route::get('/comingsoon', 'ComingSoonController@index')->name('comingsoon');
 
 Route::get('/', 'HomepageController@index')->middleware('needevents')->name('home');
 
+Route::post('/message', 'MessageController@store')->name('message.store');
+
 Route::middleware('guest')->group(function () {
     Route::view('/masuk', 'auth.login')->name('login');
     Route::post('/masuk', 'AuthController@login')->name('login');

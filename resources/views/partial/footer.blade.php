@@ -17,13 +17,14 @@
         <div class="col-lg-6 formulir">
           <div class="contact-wrapper form-style-two pt-115">
             <h4 class="contact-title pb-10"><i class="lni lni-envelope"></i> Hubungi kami</h4>
-            <form name="formulir" id="contact-form" action="assets/contact.php" method="post">
+            <form name="formulir" id="contact-form" action="{{ route('message.store' )}}" method="post">
+              @csrf
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-input mt-25">
                     <div class="input-items default">
                       <div class="single-tab-select-box">
-                        <select class="form-control" name="keperluan">
+                        <select class="form-control" name="requirement">
                           <option value="default">Keperluan</option>
                           <option value="pertanyaan">Pertanyaan</option>
                           <option value="sponsorhip">Sponsorship</option>
@@ -37,23 +38,20 @@
                 <div class="col-md-6">
                   <div class="form-input mt-25">
                     <div class="input-items default">
-                      <input type="email" name="email" placeholder="Email">
+                      <input type="text" name="contact" placeholder="Kontak (Email/WA)">
                     </div>
                   </div> <!-- form input -->
                 </div>
                 <div class="col-md-12">
                   <div class="form-input mt-25">
                     <div class="input-items default">
-                      <textarea name="massage" placeholder="Massage"></textarea>
+                      <textarea name="message" placeholder="Pesan"></textarea>
                     </div>
                   </div> <!-- form input -->
                 </div>
                 <div class="col-md-12">
                   <div class="form-input light-rounded-buttons mt-30">
-                    <button class="main-btn light-rounded-two" onclick="konfirmasi()">Send Message</button>
-                    <script type="text/javascript">
-                      function konfirmasi(){ alert("Pesan telah dikirimkan. Terima kasih");}
-                    </script>
+                    <button class="main-btn light-rounded-two">Send Message</button>
                   </div> <!-- form input -->
                 </div>
               </div> <!-- row -->
@@ -65,4 +63,4 @@
   </div>
 </footer>
 
-<!--script src="{{ asset('assets/js/ajax-contact.js') }}"></script-->
+<script src="{{ asset('assets/js/ajax-contact.js') }}"></script>
