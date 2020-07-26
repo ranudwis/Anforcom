@@ -32,6 +32,8 @@ Route::prefix('/daftar')
         Route::post('/{event}', 'EnrollmentController@enroll')->name('create');
     });
 
+Route::view('/sudahterdaftar', 'alreadyregistered')->name('alreadyregistered');
+
 Route::prefix('/dashboard')
     ->namespace('Dashboard')
     ->name('dashboard.')

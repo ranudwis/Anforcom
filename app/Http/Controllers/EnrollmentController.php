@@ -2,17 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Requests\RegistrationRequest;
-use App\Events\NewEventRegistration;
 use App\Event;
+use App\Events\NewEventRegistration;
+use App\Http\Middleware\EnrollmentDuplicationPreventionMiddleware;
+use App\Http\Requests\RegistrationRequest;
 use App\Team;
+use Illuminate\Http\Request;
 
 class EnrollmentController extends Controller
 {
-    public function index()
+    public function __construct()
     {
-        $events = Event::all();
+        $this->middleware(EnrollmentDuplicationPreventionMiddleware::class)
+            ->except('index');
+    }
+
+    public function index(Request $request)
+    {
+        $userRegistrations = $request->user()->registrations()->with('event')->get();
+
+        $events = Event::minusAlreadyRegistered($userRegistrations)->get();
 
         return view('enroll.index', compact('events'));
     }

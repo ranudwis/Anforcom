@@ -34,4 +34,19 @@ class Event extends Model
             'end' => null,
         ];
     }
+
+    public function scopeMinusAlreadyRegistered($query, $registrations)
+    {
+        $query->whereNotIn('id', $registrations->pluck('event.id'));
+
+        $hasCompetition = $registrations->contains(function ($registration) {
+            return $registration->event->type === 'competition';
+        });
+
+        if ($hasCompetition) {
+            $query->where('type', '<>', 'competition');
+        }
+
+        return $query;
+    }
 }
