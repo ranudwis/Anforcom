@@ -10,7 +10,13 @@
         </button>
         <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
           <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
+            <li class="nav-item unvisible">
+                <a class="nav-link page-scroll" href="{{ route('login') }}">Login</a>
+            </li>
+            <li class="nav-item unvisible">
+                <a class="nav-link page-scroll" href="{{ route('register') }}">Daftar</a>
+            </li>
+            <li class="nav-item">
                   <a class="nav-link page-scroll" href="{{ route('home') }}">Home</a>
               </li>
               <li class="nav-item dropdown">

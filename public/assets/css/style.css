@@ -2074,7 +2074,7 @@ p {
       border-color: #0ba2ed;
       background-color: #0ba2ed;
       color: #fff; }
-
+      @media (min-width: 991px) {.unvisible {visibility: hidden;}}
       /* Dropdown Menu */
       .navbar-custom .dropdown:hover > .dropdown-menu {
       	display: block; /* this makes the dropdown menu stay open while hovering it */
@@ -2128,15 +2128,17 @@ p {
   background: url("../../assets/images/kecil.png") right top no-repeat;
   background-size: 80%;}
 
-@media (max-width: 1440px) and (min-width: 769px){
-    .header {
-      background: url("../../assets/images/kecil.png") right top no-repeat;
-      background-size: 70%;}}
+@media (max-width: 1440px) and (min-width: 1280px){
+  .header { background-size: 70%;}}
 
-@media (max-width: 768px) {
-  .header {
-    background: url("../../assets/images/kecil.png") right top no-repeat;
-    background-size: cover;}}
+@media (max-width: 1279px) and (min-width: 992px){
+  .header { background-size: 80%;}}
+
+@media (max-width: 991px) and (min-width: 581px){
+  .header { background-size: 250%;}}
+
+@media (max-width: 580px) {
+  .header { background-size: cover;}}
 
 .header img {
   margin-left: 300px;
@@ -2149,7 +2151,7 @@ p {
   }
 }
 
-@media (max-width: 1280px) and (min-width: 992px) {
+@media (max-width: 1280px) and (min-width: 991px) {
   .header img {
     margin-left: 100px;
   }
@@ -2162,6 +2164,7 @@ p {
     margin-left: 60px;
   }
 }
+
 .header .header-content {
   padding-top: 8.5rem;
   padding-bottom: 7rem;
@@ -2655,7 +2658,7 @@ p {
       position: absolute;
       top: 0;
       right: 0;
-      width: 50%;
+      width: 60%;
       height: 100%;
       z-index: 9; }
       @media (max-width: 1279px) {
@@ -2663,14 +2666,10 @@ p {
           visibility: hidden;}}
       @media (min-width: 1280px) and (max-width: 1539px) {
         .slider-image-tangan img {
-          margin-left: 150px;}}
+          margin-left: 200px;}}
       @media (min-width: 1540px) {
         .slider-image-tangan img {
           margin-left: 450px;}}
-    .laptop img {
-      width: 120%;
-      height: 120%;
-    }
 .slider-content {
   position: relative;
   z-index: 9;
