@@ -2654,9 +2654,8 @@ p {
     .slider-image-tangan {
       position: absolute;
       top: 0;
-      padding-left: 650px;
       right: 0;
-      width: 100%;
+      width: 50%;
       height: 100%;
       z-index: 9; }
       @media (max-width: 1279px) {
