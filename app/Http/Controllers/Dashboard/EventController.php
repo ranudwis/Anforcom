@@ -21,7 +21,7 @@ class EventController extends Controller
         $event->load([
             'tasks.submissions' => function ($query) use ($leader) {
                 $query->where('submissions.team_id', $leader->team->id);
-            }
+            }, 'tasks.timeline'
         ]);
 
         return view('dashboard.team', compact('event', 'leader'));

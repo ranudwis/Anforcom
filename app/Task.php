@@ -10,7 +10,6 @@ class Task extends Model
         'event_id', 'timeline_id', 'name', 'description',
     ];
 
-
     public function submissions()
     {
         return $this->hasMany(Submission::class);
@@ -19,5 +18,10 @@ class Task extends Model
     public function competition()
     {
         return $this->belongsTo(Competition::class);
+    }
+
+    public function timeline()
+    {
+        return $this->belongsTo(Timeline::class);
     }
 }

@@ -48,6 +48,8 @@ Route::prefix('/dashboard')
         Route::get('/pembayaran/{event}', 'PaymentController@show')->name('payment');
         Route::post('/pembayaran/{event}', 'PaymentController@pay')->name('payment');
 
+        Route::post('/pengumpulan/{task}', 'SubmissionController@submit')->name('submission.submit');
+
         //ini halaman percobaan
         Route::view('/tim', 'dashboard.tim')->name('tim');
         Route::view('/tugas', 'dashboard.tugas')->name('tugas');

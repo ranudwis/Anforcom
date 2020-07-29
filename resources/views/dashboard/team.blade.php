@@ -56,9 +56,42 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-md">
-                                    <h5 class="font-weight-bold mb-3">Form Tugas</h5>
+                                    <h5 class="font-weight-bold mb-3">Pengumpulan file</h5>
                                 </div>
                             </div>
+
+                            @foreach ($event->tasks as $task)
+                                <div class="mb-4">
+                                    <h5>{{ $task->name }}</h5>
+
+                                    <p>
+                                        {{ $task->timeline->getRangeString() }}
+                                    </p>
+
+                                    @foreach ($task->submissions as $submission)
+                                        <a href="{{ Storage::url($submission->file) }}" target="_blank">
+                                            <div>
+                                                Pengumpulan {{ $submission->created_at->format('j F Y H:i:s') }}
+                                            </div>
+                                        </a>
+                                    @endforeach
+
+                                    @if ($task->submissions->count() !== 0)
+                                        <p class="mt-2">
+                                            Upload revisi
+                                        </p>
+                                    @endif
+                                    <form
+                                        method="post"
+                                        action="{{ route('dashboard.submission.submit', ['task' => $task->id]) }}"
+                                        enctype="multipart/form-data"
+                                    >
+                                        @csrf
+                                        <input name="file" type="file" /><br />
+                                        <button type="submit">Kirim</button>
+                                    </form>
+                                </div>
+                            @endforeach
                         </li>
                     </ul>
                 </div>
