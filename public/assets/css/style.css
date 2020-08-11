@@ -2926,13 +2926,13 @@ p {
 
 @media (min-width: 992px) and (max-width: 1279px){
   .timeline {
-    padding-left: 150px;
+    padding-left: 200px;
   }
 }
 
 @media (min-width: 1280px) {
   .timeline {
-    padding-left: 250px;
+    padding-left: 350px;
   }
 }
 
