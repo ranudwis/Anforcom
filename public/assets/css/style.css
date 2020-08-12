@@ -2125,6 +2125,9 @@ p {
          HOME css
 ===========================*/
 .header {
+  background: url("../../assets/images/slider/bg.png") no-repeat;
+}
+/*.header {
   background: url("../../assets/images/kecil.png") right top no-repeat;
   background-size: 80%;}
 
@@ -2139,9 +2142,9 @@ p {
 
 @media (max-width: 580px) {
   .header { background-size: cover;}}
-
+*/
 .header img {
-  margin-left: 300px;
+  margin-left: 200px;
   margin-top: 50px;
 }
 
@@ -2176,7 +2179,7 @@ p {
 }
 
 .header h1 {
-  color: #000;
+  color: #fff;
   margin-top: 100px;
   margin-bottom: 20px;
 }
@@ -2197,7 +2200,7 @@ p {
   max-width: 480px;
   font-size: 24px;
   line-height: inherit;
-  color: #000;
+  color: #fff;
 }
 
 .main-btn {
@@ -2240,7 +2243,7 @@ p {
     color: #fff;}
   .slider-btn li a.rounded-one:hover {
     background-color: #fff;
-    border-color: #094480;
+    border-color: transparent;
     color: #094480; }
 
 /*===========================
