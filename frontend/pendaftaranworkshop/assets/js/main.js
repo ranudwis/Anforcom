@@ -5,7 +5,6 @@
 
         var current_fs, next_fs, previous_fs; //fieldsets
         var opacity;
-        var input = $('.form-group .form-control');
 
         $('.alert').hide();
         $('#pilihanIndividu').hide();
@@ -97,13 +96,13 @@
             switch (selectedValue) {
                 case 'individu':
                     $('#pilihanIndividu').show();
-                    $('#pilihanIndividu input .form-control').prop('required', true);
+                    $('#pilihanIndividu input').prop('required', true);
                     $('#pilihanKelompok').hide();
                     $('#pilihanKelompok input').removeAttr('required');
                     break;
                 case 'kelompok':
                     $('#pilihanKelompok').show();
-                    $('#pilihanKelompok input .form-control').prop('required', true);
+                    $('#pilihanKelompok input').prop('required', true);
                     $('#pilihanIndividu').hide();
                     $('#pilihanIndividu input').removeAttr('required');
                     break;
