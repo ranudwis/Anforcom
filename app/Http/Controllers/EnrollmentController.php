@@ -28,8 +28,13 @@ class EnrollmentController extends Controller
 
     public function show(Event $event)
     {
-        // TODO: Check wheter event is an event or competition
-        return view('enroll.show', compact('event'));
+        $workshop = "workshop";
+        if ($event['slug'] === $workshop) {
+            return view('enroll.workshop');
+        } else {
+            # code...
+            return view('enroll.show', compact('event'));
+        }
     }
 
     public function enroll(RegistrationRequest $request, Event $event)
@@ -68,5 +73,9 @@ class EnrollmentController extends Controller
         event(new NewEventRegistration($registration, $team));
 
         return redirect()->route('dashboard.index');
+    }
+    function enrollworkshop(Type $var = null)
+    {
+        # code...
     }
 }

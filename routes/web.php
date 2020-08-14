@@ -30,6 +30,7 @@ Route::prefix('/daftar')
         Route::get('/', 'EnrollmentController@index')->name('index');
         Route::get('/{event}', 'EnrollmentController@show')->name('show');
         Route::post('/{event}', 'EnrollmentController@enroll')->name('create');
+        Route::post('/workshop', 'EnrollmentController@enrollworkshop')->name('createworkshop');
     });
 
 Route::view('/sudahterdaftar', 'alreadyregistered')->name('alreadyregistered');
