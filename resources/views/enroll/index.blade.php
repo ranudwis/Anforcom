@@ -11,21 +11,21 @@
     </div>
     <div class="row my-5">
         @if ($events->count() === 0)
-            <div class="col-md">
-                Terima kasih, sudah tidak ada event lagi yang kamu bisa daftar.
-            </div>
+        <div class="col-md">
+            Terima kasih, sudah tidak ada event lagi yang kamu bisa daftar.
+        </div>
         @else
-            @foreach ($events as $event)
-            <div class="col-md mx-5">
-                <div class="card rounded shadow-sm mx-auto">
-                    <div class="card-body text-center">
-                        <h5>
-                            <a href="{{ route('enroll.show', ['event' => $event->slug]) }}" alt="Daftar {{ $event->name }}" title="Daftar {{ $event->name }}" style="text-decoration: none; color: black">{{ $event->name }}</a>
-                        </h5>
-                    </div>
-                  </div>
+        @foreach ($events as $event)
+        <div class="col-md mx-5">
+            <div class="card rounded shadow-sm mx-auto">
+                <div class="card-body text-center">
+                    <h5>
+                        <a href="{{ route('enroll.show', ['event' => $event->slug]) }}" alt="Daftar {{ $event->name }}" title="Daftar {{ $event->name }}" style="text-decoration: none; color: black">{{ $event->name }}</a>
+                    </h5>
+                </div>
             </div>
-            @endforeach
+        </div>
+        @endforeach
         @endempty
     </div>
 </article>

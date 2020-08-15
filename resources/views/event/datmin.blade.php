@@ -1,45 +1,45 @@
 @extends('partial.main')
 
 @section('content')
-    <!-- HOME START -->
-    <section id="lomba" class="slider_area">
-        <div id="carouselThree" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="slider-content">
-                                    <h1 class="title">{{ $competition->name }}</h1>
-                                    <p class="text">Kompetisi yang bertujuan untuk mencari penyeselaian permasalahan pengolahan data serta memprediksi data tersebut.</p>
-                                    <ul class="slider-btn rounded-buttons">
-                                        <li><a class="main-btn rounded-one" href="{{ route('enroll.show', ['event' => $competition->slug]) }}">Daftar</a></li>
-                                        <li><a class="main-btn rounded-two" href="{{ asset('rulebooks/Rulebook Data Mining Anforcom 2020.pdf') }}">Rulebook</a></li>
-                                    </ul>
-                                </div> <!-- slider-content -->
-                            </div>
-                        </div> <!-- row -->
-                    </div> <!-- container -->
-                    <div class="slider-image-box laptop d-none d-lg-flex align-items-end">
-                        <div class="slider-image">
-                            <img src="{{ asset('assets/images/slider/Group 33.png') }}" alt="Hero">
-                        </div> <!-- slider-imgae -->
-                    </div> <!-- slider-imgae box -->
-                </div> <!-- carousel-item -->
-            </div>
+<!-- HOME START -->
+<section id="lomba" class="slider_area">
+    <div id="carouselThree" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="slider-content">
+                                <h1 class="title">{{ $competition->name }}</h1>
+                                <p class="text">Kompetisi yang bertujuan untuk mencari penyeselaian permasalahan pengolahan data serta memprediksi data tersebut.</p>
+                                <ul class="slider-btn rounded-buttons">
+                                    <li><a class="main-btn rounded-one" href="{{ route('enroll.show', ['event' => $competition->slug]) }}">Daftar</a></li>
+                                    <li><a class="main-btn rounded-two" href="{{ asset('rulebooks/Rulebook Data Mining Anforcom 2020.pdf') }}">Rulebook</a></li>
+                                </ul>
+                            </div> <!-- slider-content -->
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+                <div class="slider-image-box laptop d-none d-lg-flex align-items-end">
+                    <div class="slider-image">
+                        <img src="{{ asset('assets/images/slider/Group 33.png') }}" alt="Hero">
+                    </div> <!-- slider-imgae -->
+                </div> <!-- slider-imgae box -->
+            </div> <!-- carousel-item -->
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- HOME ENDS -->
+<!-- HOME ENDS -->
 
-    @include('event.partial.theme')
+@include('event.partial.theme')
 
-    @include('event.partial.timeline')
+@include('event.partial.timeline')
 
-    <!-- FAQ START -->
+<!-- FAQ START -->
 
-    <section id="FAQ" class="faq-area">
-        {{-- <div class="container">
+<section id="FAQ" class="faq-area">
+    {{-- <div class="container">
         <div class="row">
         <div class="col-lg-6">
         <div class="faq-content mt-45">
@@ -66,7 +66,7 @@
 </div>
 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
 <div class="card-body">
-<p class="text">Tidak ada template untuk proposal lomba mobile apps sehingga pesertta dapat dengan bebas mengkreasikan desain proposal tersebut.</p>
+<p class="text">Tidak ada template untuk proposal lomba mobile apps sehingga peserta dapat dengan bebas mengkreasikan desain proposal tersebut.</p>
 </div>
 </div>
 </div> <!-- card -->
@@ -90,7 +90,7 @@
 </div>
 </div> -->
 </div> <!-- row --> --}}
-</div> <!-- container -->
+    </div> <!-- container -->
 </section>
 
 <!-- FAQ ENDS -->
