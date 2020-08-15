@@ -27,10 +27,10 @@ Route::prefix('/lomba')
 Route::prefix('/daftar')
     ->name('enroll.')
     ->middleware('enrollment')->group(function () {
+        Route::post('/workshop/{event}', 'EnrollmentController@enrollworkshop')->name('enrollworkshop');
         Route::get('/', 'EnrollmentController@index')->name('index');
         Route::get('/{event}', 'EnrollmentController@show')->name('show');
         Route::post('/{event}', 'EnrollmentController@enroll')->name('create');
-        Route::post('/workshop', 'EnrollmentController@enrollworkshop')->name('createworkshop');
     });
 
 Route::view('/sudahterdaftar', 'alreadyregistered')->name('alreadyregistered');

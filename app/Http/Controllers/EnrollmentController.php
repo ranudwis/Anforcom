@@ -30,9 +30,8 @@ class EnrollmentController extends Controller
     {
         $workshop = "workshop";
         if ($event['slug'] === $workshop) {
-            return view('enroll.workshop');
+            return view('enroll.workshop', compact('event'));
         } else {
-            # code...
             return view('enroll.show', compact('event'));
         }
     }
@@ -74,8 +73,53 @@ class EnrollmentController extends Controller
 
         return redirect()->route('dashboard.index');
     }
-    function enrollworkshop(Type $var = null)
+
+    public function enrollworkshop(Request $request, Event $event)
     {
-        # code...
+        $request->validate([
+            'team_name' => 'required',
+            'name' => 'required',
+            'university' => 'required',
+            'email' => 'required',
+            'contact' => 'required',
+            'leader_ktm' => 'required',
+            'leader_ktp' => 'required',
+        ]);
+
+        $registration = $request->user()->registrations()->create([
+            'event_id' => $event->id
+        ]);
+        $team = new Team([
+            'name' => $request->team_name,
+            'leader_id' => $request->user()->id,
+            'competition_id' => $event->id,
+            'university' => $request->university,
+            'leader_nim' => " ",
+            'leader_ktm' => $request->leader_ktm->store('public/images/ktm'),
+            'leader_ktp' => $request->leader_ktp->store('public/images/ktp')
+        ]);
+
+        $team = $registration->teams()->save($team);
+
+        $team->members()->createMany(
+            array_map(
+                function ($member) {
+                    return $member + [
+                        'ktm' => $member['ktm']->store('public/images/ktm'),
+                        'ktp' => $member['ktp']->store('public/images/ktp')
+                    ];
+                },
+                array_filter(
+                    $request->members,
+                    function ($member) {
+                        return isset($member['name']) && $member['name'];
+                    }
+                )
+            )
+        );
+
+        event(new NewEventRegistration($registration, $team));
+
+        return redirect()->route('dashboard.index');
     }
 }
