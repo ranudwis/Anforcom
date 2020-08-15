@@ -155,7 +155,7 @@ p {
 ===========================*/
 
 .workshop {
-  background: url("../../assets/images/bg.png") center center no-repeat;
+  background: url("../images/bg.png") center center no-repeat;
   background-size: cover;
   position: relative;
   padding-top: 6.875rem; }
