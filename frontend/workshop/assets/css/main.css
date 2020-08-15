@@ -1,0 +1,383 @@
+/*===========================
+      01.Default css
+===========================*/
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800");
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #121212; }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+img {
+  max-width: 100%; }
+
+a:focus,
+a:hover {
+  text-decoration: none; }
+
+i, span, a {
+  display: inline-block; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #121212;
+  margin: 0px; }
+
+h1 { font-size: 48px; }
+h2 { font-size: 36px; }
+h3 { font-size: 28px; }
+h4 { font-size: 22px; }
+h5 { font-size: 18px; }
+h6 { font-size: 16px; }
+
+ul, ol {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none; }
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #121212;
+  margin: 0px; }
+
+.bg-cover {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%; }
+
+.title {
+   font-size: 44px;
+   font-weight: 600;
+   color: #121212;
+   line-height: 55px; }
+   @media (max-width: 767px) {
+    .title {
+      font-size: 30px;
+      line-height: 35px; } }
+
+.text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #6c6c6c;
+  margin-top: 24px; }
+
+.content {
+	padding-top: 8rem;
+	padding-bottom: 0rem;
+  padding-left: 5rem; }
+
+
+.btn { display: inline-block; }
+  @media (max-width: 767px) {
+    .btn ul li {
+      margin-left: 0; } }
+  .btn ul li:first-child {
+    margin-left: 0; }
+
+.btn .btn-one {
+  border-radius: 50px;
+  color: #0BA2ED;
+  background: #fff;
+  border-color: transparent; }
+  .btn .btn-one:hover {
+    color: #fff;
+    border-color: #fff;;
+    background: #0BA2ED; }
+
+.btn .btn-two {
+  border-radius: 50px;
+  color: #fff;
+  background: transparent;
+  border-color: #fff; }
+  .btn .btn-two:hover {
+    border-color: transparent;
+    color: #0BA2ED;
+    background-color: #fff }
+
+.main-btn {
+  margin-top: 20px;
+  display: inline-block;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 2px solid #0BA2ED;
+  padding: 0 32px;
+  font-size: 16px;
+  line-height: 46px;
+  background-color: #0BA2ED;
+  color: #fff;
+  cursor: pointer;
+  z-index: 5;
+  -webkit-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  -ms-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+  position: relative;
+  text-transform: uppercase; }
+  @media (max-width: 767px) {
+    .main-btn {
+      font-size: 14px;
+      padding: 0 20px;
+      line-height: 40px; }}
+
+.center {
+  text-align: center;
+  position: center;}
+.right {
+  text-align: right;
+  position: right;}
+.left {
+  text-align: left;
+  position: left;}
+.margin {margin-bottom: 40px;}
+
+/*===========================
+      02.WORKSHOP css
+===========================*/
+
+.workshop {
+  background: url("../../assets/images/bg.png") center center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 6.875rem; }
+.workshop img {
+  margin-left: 100px;;
+  align: bottom;
+  width: 50%;
+  height: 100%;}
+.workshop h1 {
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 81px;}
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .workshop h1 { font-size: 81px;}}
+  @media (max-width: 767px) {
+    .workshop h1 { font-size: 36px;}}
+
+.workshop p {color: #fff;}
+.workshop .btn li a .btn-one {
+  background-color: #0BA2ED;
+  border-color: #0BA2ED;
+  color: #fff;}
+.workshop .btn li a .btn-one:hover {
+  background-color: #fff;
+  color: #0BA2ED; }
+@media (max-width: 410px) {
+  .workshop .btn .btn-two {margin-top: 0px;}}
+/*===========================
+      03.MATERI css
+===========================*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .materi {
+    padding-top: 90px;
+    padding-bottom: 100px; } }
+@media (max-width: 767px) {
+  .materi {
+    padding-top: 70px;
+    padding-bottom: 80px; } }
+.materi {
+  background: #f4f6f7;
+  padding-top: 6.875rem;
+  padding-bottom: 6.125rem; }
+.materi h3 {
+  text-align: center;
+  margin-bottom: 3rem; }
+.jenis .paket-1 {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;}
+.blue { background-color: #0BA2ED;}
+.purple { background-color: #8487F4;}
+.jenis .paket-1 .judul {
+  font-size: 22px;
+  color: #fff;
+  padding: 25px; }
+.jenis .jenis-body {
+  border: 1px solid #ddd;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; }
+.jenis .jenis-body .jenis-text {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 25px; }
+.jenis .jenis-body .jenis-list {
+  padding-top: 30px; }
+  .jenis .jenis-body .jenis-list p {
+    line-height: 36px;
+    color: #32333c;
+    font-size: 16px; }
+
+.single-pricing {
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  padding: 24px 20px 50px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px;
+  background-color: #fff; }
+.single-pricing .pricing-list {
+  margin-top: 5px; }
+.single-pricing .pricing-list ul li {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  color: #121212;
+  margin-top: 16px; }
+  @media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .single-pricing .pricing-list ul li {
+      font-size: 14px;
+      margin-top: 12px; } }
+  @media (max-width: 767px) {
+    .single-pricing .pricing-list ul li {
+      font-size: 14px;
+      margin-top: 12px; } }
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    .single-pricing .pricing-list ul li {
+      font-size: 16px;
+      margin-top: 16px; } }
+      .single-pricing .pricing-list ul li i {
+        color: #8487F4;
+        margin-right: 8px; }
+        .single-pricing .pricing-list ul li i .right {
+          color: #0BA2ED;}
+
+.single-pricing.pro .pricing-header .sub-title::before {
+  right: auto;
+  left: 0px;
+  background-color: #8487F4; }
+.single-pricing.enterprise .pricing-header .sub-title::before {
+  right: 0px;
+  left: auto;
+  background-color: #0BA2ED; }
+
+
+  /*===========================
+        03.TIMELINE css
+  ===========================*/
+
+  .timeline-area {
+    padding-top: 6.875rem;
+    padding-bottom: 6.125rem;
+    background: #fcfcfc;}
+
+    .timeline-workshop {
+      position: relative;
+    }
+
+    @media (min-width: 992px) and (max-width: 1279px){
+      .timeline-workshop {
+        padding-left: 200px;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px){
+      .timeline-workshop {
+        padding-left: 150px;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .timeline-workshop {
+        padding-left: 350px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .timeline-workshop {
+        padding-left: 50px;
+      }
+    }
+
+    .timeline-workshop .title {
+      font-size: 20px;
+      text-transform: uppercase;
+      margin-left: 25px;
+    }
+
+    .timeline-workshop li {
+      padding: 0 20px 20px 30px;
+      list-style: none;
+      border-left: 2px solid #f1f1f1;
+    }
+
+    .timeline-workshop li .content-text {
+      background: #f2f2f2;
+      padding: 20px;
+    }
+
+    .timeline-workshop li .line-title {
+      font-size: 16px;
+      line-height: 6px;
+    }
+
+    .timeline-workshop li span {
+      font-size: 12px;
+      padding: 9px 0;
+      display: block;
+    }
+
+    .timeline-workshop li .line-text {
+      color: #202020;
+      line-height: 18px;
+    }
+
+    .timeline-workshop li:first-child:before {
+      border: 0;
+      background: none;
+      position: relative;
+    }
+
+    .timeline-workshop li:last-child {
+      padding: 0 20px 0px 30px;
+    }
+
+    .timeline-workshop li:before {
+      content: "";
+      border: solid 2px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50px;
+      -moz-border-radius: 50px;
+      -webkit-border-radius: 50px;
+      font-size: 8px;
+      margin-left: -35px;
+      font-weight: 400;
+      background: #fff;
+      display: block;
+      position: absolute;
+      margin-top: 18px;
+      border-color: #0ba2ed !important;
+    }
+
+    .timeline-workshop li:first-child i {
+      font-size: 20px;
+      float: left;
+      margin-left: -30px;
+      line-height: 50px;
+      border-radius: 30px;
+      margin: -12px -55px;
+      background: #0ba2ed;
+      color: #fff;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+    }
