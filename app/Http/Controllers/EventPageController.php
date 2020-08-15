@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Event;
 
-class CompetitionPageController extends Controller
+class EventPageController extends Controller
 {
     public function index()
     {
@@ -16,8 +16,7 @@ class CompetitionPageController extends Controller
 
     public function show($competition)
     {
-        $competition = Event::where('type', 'competition')
-            ->with('timelines')
+        $competition = Event::with('timelines')
             ->where('slug', $competition)
             ->firstOrFail();
 

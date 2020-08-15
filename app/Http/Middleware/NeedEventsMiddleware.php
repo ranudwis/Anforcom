@@ -16,7 +16,7 @@ class NeedEventsMiddleware
      */
     public function handle($request, Closure $next)
     {
-        $sharedEvents = Event::all();
+        $sharedEvents = Event::all()->groupBy('type');
         view()->share('sharedEvents', $sharedEvents);
 
         return $next($request);

@@ -20,8 +20,15 @@ Route::prefix('/lomba')
     ->name('competition.')
     ->middleware('needevents')
     ->group(function () {
-        Route::get('/', 'CompetitionPageController@index')->name('index');
-        Route::get('/{competition}', 'CompetitionPageController@show')->name('show');
+        Route::get('/', 'EventPageController@index')->name('index');
+        Route::get('/{competition}', 'EventPageController@show')->name('show');
+    });
+
+Route::prefix('/event')
+    ->name('event.')
+    ->middleware('needevents')
+    ->group(function () {
+        Route::get('/{event}', 'EventPageController@show')->name('show');
     });
 
 Route::prefix('/daftar')
