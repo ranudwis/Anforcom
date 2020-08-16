@@ -38,6 +38,20 @@
                     <div class="btn-block mt-3" id="alert" role="alert">
 
                     </div>
+
+                    @if ($errors->any())
+                        <div class="alert visible alert-danger" role="alert">
+                            <ul>
+
+                            @foreach ($errors->all() as $error)
+                                <li>
+                                    {{ $error }}
+                                </li>
+                            @endforeach
+
+                            </ul>
+                        </div>
+                    @endif
                 </div>
             </div>
             <form
@@ -58,7 +72,6 @@
                                     <ul id="progressbar">
                                         <li class="active" id="account">Pilihan Workshop</li>
                                         <li id="personal">Data Peserta</li>
-                                        <li id="confirm">Selesai</li>
                                     </ul> <!-- fieldsets -->
                                 </div>
                                 <fieldset>
@@ -141,8 +154,7 @@
                                                         <i class="fas fa-university"></i>
                                                     </span>
                                                 </div>
-                                                <input class="form-control" id="instance" type="text" name="university"
-                                                    value="">
+                                                <input class="form-control" id="instance" type="text" name="university">
                                                 <label for="instance" class="form-control-placeholder">Instansi
                                                     *</label>
                                             </div>
@@ -156,8 +168,7 @@
                                                         <i class="fas fa-university"></i>
                                                     </span>
                                                 </div>
-                                                <input class="form-control birthdate" id="birthdate" type="date"
-                                                    name="birthdate" value="">
+                                                <input class="form-control birthdate" id="birthdate" type="date" name="birthdate">
                                             </div>
                                             <p id="age"></p>
                                         </div>
@@ -165,14 +176,14 @@
                                             <label for="scan">Scan KTP/Kartu Identitas lain *
                                                 <small>.png/.jpg</small></label>
                                             <input class="form-control-file scan" id="input-scan-ktp" type="file"
-                                                name="leader_ktp" accept=".png,.jpg">
+                                                name="leader_ktp" accept="image/*">
                                             </span>
                                         </div>
                                         <div class="form-group mt-0 pt-0 scan-ktm" id="scan-ktm">
                                             <label for="scan">Scan Kartu Tanda Mahasiswa *
                                                 <small>.png/.jpg</small></label>
                                             <input class="form-control-file scan" id="input-scan-ktm" type="file"
-                                                name="leader_ktm" accept=".png,.jpg">
+                                                name="leader_ktm" accept="image/*">
                                             <span class="help-block"><small>Dapat menggunakan KTM apabila di luar range
                                                     usia
                                                     17-25 tahun</small>
@@ -228,14 +239,14 @@
                                             <label for="leader_scan">Scan KTP/Kartu Identitas lain Ketua *
                                                 <small>.png/.jpg</small></label>
                                             <input class="form-control-file scan" id="input-leader_scan-ktp" type="file"
-                                                name="leader_ktp" accept=".png,.jpg">
+                                                name="leader_ktp" accept="image/*">
                                             </span>
                                         </div>
                                         <div class="form-group mt-0 pt-0 scan-ktm" id="leader_scan-ktm">
                                             <label for="leader_scan">Scan Kartu Tanda Mahasiswa Ketua *
                                                 <small>.png/.jpg</small></label>
                                             <input class="form-control-file scan" id="input-leader_scan-ktm" type="file"
-                                                name="leader_ktm" accept=".png,.jpg">
+                                                name="leader_ktm" accept="image/*">
                                             <span class="help-block"><small>Dapat menggunakan KTM apabila di luar range
                                                     usia
                                                     17-25 tahun</small>
@@ -324,14 +335,14 @@
                                             <label for="">Scan KTP/Kartu Identitas lain Anggota 1*
                                                 <small>.png/.jpg</small></label>
                                             <input class="form-control-file scan" id="input-members0_scan-ktp"
-                                                type="file" name="members[0][ktp]" accept=".png,.jpg">
+                                                type="file" name="members[0][ktp]" accept="image/*">
                                             </span>
                                         </div>
                                         <div class="form-group mt-0 pt-0 scan-ktm" id="members0_scan-ktm">
                                             <label for="">Scan Kartu Tanda Mahasiswa Anggota 1*
                                                 <small>.png/.jpg</small></label>
                                             <input class="form-control-file scan" id="input-members0_scan-ktm"
-                                                type="file" name="members[0][ktm]" accept=".png,.jpg">
+                                                type="file" name="members[0][ktm]" accept="image/*">
                                             <span class="help-block"><small>Dapat menggunakan KTM apabila di luar range
                                                     usia
                                                     17-25 tahun</small>
@@ -426,7 +437,7 @@
                                                 2 *
                                                 <small>.png/.jpg</small></label>
                                             <input class="form-control-file scan" id="input-members1_scan-ktp"
-                                                type="file" name="members[1][ktp]" accept=".png,.jpg">
+                                                type="file" name="members[1][ktp]" accept="image/*">
                                             </span>
                                         </div>
                                         <div class="form-group mt-0 pt-0 scan-ktm" id="members1_scan-ktm">
@@ -434,7 +445,7 @@
                                                 2 *
                                                 <small>.png/.jpg</small></label>
                                             <input class="form-control-file scan" id="input-members1_scan-ktm"
-                                                type="file" name="members[1][ktm]" accept=".png,.jpg">
+                                                type="file" name="members[1][ktm]" accept="image/*">
                                             <span class="help-block"><small>Dapat menggunakan KTM apabila di luar range
                                                     usia
                                                     17-25 tahun</small>
@@ -446,23 +457,6 @@
                                         class="previous action-button-previous btn btn-light" value="Sebelumnya" />
                                     <input type="submit" name="submit" class="btn btn-success ml-1 submit submit-button"
                                         value="Daftar sekarang!" />
-                                </fieldset>
-                                <fieldset>
-                                    <div class="col-12 text-center">
-                                        <div class="row">
-                                            <div class="col-12 mb-4">
-                                                <h2 class="text-center">Berhasil!</h2>
-                                            </div>
-                                            <div class="col-12 mb-3">
-                                                <img src="https://img.icons8.com/color/96/000000/ok--v2.png"
-                                                    class="fit-image">
-                                            </div>
-                                            <div class="col-12">
-                                                <h5>Anda telah terdaftar pada workshop ini</h5>
-                                                <a href="" class="btn btn-success pr-3 pl-3">Selesai</a>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </fieldset>
                             </div>
                         </div>

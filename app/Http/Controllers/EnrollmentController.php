@@ -75,14 +75,12 @@ class EnrollmentController extends Controller
 
     public function enrollworkshop(Request $request, Event $event)
     {
+        dd($request->all());
         $request->validate([
             'team_name' => 'required',
-            'name' => 'required',
             'university' => 'required',
-            'email' => 'required',
-            'contact' => 'required',
-            'leader_ktm' => 'required',
-            'leader_ktp' => 'required',
+            'leader_ktm' => 'required|image',
+            'leader_ktp' => 'required|image',
         ]);
 
         $registration = $request->user()->registrations()->create([
