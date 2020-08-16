@@ -28,12 +28,11 @@ class EnrollmentController extends Controller
 
     public function show(Event $event)
     {
-        $workshop = "workshop";
-        if ($event['slug'] === $workshop) {
-            return view('enroll.workshop', compact('event'));
-        } else {
-            return view('enroll.show', compact('event'));
+        if ($event->type === 'event') {
+            return view('enroll.event', compact('event'));
         }
+
+        return view('enroll.event', compact('event'));
     }
 
     public function enroll(RegistrationRequest $request, Event $event)

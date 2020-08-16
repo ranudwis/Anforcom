@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/eventregistration/css/style.css') }}">
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="96x96" href="assets/images/icons/favicon-96x96.png" />
@@ -29,7 +29,7 @@
         <div class="container">
             <div class="row mb-3">
                 <div class="col-md-8 col-lg-8 text-center mx-auto pt-5" id="judulregis">
-                    <img src="assets/images/LOGO2.png" class="img-fluid mb-2" style="max-height: 30px;">
+                    <img src="{{ asset('assets/eventregistration/images/LOGO2.png') }}" class="img-fluid mb-2" style="max-height: 30px;">
                     <h2 class="form-title">Form Pendaftaran Workshop ANFORCOM</h2>
                 </div>
             </div>
@@ -489,7 +489,7 @@
     <!--===============================================================================================-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     </script>
-    <script src="assets/js/main.js" type="text/javascript"></script>
+    <script src="{{ asset('assets/eventregistration/js/main.js') }}" type="text/javascript"></script>
 </body>
 
 </html>

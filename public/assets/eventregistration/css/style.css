@@ -82,7 +82,8 @@ html {
 }
 
 .form-control:focus+.form-control-placeholder,
-.form-control:valid+.form-control-placeholder {
+.form-control:valid+.form-control-placeholder,
+.form-control:disabled+.form-control-placeholder {
     font-size: 70%;
     -o-transform: translate3d(0, -90%, 0);
     -moz-transform: translate3d(0, -90%, 0);
