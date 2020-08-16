@@ -13,7 +13,7 @@
                 <div class="row">
                     <ul class="timeline">
                         <li>
-                            @foreach ($competition->timelines as $timeline)
+                            @foreach ($event->timelines as $timeline)
                                 <li>
                                     <div class="content-text">
                                         <h3 class="line-title">{{ $timeline->name }}</h3>

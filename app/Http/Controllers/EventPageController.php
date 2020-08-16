@@ -16,12 +16,12 @@ class EventPageController extends Controller
 
     public function show($competition)
     {
-        $competition = Event::with('timelines')
+        $event = Event::with('timelines')
             ->where('slug', $competition)
             ->firstOrFail();
 
-        if (view()->exists('event.' . $competition->template_name)) {
-            return view('event.' . $competition->template_name, compact('competition'));
+        if (view()->exists('event.' . $event->template_name)) {
+            return view('event.' . $event->template_name, compact('event'));
         }
 
         abort(404);

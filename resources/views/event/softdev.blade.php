@@ -10,10 +10,10 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="slider-content">
-                                    <h1 class="title">{{ $competition->name }}</h1>
+                                    <h1 class="title">{{ $event->name }}</h1>
                                     <p class="text">Kompetisi yang bertujuan untuk membuat dan mengembangkan applikasi mengenai suatu tema tertentu.</p>
                                     <ul class="slider-btn rounded-buttons">
-                                        <li><a class="main-btn rounded-one" href="{{ route('enroll.show', ['event' => $competition->slug]) }}">Daftar</a></li>
+                                        <li><a class="main-btn rounded-one" href="{{ route('enroll.show', ['event' => $event->slug]) }}">Daftar</a></li>
                                         <li><a class="main-btn rounded-two" href="{{ asset('rulebooks/Rulebook Apps Innovation Anforcom 2020.pdf') }}">Rulebook</a></li>
                                     </ul>
                                 </div>

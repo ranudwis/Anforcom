@@ -11,9 +11,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 margin">
-                        <h1 class="title">Workshop</h1>
+                        <h1 class="title">{{ $event->name }}</h1>
                         <p class="text">Dapatkan materi mulai dari langkah-langkah merilis startup mulai dari nol, hingga mendapatkan feedback dari mentor/speaker terkait startup atau ide kamu.</p>
-                        <ul class="btn"><li><a class="main-btn btn-one" href="#">Daftar</a></li></ul>
+                        <ul class="btn"><li><a class="main-btn btn-one" href="{{ route('enroll.show', ['event' => $event->slug]) }}">Daftar</a></li></ul>
                         <ul class="btn"><li><a class="main-btn btn-two" href="#">Guidebook</a></li></ul>
                     </div>
                     <div class="col-lg-6">
@@ -75,4 +75,6 @@
             </div>
         </div>
     </section>
+
+    @include('event.partial.timeline')
 @endsection
