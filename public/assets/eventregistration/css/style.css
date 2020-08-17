@@ -159,7 +159,7 @@ input:focus {
 #progressbar li {
     list-style-type: none;
     font-size: 12px;
-    width: 30%;
+    width: 45%;
     float: left;
     font-family: Product-Sans-Bold;
 }
