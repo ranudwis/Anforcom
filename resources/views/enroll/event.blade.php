@@ -163,6 +163,18 @@
                                         </div>
                                     </div>
                                     <div id="pilihanKelompok">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="fa fa-group"></i>
+                                                    </span>
+                                                </div>
+                                                <input class="form-control" id="team_name" type="text" required name="team_name">
+                                                <label for="team_name" class="form-control-placeholder">Nama Tim *</label>
+                                            </div>
+                                        </div>
+
                                         <div class="card-title">Informasi Ketua</div>
                                         <div class="form-group">
                                             <div class="input-group">
@@ -289,7 +301,7 @@
                                                         <i class="fas fa-university"></i>
                                                     </span>
                                                 </div>
-                                                <input class="form-control" id="members0instance" type="text" name="members[0][university]">
+                                                <input class="form-control" id="members0instance" type="text" name="members[0][instation]">
                                                 <label for="members0instance" class="form-control-placeholder">Instansi
                                                     Anggota 1
                                                     *</label>
@@ -381,7 +393,7 @@
                                                         <i class="fas fa-university"></i>
                                                     </span>
                                                 </div>
-                                                <input class="form-control" id="members1instance" type="text" name="members[1][university]">
+                                                <input class="form-control" id="members1instance" type="text" name="members[1][instation]">
                                                 <label for="members1instance" class="form-control-placeholder">Instansi
                                                     Anggota
                                                     2

@@ -75,11 +75,9 @@ class EnrollmentController extends Controller
 
     public function enrollworkshop(Request $request, Event $event)
     {
-        dd($request->all());
         $request->validate([
-            'team_name' => 'required',
             'university' => 'required',
-            'leader_ktm' => 'required|image',
+            'leader_ktm' => 'nullable|image',
             'leader_ktp' => 'required|image',
         ]);
 
@@ -87,33 +85,38 @@ class EnrollmentController extends Controller
             'event_id' => $event->id
         ]);
         $team = new Team([
-            'name' => $request->team_name,
+            'name' => $request->team_name ?? $request->user()->name,
             'leader_id' => $request->user()->id,
             'competition_id' => $event->id,
             'university' => $request->university,
             'leader_nim' => " ",
-            'leader_ktm' => $request->leader_ktm->store('public/images/ktm'),
+            'leader_ktm' => $request->leader_ktm ? $request->leader_ktm->store('public/images/ktm') : null,
             'leader_ktp' => $request->leader_ktp->store('public/images/ktp')
         ]);
 
         $team = $registration->teams()->save($team);
 
-        $team->members()->createMany(
-            array_map(
+        if ($request->members) {
+            $members = array_filter(
+                $request->members,
                 function ($member) {
-                    return $member + [
-                        'ktm' => $member['ktm']->store('public/images/ktm'),
-                        'ktp' => $member['ktp']->store('public/images/ktp')
-                    ];
-                },
-                array_filter(
-                    $request->members,
+                    return isset($member['name']) && $member['name'];
+                }
+            );
+
+            $team->members()->createMany(
+                array_map(
                     function ($member) {
-                        return isset($member['name']) && $member['name'];
-                    }
+                        return $member + [
+                            'ktm' => $member['ktm']->store('public/images/ktm'),
+                            'ktp' => $member['ktp']->store('public/images/ktp'),
+                            'nim' => ''
+                        ];
+                    },
+                    $members
                 )
-            )
-        );
+            );
+        }
 
         event(new NewEventRegistration($registration, $team));
 
