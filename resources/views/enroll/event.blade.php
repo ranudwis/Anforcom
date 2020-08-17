@@ -125,18 +125,6 @@
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">
-                                                        <i class="fas fa-phone"></i>
-                                                    </span>
-                                                </div>
-                                                <input class="form-control" id="contact" type="text" name="contact" value="{{ Auth::user()->contact }}" disabled>
-                                                <label for="contact" class="form-control-placeholder">WA
-                                                    *</label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
                                                         <i class="fas fa-university"></i>
                                                     </span>
                                                 </div>
@@ -188,6 +176,22 @@
                                                     Ketua
                                                     *</label>
                                             </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="fas fa-envelope"></i>
+                                                    </span>
+                                                </div>
+                                                <input class="form-control" id="email" type="text" value="{{ Auth::user()->email }}" disabled>
+                                                <label for="email" class="form-control-placeholder">Email
+                                                    *</label>
+                                            </div>
+                                            <span class="help-block"><small>Menggunakan email yang terdaftar di
+                                                    platform
+                                                    zoom</small>
+                                            </span>
                                         </div>
                                         <div class="form-group">
                                             <div class="input-group">
@@ -364,7 +368,7 @@
                                                     </span>
                                                 </div>
                                                 <input class="form-control" id="members1contact" type="text" name="members[1][contact]">
-                                                <label for="members1contact" class="form-control-placeholder">Kontak
+                                                <label for="members1contact" class="form-control-placeholder">WA
                                                     Anggota
                                                     2
                                                     *</label>

@@ -27,5 +27,13 @@ class EventSeeder extends Seeder
             'template_name' => 'datmin',
         ]);
         $dataMining->save();
+
+        $workshop = new Event([
+            'type' => 'event',
+            'name' => 'Workshop',
+            'slug' => 'workshop',
+            'template_name' => 'workshop',
+        ]);
+        $workshop->save();
     }
 }
