@@ -14,10 +14,13 @@
 
         $(".next").click(function () {
             if ($('input[type=radio][name=pilihan]:checked').length == 0) {
-                showAlert('Pilihan workshop masih kosong! silahkan diisi');
+                showAlert('Pilihan workshop masih kosong! silahkan diisi', 'danger');
                 return false;
             } else {
                 $('.alert').hide();
+                if ($("input[name='pilihan']:checked").val() == 'kelompok') {
+                    showAlert('Anda wajib mendaftar untuk 3 orang pada pilihan ini!', 'info');
+                }
                 current_fs = $(this).parent();
                 next_fs = $(this).parent().next();
 
@@ -47,8 +50,8 @@
             }
         });
 
-        function showAlert(message) {
-            $("#alert").html('<div class="alert alert-danger" role="alert">' + message +
+        function showAlert(message, category) {
+            $("#alert").html('<div class="alert alert-' + category + '" role="alert">' + message +
                 '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'
             );
         }
