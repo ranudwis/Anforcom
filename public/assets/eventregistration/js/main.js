@@ -132,6 +132,7 @@
                 $('#scan-ktm').show();
                 $('#scan-ktm input').prop('required', true);
             } else {
+                $('#scan-ktm input').removeAttr('required');
                 $('#scan-ktm').hide();
             }
         });
@@ -146,8 +147,9 @@
             }
             if (age < 17 || age > 25) {
                 $('#leader_scan-ktm').show();
-                $('#leader_scan-ktm').prop('required', true);
+                $('#leader_scan-ktm input').prop('required', true);
             } else {
+                $('#leader_scan-ktm input').removeAttr('required');
                 $('#leader_scan-ktm').hide();
             }
         });
@@ -162,8 +164,9 @@
             }
             if (age < 17 || age > 25) {
                 $('#members1_scan-ktm').show();
-                $('#members1_scan-ktm').prop('required', true);
+                $('#members1_scan-ktm input').prop('required', true);
             } else {
+                $('#members1_scan-ktm input').removeAttr('required');
                 $('#members1_scan-ktm').hide();
             }
         });
@@ -178,8 +181,9 @@
             }
             if (age < 17 || age > 25) {
                 $('#members0_scan-ktm').show();
-                $('#members0_scan-ktm').prop('required', true);
+                $('#members0_scan-ktm input').prop('required', true);
             } else {
+                $('#members0_scan-ktm input').removeAttr('required');
                 $('#members0_scan-ktm').hide();
             }
         });
