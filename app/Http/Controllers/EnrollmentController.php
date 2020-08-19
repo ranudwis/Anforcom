@@ -90,7 +90,7 @@ class EnrollmentController extends Controller
             'competition_id' => $event->id,
             'university' => $request->university,
             'leader_nim' => " ",
-            'leader_ktm' => $request->leader_ktm ? $request->leader_ktm->store('public/images/ktm') : null,
+            'leader_ktm' => $request->leader_ktm ? $request->leader_ktm->store('public/images/ktm') : '',
             'leader_ktp' => $request->leader_ktp->store('public/images/ktp')
         ]);
 
@@ -108,7 +108,7 @@ class EnrollmentController extends Controller
                 array_map(
                     function ($member) {
                         return $member + [
-                            'ktm' => $member['ktm']->store('public/images/ktm'),
+                            'ktm' => isset($member['ktm']) ? $member['ktm']->store('public/images/ktm') : '',
                             'ktp' => $member['ktp']->store('public/images/ktp'),
                             'nim' => ''
                         ];
