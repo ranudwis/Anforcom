@@ -56,7 +56,8 @@ class EnrollmentController extends Controller
             array_map(
                 function ($member) {
                     return $member + [
-                        'ktm' => $member['ktm']->store('public/images/ktm')
+                        'ktm' => $member['ktm']->store('public/images/ktm'),
+                        'ktp' => ''
                     ];
                 },
                 array_filter(
