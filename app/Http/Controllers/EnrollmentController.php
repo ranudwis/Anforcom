@@ -32,7 +32,7 @@ class EnrollmentController extends Controller
             return view('enroll.event', compact('event'));
         }
 
-        return view('enroll.event', compact('event'));
+        return view('enroll.competition', compact('event'));
     }
 
     public function enroll(RegistrationRequest $request, Event $event)
