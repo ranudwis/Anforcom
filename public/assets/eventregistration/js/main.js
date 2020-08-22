@@ -87,11 +87,6 @@
             });
         });
 
-        // $('.scan-ktp').hide();
-        $('#scan-ktm, #leader_scan-ktm, #members0_scan-ktm, #members1_scan-ktm').hide();
-        $('.scan-ktm input').removeAttr('required');
-
-
         $("input[type='radio']").on('change', function () {
 
             var selectedValue = $("input[name='pilihan']:checked").val();
@@ -104,87 +99,15 @@
                 case 'individu':
                     $('#pilihanIndividu').show();
                     $('#pilihanIndividu input').prop('required', true);
-                    $('#input-scan-ktm').removeAttr('required');
                     $('#pilihanKelompok input').removeAttr('required name');
                     $('#pilihanKelompok').hide();
                     break;
                 case 'kelompok':
                     $('#pilihanKelompok').show();
                     $('#pilihanKelompok input').prop('required', true);
-                    $('#input-leader_scan-ktm').removeAttr('required');
-                    $('#input-members0_scan-ktm').removeAttr('required');
-                    $('#input-members1_scan-ktm').removeAttr('required');
                     $('#pilihanIndividu input').removeAttr('required name');
                     $('#pilihanIndividu').hide();
                     break;
-            }
-        });
-
-        $("#birthdate").change(function () {
-            var today = new Date();
-            var birthDate = new Date($(this).val());
-            var age = today.getFullYear() - birthDate.getFullYear();
-            var m = today.getMonth() - birthDate.getMonth();
-            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-                age--;
-            }
-            if (age < 17 || age > 25) {
-                $('#scan-ktm').show();
-                $('#scan-ktm input').prop('required', true);
-            } else {
-                $('#scan-ktm input').removeAttr('required');
-                $('#scan-ktm').hide();
-            }
-        });
-
-        $("#leader_birthdate").change(function () {
-            var today = new Date();
-            var birthDate = new Date($(this).val());
-            var age = today.getFullYear() - birthDate.getFullYear();
-            var m = today.getMonth() - birthDate.getMonth();
-            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-                age--;
-            }
-            if (age < 17 || age > 25) {
-                $('#leader_scan-ktm').show();
-                $('#leader_scan-ktm input').prop('required', true);
-            } else {
-                $('#leader_scan-ktm input').removeAttr('required');
-                $('#leader_scan-ktm').hide();
-            }
-        });
-
-        $("#members1birthdate").change(function () {
-            var today = new Date();
-            var birthDate = new Date($(this).val());
-            var age = today.getFullYear() - birthDate.getFullYear();
-            var m = today.getMonth() - birthDate.getMonth();
-            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-                age--;
-            }
-            if (age < 17 || age > 25) {
-                $('#members1_scan-ktm').show();
-                $('#members1_scan-ktm input').prop('required', true);
-            } else {
-                $('#members1_scan-ktm input').removeAttr('required');
-                $('#members1_scan-ktm').hide();
-            }
-        });
-
-        $("#members0birthdate").change(function () {
-            var today = new Date();
-            var birthDate = new Date($(this).val());
-            var age = today.getFullYear() - birthDate.getFullYear();
-            var m = today.getMonth() - birthDate.getMonth();
-            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-                age--;
-            }
-            if (age < 17 || age > 25) {
-                $('#members0_scan-ktm').show();
-                $('#members0_scan-ktm input').prop('required', true);
-            } else {
-                $('#members0_scan-ktm input').removeAttr('required');
-                $('#members0_scan-ktm').hide();
             }
         });
     });

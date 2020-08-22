@@ -146,21 +146,6 @@
                                             </div>
                                             <p id="age"></p>
                                         </div>
-                                        <div class="form-group mt-0 pt-0 scan-ktp" id="scan-ktp">
-                                            <label for="scan">Scan KTP/Kartu Identitas lain *
-                                                <small>.png/.jpg</small></label>
-                                            <input class="form-control-file scan" id="input-scan-ktp" type="file" name="leader_ktp" accept="image/*">
-                                            </span>
-                                        </div>
-                                        <div class="form-group mt-0 pt-0 scan-ktm" id="scan-ktm">
-                                            <label for="scan">Scan Kartu Tanda Mahasiswa *
-                                                <small>.png/.jpg</small></label>
-                                            <input class="form-control-file scan" id="input-scan-ktm" type="file" name="leader_ktm" accept="image/*">
-                                            <span class="help-block"><small>Dapat menggunakan KTM apabila di luar range
-                                                    usia
-                                                    17-25 tahun</small>
-                                            </span>
-                                        </div>
                                     </div>
                                     <div id="pilihanKelompok">
                                         <div class="form-group">
@@ -231,21 +216,6 @@
                                                 <input class="form-control birthdate" id="leader_birthdate" type="date" name="leader_birthdate">
                                             </div>
                                             <p id="age"></p>
-                                        </div>
-                                        <div class="form-group mt-0 pt-0 scan-ktp" id="leader_scan-ktp">
-                                            <label for="leader_scan">Scan KTP/Kartu Identitas lain Ketua *
-                                                <small>.png/.jpg</small></label>
-                                            <input class="form-control-file scan" id="input-leader_scan-ktp" type="file" name="leader_ktp" accept="image/*">
-                                            </span>
-                                        </div>
-                                        <div class="form-group mt-0 pt-0 scan-ktm" id="leader_scan-ktm">
-                                            <label for="leader_scan">Scan Kartu Tanda Mahasiswa Ketua *
-                                                <small>.png/.jpg</small></label>
-                                            <input class="form-control-file scan" id="input-leader_scan-ktm" type="file" name="leader_ktm" accept="image/*">
-                                            <span class="help-block"><small>Dapat menggunakan KTM apabila di luar range
-                                                    usia
-                                                    17-25 tahun</small>
-                                            </span>
                                         </div>
 
                                         <hr>
@@ -320,21 +290,6 @@
                                                 <input class="form-control birthdate" id="members0birthdate" type="date">
                                             </div>
                                             <p id="age"></p>
-                                        </div>
-                                        <div class="form-group mt-0 pt-0 scan-ktp" id="members0_scan-ktp">
-                                            <label for="">Scan KTP/Kartu Identitas lain Anggota 1*
-                                                <small>.png/.jpg</small></label>
-                                            <input class="form-control-file scan" id="input-members0_scan-ktp" type="file" name="members[0][ktp]" accept="image/*">
-                                            </span>
-                                        </div>
-                                        <div class="form-group mt-0 pt-0 scan-ktm" id="members0_scan-ktm">
-                                            <label for="">Scan Kartu Tanda Mahasiswa Anggota 1*
-                                                <small>.png/.jpg</small></label>
-                                            <input class="form-control-file scan" id="input-members0_scan-ktm" type="file" name="members[0][ktm]" accept="image/*">
-                                            <span class="help-block"><small>Dapat menggunakan KTM apabila di luar range
-                                                    usia
-                                                    17-25 tahun</small>
-                                            </span>
                                         </div>
 
                                         <hr>
@@ -414,23 +369,6 @@
                                                 <input class="form-control birthdate" id="members1birthdate" type="date" name="members[1][birthdate]">
                                             </div>
                                             <p id="age"></p>
-                                        </div>
-                                        <div class="form-group mt-0 pt-0 scan-ktp" id="members1_scan-ktp">
-                                            <label for="members1scan">Scan KTP/Kartu Identitas lain Anggota
-                                                2 *
-                                                <small>.png/.jpg</small></label>
-                                            <input class="form-control-file scan" id="input-members1_scan-ktp" type="file" name="members[1][ktp]" accept="image/*">
-                                            </span>
-                                        </div>
-                                        <div class="form-group mt-0 pt-0 scan-ktm" id="members1_scan-ktm">
-                                            <label for="members1scan">Scan Kartu Tanda Mahasiswa Anggota
-                                                2 *
-                                                <small>.png/.jpg</small></label>
-                                            <input class="form-control-file scan" id="input-members1_scan-ktm" type="file" name="members[1][ktm]" accept="image/*">
-                                            <span class="help-block"><small>Dapat menggunakan KTM apabila di luar range
-                                                    usia
-                                                    17-25 tahun</small>
-                                            </span>
                                         </div>
                                     </div>
                                     <p class="mb-0 pb-0 mt-3"><small>*) Wajib untuk diisi</small></p>
