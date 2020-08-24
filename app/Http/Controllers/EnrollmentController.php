@@ -83,7 +83,7 @@ class EnrollmentController extends Controller
             'email' => 'required',
             'contact' => 'required',
             'leader_ktm' => 'required',
-            'leader_ktp' => 'required',
+            'tgl_lahir' => 'required',
         ]);
 
         $registration = $request->user()->registrations()->create([
@@ -94,9 +94,9 @@ class EnrollmentController extends Controller
             'leader_id' => $request->user()->id,
             'competition_id' => $event->id,
             'university' => $request->university,
-            'leader_nim' => " ",
+            'leader_nim' => "",
             'leader_ktm' => $request->leader_ktm->store('public/images/ktm'),
-            'leader_ktp' => $request->leader_ktp->store('public/images/ktp')
+            'tgl_lahir' => $request->tgl_lahir
         ]);
 
         $team = $registration->teams()->save($team);
@@ -105,8 +105,7 @@ class EnrollmentController extends Controller
             array_map(
                 function ($member) {
                     return $member + [
-                        'ktm' => $member['ktm']->store('public/images/ktm'),
-                        'ktp' => $member['ktp']->store('public/images/ktp')
+                        'ktm' => $member['ktm']->store('public/images/ktm')
                     ];
                 },
                 array_filter(

@@ -47,15 +47,15 @@
             <p>{{$message}}</p>
         </div>
         @enderror
-        <label>Foto KTM</label>
-        <input type="file" name="leader_ktm"><br>
-        <label>Foto KTP</label>
-        <input type="file" name="leader_ktp"><br>
-        @error('leader_ktp')
+        <label>Tanggal Lahir</label>
+        <input type="date" name="tgl_lahir"><br>
+        @error('tgl_lahir')
         <div class="invalid-feedback">
             <p>{{$message}}</p>
         </div>
         @enderror
+        <label>Foto KTM</label>
+        <input type="file" name="leader_ktm"><br>
         <h2>Anggota 1</h2>
         <label>Nama</label>
         <input type="text" name="members[0][name]"><br>
@@ -87,16 +87,15 @@
             <p>{{$message}}</p>
         </div>
         @enderror
-        <label>Foto KTM</label>
-        <input type="file" name="members[0][ktm]" 2><br>
-
-        <label>Foto KTP</label>
-        <input type="file" name="members[0][ktp]"><br>
-        @error('ktp')
+        <label>Tanggal lahir</label>
+        <input type="date" name="members[0][tgl_lahir]"><br>
+        @error('tgl_lahir')
         <div class="invalid-feedback">
             <p>{{$message}}</p>
         </div>
         @enderror
+        <label>Foto KTM</label>
+        <input type="file" name="members[0][ktm]" 2><br>
         <h2>Anggota 2</h2>
         <label>Nama</label>
         <input type="text" name="members[1][name]"><br>
@@ -128,15 +127,15 @@
             <p>{{$message}}</p>
         </div>
         @enderror
-        <label>Foto KTM</label>
-        <input type="file" name="members[1][ktm]"><br>
-        <label>Foto KTP</label>
-        <input type="file" name="members[1][ktp]"><br>
-        @error('ktp')
+        <label>Tanggal Lahir</label>
+        <input type="date" name="members[1][tgl_lahir]"><br>
+        @error('tgl_lahir')
         <div class="invalid-feedback">
             <p>{{$message}}</p>
         </div>
         @enderror
+        <label>Foto KTM</label>
+        <input type="file" name="members[1][ktm]"><br>
         <button type="submit">Submit</button>
     </form>
 </body>
