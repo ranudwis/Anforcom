@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Team extends Model
 {
     protected $fillable = [
-        'name', 'leader_id', 'competition_id', 'university', 'leader_nim', 'leader_ktm', 'leader_ktp',
+        'name', 'leader_id', 'competition_id', 'university', 'leader_nim', 'leader_ktm', 'tgl_lahir',
     ];
 
     public function members()

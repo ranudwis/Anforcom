@@ -28,11 +28,12 @@ class EnrollmentController extends Controller
 
     public function show(Event $event)
     {
-        if ($event->type === 'event') {
-            return view('enroll.event', compact('event'));
+        $workshop = "workshop";
+        if ($event['slug'] === $workshop) {
+            return view('enroll.workshop', compact('event'));
+        } else {
+            return view('enroll.show', compact('event'));
         }
-
-        return view('enroll.competition', compact('event'));
     }
 
     public function enroll(RegistrationRequest $request, Event $event)
@@ -56,8 +57,7 @@ class EnrollmentController extends Controller
             array_map(
                 function ($member) {
                     return $member + [
-                        'ktm' => $member['ktm']->store('public/images/ktm'),
-                        'ktp' => ''
+                        'ktm' => $member['ktm']->store('public/images/ktm')
                     ];
                 },
                 array_filter(
@@ -77,9 +77,13 @@ class EnrollmentController extends Controller
     public function enrollworkshop(Request $request, Event $event)
     {
         $request->validate([
+            'team_name' => 'required',
+            'name' => 'required',
             'university' => 'required',
-            'leader_ktm' => 'nullable|image',
-            'leader_ktp' => 'required|image',
+            'email' => 'required',
+            'contact' => 'required',
+            'leader_ktm' => 'required',
+            'tgl_lahir' => 'required',
         ]);
 
         $registration = $request->user()->registrations()->create([
@@ -91,8 +95,8 @@ class EnrollmentController extends Controller
             'competition_id' => $event->id,
             'university' => $request->university,
             'leader_nim' => " ",
-            'leader_ktm' => $request->leader_ktm ? $request->leader_ktm->store('public/images/ktm') : '',
-            'leader_ktp' => $request->leader_ktp->store('public/images/ktp')
+            'leader_ktm' => $request->leader_ktm->store('public/images/ktm'),
+            'tgl_lahir' => $request->tgl_lahir
         ]);
 
         $team = $registration->teams()->save($team);
@@ -109,9 +113,7 @@ class EnrollmentController extends Controller
                 array_map(
                     function ($member) {
                         return $member + [
-                            'ktm' => isset($member['ktm']) ? $member['ktm']->store('public/images/ktm') : '',
-                            'ktp' => $member['ktp']->store('public/images/ktp'),
-                            'nim' => ''
+                            'ktm' => isset($member['ktm']) ? $member['ktm']->store('public/images/ktm') : ''
                         ];
                     },
                     $members
