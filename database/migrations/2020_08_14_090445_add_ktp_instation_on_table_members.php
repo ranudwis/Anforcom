@@ -15,7 +15,8 @@ class AddKtpInstationOnTableMembers extends Migration
     {
         Schema::table('members', function (Blueprint $table) {
             $table->string('ktp')->after('ktm');
-            $table->string('instation')->nullable()->after('contact');
+            // TODO: Invalid migration, need to uncomment on future project
+            // $table->string('instation')->nullable()->after('contact');
         });
     }
 
