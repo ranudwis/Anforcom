@@ -55,9 +55,9 @@ class EnrollmentController extends Controller
         $team->members()->createMany(
             array_map(
                 function ($member) {
-                    return $member + [
-                        'ktm' => $member['ktm']->store('public/images/ktm')
-                    ];
+                    $member['ktm'] = $member['ktm']->store('public/images/ktm');
+
+                    return $member;
                 },
                 array_filter(
                     $request->members,
@@ -103,7 +103,17 @@ class EnrollmentController extends Controller
                 }
             );
 
-            $team->members()->createMany($members);
+            $team->members()->createMany(
+                array_map(
+                    function ($member) {
+                        $member['nim'] = '';
+                        $member['ktm'] = '';
+
+                        return $member;
+                    },
+                    $members
+                )
+            );
         }
 
         event(new NewEventRegistration($registration, $team));

@@ -142,7 +142,7 @@
                                                         <i class="fas fa-university"></i>
                                                     </span>
                                                 </div>
-                                                <input class="form-control birthdate" id="birthdate" type="date" name="birthdate">
+                                                <input class="form-control birthdate" id="birthdate" type="date" name="tgl_lahir">
                                             </div>
                                             <p id="age"></p>
                                         </div>
@@ -213,7 +213,7 @@
                                                         <i class="fas fa-university"></i>
                                                     </span>
                                                 </div>
-                                                <input class="form-control birthdate" id="leader_birthdate" type="date" name="leader_birthdate">
+                                                <input class="form-control birthdate" id="leader_birthdate" type="date" name="tgl_lahir">
                                             </div>
                                             <p id="age"></p>
                                         </div>
@@ -287,7 +287,7 @@
                                                         <i class="fas fa-university"></i>
                                                     </span>
                                                 </div>
-                                                <input class="form-control birthdate" id="members0birthdate" type="date">
+                                                <input class="form-control birthdate" id="members0birthdate" type="date" name="members[0][tgl_lahir]">
                                             </div>
                                             <p id="age"></p>
                                         </div>
@@ -366,7 +366,7 @@
                                                         <i class="fas fa-university"></i>
                                                     </span>
                                                 </div>
-                                                <input class="form-control birthdate" id="members1birthdate" type="date" name="members[1][birthdate]">
+                                                <input class="form-control birthdate" id="members1birthdate" type="date" name="members[1][tgl_lahir]">
                                             </div>
                                             <p id="age"></p>
                                         </div>
