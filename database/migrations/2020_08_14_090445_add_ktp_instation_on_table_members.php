@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddInstationDateOfBirthTableMember extends Migration
+class AddKtpInstationOnTableMembers extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,8 @@ class AddInstationDateOfBirthTableMember extends Migration
     public function up()
     {
         Schema::table('members', function (Blueprint $table) {
-            $table->dropColumn('ktp');
-            $table->date('tgl_lahir')->nullable()->after('contact');
+            $table->string('ktp')->after('ktm');
+            $table->string('instation')->nullable()->after('contact');
         });
     }
 
@@ -27,7 +27,8 @@ class AddInstationDateOfBirthTableMember extends Migration
     public function down()
     {
         Schema::table('members', function (Blueprint $table) {
-            $table->dropColumn('tgl_lahir');
+            $table->dropColumn('ktp');
+            $table->dropColumn('instation');
         });
     }
 }

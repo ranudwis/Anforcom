@@ -14,6 +14,7 @@ class AddDateOfBirthTableTeam extends Migration
     public function up()
     {
         Schema::table('teams', function (Blueprint $table) {
+            $table->dropColumn('leader_ktp');
             $table->date('tgl_lahir')->nullable()->after('leader_ktm');
         });
     }
@@ -26,7 +27,7 @@ class AddDateOfBirthTableTeam extends Migration
     public function down()
     {
         Schema::table('teams', function (Blueprint $table) {
-            Schema::drop('teams');
+            $table->dropColumn('tgl_lahir');
         });
     }
 }

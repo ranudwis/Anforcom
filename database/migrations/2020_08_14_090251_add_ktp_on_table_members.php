@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddInstationDateOfBirthTableMember extends Migration
+class AddKtpOnTableMembers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class AddInstationDateOfBirthTableMember extends Migration
      */
     public function up()
     {
-        Schema::table('members', function (Blueprint $table) {
-            $table->dropColumn('ktp');
-            $table->date('tgl_lahir')->nullable()->after('contact');
+        Schema::table('teams', function (Blueprint $table) {
+            $table->string('leader_ktp')->nullable()->after('leader_ktm');
         });
     }
 
@@ -26,8 +25,8 @@ class AddInstationDateOfBirthTableMember extends Migration
      */
     public function down()
     {
-        Schema::table('members', function (Blueprint $table) {
-            $table->dropColumn('tgl_lahir');
+        Schema::table('teams', function (Blueprint $table) {
+            $table->dropColumn('leader_ktp');
         });
     }
 }
