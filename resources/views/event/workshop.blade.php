@@ -12,6 +12,7 @@
                 <div class="row">
                     <div class="col-lg-6 margin">
                         <h1 class="title">{{ $event->name }}</h1>
+                        <ul class="btn"><li><a class="main-btn btn-two" href="{{ asset('rulebooks/Guidebook Workshop Kickstart Your Startup 101.pdf') }}">Guideline</a></li></ul>
                         <p class="text">Dalam perbaikan...</p>
                     </div>
                     <div class="col-lg-6">
