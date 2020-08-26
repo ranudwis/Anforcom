@@ -29,7 +29,7 @@
                 <div class="form-group-full">
                     <label for="username">Nama</label>
                     <div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type user name">
-                        <input id="username" class="input100" type="text" name="name" placeholder="anforcom">
+                        <input id="username" class="input100" type="text" name="name" placeholder="anforcom" autofocus>
                         <span class="focus-input100"></span>
                     </div>
                 </div>

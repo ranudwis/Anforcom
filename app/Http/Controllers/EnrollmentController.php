@@ -55,10 +55,9 @@ class EnrollmentController extends Controller
         $team->members()->createMany(
             array_map(
                 function ($member) {
-                    return $member + [
-                        'ktm' => $member['ktm']->store('public/images/ktm'),
-                        'ktp' => ''
-                    ];
+                    $member['ktm'] = $member['ktm']->store('public/images/ktm');
+
+                    return $member;
                 },
                 array_filter(
                     $request->members,
@@ -78,8 +77,7 @@ class EnrollmentController extends Controller
     {
         $request->validate([
             'university' => 'required',
-            'leader_ktm' => 'nullable|image',
-            'leader_ktp' => 'required|image',
+            'tgl_lahir' => 'required',
         ]);
 
         $registration = $request->user()->registrations()->create([
@@ -90,9 +88,9 @@ class EnrollmentController extends Controller
             'leader_id' => $request->user()->id,
             'competition_id' => $event->id,
             'university' => $request->university,
-            'leader_nim' => " ",
-            'leader_ktm' => $request->leader_ktm ? $request->leader_ktm->store('public/images/ktm') : '',
-            'leader_ktp' => $request->leader_ktp->store('public/images/ktp')
+            'leader_nim' => '',
+            'leader_ktm' => '',
+            'tgl_lahir' => $request->tgl_lahir
         ]);
 
         $team = $registration->teams()->save($team);
@@ -108,11 +106,10 @@ class EnrollmentController extends Controller
             $team->members()->createMany(
                 array_map(
                     function ($member) {
-                        return $member + [
-                            'ktm' => isset($member['ktm']) ? $member['ktm']->store('public/images/ktm') : '',
-                            'ktp' => $member['ktp']->store('public/images/ktp'),
-                            'nim' => ''
-                        ];
+                        $member['nim'] = '';
+                        $member['ktm'] = '';
+
+                        return $member;
                     },
                     $members
                 )

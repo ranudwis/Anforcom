@@ -14,7 +14,6 @@ class AddKtpOnTableMembers extends Migration
     public function up()
     {
         Schema::table('teams', function (Blueprint $table) {
-            //
             $table->string('leader_ktp')->nullable()->after('leader_ktm');
         });
     }
@@ -26,6 +25,8 @@ class AddKtpOnTableMembers extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('teams', function (Blueprint $table) {
+            $table->dropColumn('leader_ktp');
+        });
     }
 }
