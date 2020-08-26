@@ -28,12 +28,11 @@ class EnrollmentController extends Controller
 
     public function show(Event $event)
     {
-        $workshop = "workshop";
-        if ($event['slug'] === $workshop) {
-            return view('enroll.workshop', compact('event'));
-        } else {
-            return view('enroll.show', compact('event'));
+        if ($event->type === 'event') {
+            return view('enroll.event', compact('event'));
         }
+
+        return view('enroll.competition', compact('event'));
     }
 
     public function enroll(RegistrationRequest $request, Event $event)
@@ -77,12 +76,7 @@ class EnrollmentController extends Controller
     public function enrollworkshop(Request $request, Event $event)
     {
         $request->validate([
-            'team_name' => 'required',
-            'name' => 'required',
             'university' => 'required',
-            'email' => 'required',
-            'contact' => 'required',
-            'leader_ktm' => 'required',
             'tgl_lahir' => 'required',
         ]);
 
@@ -94,8 +88,8 @@ class EnrollmentController extends Controller
             'leader_id' => $request->user()->id,
             'competition_id' => $event->id,
             'university' => $request->university,
-            'leader_nim' => " ",
-            'leader_ktm' => $request->leader_ktm->store('public/images/ktm'),
+            'leader_nim' => '',
+            'leader_ktm' => '',
             'tgl_lahir' => $request->tgl_lahir
         ]);
 
@@ -109,16 +103,7 @@ class EnrollmentController extends Controller
                 }
             );
 
-            $team->members()->createMany(
-                array_map(
-                    function ($member) {
-                        return $member + [
-                            'ktm' => isset($member['ktm']) ? $member['ktm']->store('public/images/ktm') : ''
-                        ];
-                    },
-                    $members
-                )
-            );
+            $team->members()->createMany($members);
         }
 
         event(new NewEventRegistration($registration, $team));
