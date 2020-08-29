@@ -99,20 +99,20 @@
                   </a>
                 </div> <!-- single service -->
               </div>
-              {{-- <div class="col-lg-6">
+              <div class="col-lg-6">
                 <div class="single-service text-center mt-30">
                   <a href="#">
                     <div class="image-fluid service-icon">
                       <img src="assets/images/speech.png" alt="">
                     </div>
                     <div class="service-content">
-                      <h4 class="title service-title">Seminar</h4>
-                      <p class="text">Acara Seminar yang diisi oleh developer ternama.</p>
+                      <h4 class="title service-title">Workshop</h4>
+                      <p class="text">Dapatkan materi mulai dari langkah-langkah merilis startup mulai dari nol, hingga mendapatkan feedback dari mentor/speaker terkait startup atau ide kamu.</p>
                     </div>
                   </a>
                 </div> <!-- single service -->
               </div>
-              <div class="col-lg-6">
+              {{-- <div class="col-lg-6">
                 <div class="single-service text-center mt-30">
                   <a href="#">
                     <div class="image-fluid service-icon">
