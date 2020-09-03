@@ -101,7 +101,7 @@
               </div>
               <div class="col-lg-6">
                 <div class="single-service text-center mt-30">
-                  <a href="#">
+                  <a href="{{ route('event.show', ['event' => 'workshop'])}}">
                     <div class="image-fluid service-icon">
                       <img src="assets/images/speech.png" alt="">
                     </div>
