@@ -5,7 +5,7 @@
         <div class="col-lg-6">
           <div class="footer-content">
             <a href="#home"><img src="{{ asset('assets/images/LOGO2 PUTIH.png') }}" alt="logo"></a>
-            <p class="text"><b>Panitia Annual Informatics Competition 2020</b><br>Fakultas Sains dan Matiematika, Universitas Diponegoro,<br>Jl.Prof.Soedharto, S.H.,Tembalang, Semarang 50275 </p></p>
+            <p class="text"><b>Panitia Annual Informatics Competition 2020</b><br>Fakultas Sains dan Matematika, Universitas Diponegoro,<br>Jl.Prof.Soedharto, S.H.,Tembalang, Semarang 50275 </p></p>
             <ul>
               <li><a href="http://line.me/ti/p/~@gsy5063l"><i class="lni lni-line"></i></a></li>
               <li><a href="https://twitter.com/Anforcom"><i class="lni lni-twitter-original"></i></a></li>
