@@ -40,7 +40,12 @@ class GenerateDataMiningDataSetEmailTemplate extends Command
     public function handle()
     {
         $teams = Event::where('slug', 'datmin')
-            ->with('registrations.teams.leader')
+            ->with([
+                'registrations' => function ($query) {
+                    $query->where('status', 'active');
+                },
+                'registrations.teams.leader'
+            ])
             ->first()
             ->registrations
             ->pluck('teams');
