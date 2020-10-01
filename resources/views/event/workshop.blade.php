@@ -51,9 +51,10 @@
                                     Peserta akan mendapatkan materi mengenai langkah-langkah merintis
                                     sebuah startup dari nol, mulai dari penemuan dan pengembangan ide,
                                     menyusun Business Model Canvas, membangun tim, menyusun produk
-                                    hingga tahap MVP, serta validasi penerimaan prototype produk (materi
-                                    lebih lanjut sesuai. Peserta juga akan diajak untuk
-                                    melakukan praktik pada sesi ini. Sesi ini terbagi menjadi dua pertemuan,
+                                    hingga tahap MVP, serta validasi penerimaan prototype produk. Peserta juga akan diajak untuk
+                                    melakukan praktik pada sesi ini.
+                                    <br /><br />
+                                    Sesi ini terbagi menjadi dua pertemuan,
                                     Sabtu (17 Oktober 2020) pukul 12.45-15.00 dan Minggu (18 Oktober 2020)
                                     pukul 08.00-12.00.
                                 </p>
@@ -72,7 +73,7 @@
                                 <p>
                                     Pada sesi ini, peserta akan mendapat kesempatan untuk mendapatkan
                                     feedback dari mentor/speaker terkait ide, hasil karya, atau saran terkait
-                                    pengembangan startup yang telah disusun sebelumnya. Sesi ini akan
+                                    pengembangan startup yang telah disusun sebelumnya. <br /><br /> Sesi ini akan
                                     dilaksanakan pada hari Minggu (18 Oktober 2020) pukul 13.00-15.30.
                                 </p>
                             </div>
