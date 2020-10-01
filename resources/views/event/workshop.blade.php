@@ -52,7 +52,7 @@
                                     sebuah startup dari nol, mulai dari penemuan dan pengembangan ide,
                                     menyusun Business Model Canvas, membangun tim, menyusun produk
                                     hingga tahap MVP, serta validasi penerimaan prototype produk (materi
-                                    lebih lanjut sesuai TOR – menunggu finish). Peserta juga akan diajak untuk
+                                    lebih lanjut sesuai. Peserta juga akan diajak untuk
                                     melakukan praktik pada sesi ini. Sesi ini terbagi menjadi dua pertemuan,
                                     Sabtu (17 Oktober 2020) pukul 12.45-15.00 dan Minggu (18 Oktober 2020)
                                     pukul 08.00-12.00.
