@@ -21,6 +21,49 @@
                           <div class="col-md">
                               @if ($registration->isInactive())
                                   <h4 class="text-warning"><i class="fa fa-frown"></i>&#9;Menunggu Pembayaran</h4>
+                                  <ul>
+                                      <li>
+                                          Transfer
+                                          <ul>
+                                              <li>
+                                                  2521261210 - BCA a.n. Mutiara Hardiani Mahe
+                                              </li>
+                                              <li>
+                                                  081601044203536 - BRI a.n. Adinda Rosman
+                                              </li>
+                                          </ul>
+                                      </li>
+
+                                      <li>
+                                          Virtual DANA a.n Adinda Rosman
+
+                                          <ul>
+                                              <li>
+                                                  3901082374559522 - BCA
+                                              </li>
+                                              <li>
+                                                  88810082374559522 - BRI
+                                              </li>
+                                              <li>
+                                                  8810082374559522 - BNI
+                                              </li>
+                                              <li>
+                                                  89508082374559522 - Mandiri
+                                              </li>
+                                              <li>
+                                                  8000009082374559522 - BTPN/Jenius
+                                              </li>
+
+                                              <li>
+                                                  Nomor telepon DANA - 082374559522
+                                              </li>
+                                          </ul>
+                                      </li>
+
+                                      <li>
+                                          GoPay - 089678964739
+                                      </li>
+                                  </ul>
                               @elseif ($registration->isPaid())
                                   <h4 class="text-info"><i class="fa fa-hourglass-half"></i>&#9;Menunggu Konfirmasi</h4>
                               @elseif ($registration->isRejected())
